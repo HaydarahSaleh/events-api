@@ -1,0 +1,5 @@
+description: version
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/version/VersionFailed.yaml"

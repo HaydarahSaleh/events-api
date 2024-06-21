@@ -1,0 +1,31 @@
+post:
+  summary: Increase View Count
+  operationId: IncreaseViewCount
+  description: <p>Increase View Count of <b>Post</b>. <p>Available for <b>All</b></p>
+
+  tags:
+    - post
+
+  parameters:
+    - $ref: "../../parameters/path/id.yaml"
+
+  responses:
+    "200":
+      content:
+        apllication/json:
+          schema:
+            type: object
+            properties:
+              success:
+                type: boolean
+                example: true
+              viewCount:
+                type: number
+                example: 550
+              returnedTypeName:
+                type: string
+                example: viewCount
+
+    
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

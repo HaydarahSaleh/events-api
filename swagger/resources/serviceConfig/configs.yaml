@@ -1,0 +1,47 @@
+get:
+    summary: get service Config
+    operationId: serviceConfig
+    description: <p>get the existing  <b>ServiceConfig</b></p><p>Availablefor <b>editor</b></p>
+
+    tags:
+        - serviceConfig
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/serviceConfig/Config.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: set
+    operationId: createServiceConfig
+    description: <p>set <b>ServiceConfig</b>. <p>Available for <b>editor</b></p>
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+
+    tags:
+        - serviceConfig
+
+    requestBody:
+        $ref: "../../requests/subscribeConfig/ConfigInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/subscribeConfig/Config.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/subscribeConfig/ConfigExists.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

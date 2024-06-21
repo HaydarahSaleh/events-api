@@ -1,0 +1,16 @@
+get:
+    summary: publicationByCategoryAlaises
+    operationId: publicationByCategoryAlaises
+    description: <p>  <b>publicationByCategoryAlaises</b></p>
+
+    tags:
+        - post
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/categoryAliases.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/post/Posts.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

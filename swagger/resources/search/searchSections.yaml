@@ -1,0 +1,13 @@
+get:
+    summary: Search sections
+    operationId: Search sections
+    description: <p>sections to search in <b>site</b></p>
+
+    tags:
+        - search
+
+    responses:
+        "200":
+            $ref: "../../responses/search/SearchSections.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

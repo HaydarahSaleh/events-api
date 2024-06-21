@@ -1,0 +1,16 @@
+get:
+    summary: Partnerspage
+    operationId: Partnerspage
+    description: <p> Partnerspage</p>
+
+    tags:
+        - post
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+       
+
+    responses:
+        
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

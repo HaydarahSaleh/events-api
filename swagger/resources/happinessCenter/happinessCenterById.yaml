@@ -1,0 +1,27 @@
+get:
+    summary: happinessCenter
+    operationId: happinessCenterById
+    description: <p> get  <b>happinessCenter</b>Available for <b>all</b></p>
+
+    tags:
+        - happinessCenter
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/happinessCenter/HappinessCenter.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "405":
+            $ref: "../../responses/common/Forbidden.yaml" 
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

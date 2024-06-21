@@ -1,0 +1,5 @@
+description: Events
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/filter/EventsFilter.yaml"

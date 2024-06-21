@@ -1,0 +1,38 @@
+type: object
+properties:
+    assetName:
+        type: string
+        example: news
+    add:
+        type: number
+        example: 0
+    editOwn:
+        type: number
+        example: 0
+    editAny:
+        type: number
+        example: 0
+    delete:
+        type: number
+        example: 0
+    deleteOwn:
+        type: number
+        example: 0
+    deleteAny:
+        type: number
+        example: 0
+    approve:
+        type: number
+        example: 0
+    publish:
+        type: number
+        example: 0
+    publishAfterApprove:
+        type: number
+        example: 0
+    accessAdministrationInterface:
+        type: number
+        example: 0
+    view:
+        type: number
+        example: 0

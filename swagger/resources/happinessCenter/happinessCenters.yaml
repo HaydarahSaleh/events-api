@@ -1,0 +1,51 @@
+get:
+    summary: List
+    operationId: allHappinessCenters
+    description: <p>List all  <b>HappinessCenters</b></p><p>Availablefor <b>editor</b></p>
+
+    tags:
+        - happinessCenter
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/happinessCenter/HappinessCenter.yaml"
+        "404":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "405":
+            $ref: "../../responses/common/Forbidden.yaml" 
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: Create
+    operationId: createHappinessCenter
+    description: <p>Creates a new <b>HappinessCenter</b>. <p>Available for <b>editor</b></p>
+
+    tags:
+        - happinessCenter
+ 
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    requestBody:
+        $ref: "../../requests/happinessCenter/HappinessCenter.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/happinessCenter/HappinessCenter.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        
+        "404":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "405":
+            $ref: "../../responses/common/Forbidden.yaml" 
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

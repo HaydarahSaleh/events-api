@@ -1,0 +1,47 @@
+get:
+    summary: List
+    operationId: listtrustees
+    description: <p>List all  <b>Trustees</b></p><p>Availablefor <b>all</b></p>
+
+    tags:
+        - trustee
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/trustees/Trustees.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: Create
+    operationId: createTrustee
+    description: <p>Creates a new <b>trustee</b>. <p>Available for <b>Admin</b></p>
+
+    tags:
+        - trustee
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    requestBody:
+        $ref: "../../requests/trustees/TrusteeInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/trustees/Trustee.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "403":
+            $ref: "../../responses/common/NotFound.yaml"
+        "404":
+            $ref: "../../responses/common/UsedFile.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

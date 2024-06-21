@@ -1,0 +1,5 @@
+description: invalidAction
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/common/InvalidAction.yaml"

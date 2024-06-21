@@ -1,0 +1,23 @@
+get:
+    summary: get one survey
+    operationId: SurveyByAlias
+    description: <p>Gets a <b>Survey</b> by its Id</p>Available for <b>All registered users</b>if it is published, else it is avoilable for<b>Editor</b> </p>
+
+    tags:
+        - Survey
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/path/alias.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/survey/Survey.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

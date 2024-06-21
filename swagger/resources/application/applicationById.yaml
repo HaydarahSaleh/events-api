@@ -1,0 +1,22 @@
+get:
+  summary: appliation
+  operationId: showAppliationById
+  description: <p> show  <b>application</b>Available for <b>editor</b></p>
+
+  tags:
+  - application
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/path/id.yaml"
+
+  responses:
+    '200':
+      $ref: "../../responses/application/Application.yaml"
+    '400':
+      $ref: "../../responses/common/NotFound.yaml"
+    '401':
+      $ref: "../../responses/common/Forbidden.yaml"
+    '402':
+      $ref: "../../responses/common/Unauthorized.yaml" 
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

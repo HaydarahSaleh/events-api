@@ -1,0 +1,33 @@
+Forbidden:
+  $ref: "./common/Forbidden.yaml"
+NotFound:
+  $ref: "./common/NotFound.yaml"
+NullResponse:
+  $ref: "./common/NullResponse.yaml"
+Unauthorized:
+  $ref: "./common/Unauthorized.yaml"
+UnexpectedError:
+  $ref: "./common/UnexpectedError.yaml"
+  
+User:
+  $ref: "./user/User.yaml"
+UpdateUSer:
+  $ref: "./user/UpdateUser.yaml"
+UserExists:
+  $ref: "./user/UserExists.yaml"  
+Users:
+  $ref: "./user/Users.yaml"
+ErrorInvalidEmail:
+  $ref: "./user/ErrorInvalidEmail.yaml"
+ErrorWrongCredentials:
+  $ref: "./user/ErrorWrongCredentials.yaml"  
+
+Menu:
+  $ref: "./menu/Menu.yaml"
+Menus:
+  $ref: "./menu/Menus.yaml"  
+
+Link:
+  $ref: "./link/Link.yaml"
+Links:
+  $ref: "./link/Links.yaml"  

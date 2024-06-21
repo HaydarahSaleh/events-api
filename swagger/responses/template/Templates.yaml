@@ -1,0 +1,5 @@
+description: Templates
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/template/Templates.yaml"

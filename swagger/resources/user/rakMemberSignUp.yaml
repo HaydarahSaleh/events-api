@@ -1,0 +1,23 @@
+post:
+  summary: SignUp
+  operationId: MemberSignUp
+  description: <p>Creates a new <b>User AS Member</b> in the system</p><p>Availablefor <b>ALL</b></p><p>Signup endpoint also sends a <i>confirmation</i> email with <b>emailConfirmationCode</b></p><p><b>NOTE:</b> For now, emails are not beeing sent</p><p>Default role is <b>rakMember</b></p><p>avilable values of <b>gender</b> is [MALE,FEMALE] </p><p>avilable values of <b>workType</b> is [BUSINESS_OWNER,AGENT,PARTNER,ENTITY_EMPLOYEE,OTHER] </p><p>avilable values of <b>communication mean</b> is [PHONE,EMAIL] </p>
+  
+  tags:
+    - users
+  parameters:
+        - $ref: "../../parameters/header/language.yaml"
+
+  requestBody:
+    $ref: "../../requests/user/RakMemberSignUp.yaml"          
+  
+  
+    
+  responses:
+    '200':
+      $ref: "../../responses/user/RakMember.yaml"
+    '401':
+      $ref: "../../responses/user/UserExists.yaml"
+    
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

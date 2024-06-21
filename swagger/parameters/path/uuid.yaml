@@ -1,0 +1,6 @@
+name: uuid
+in: path
+required: true
+description: uuid
+schema:
+  type: string

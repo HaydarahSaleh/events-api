@@ -1,0 +1,52 @@
+type: object
+properties:
+    serviceId:
+        type: number
+        example: 1
+
+    name:
+        type: string
+        example: name
+    memberShipId:
+        type: string
+        example: "1"
+    phoneNumber:
+        type: string
+        example: "+963932322322"
+    email:
+        type: string
+        example: work@work.com
+
+    fileIds:
+        type: array
+        items:
+            type: number
+        example: [1]
+    birthDate:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+
+    emirate:
+        type: string
+        example: hello from Mayas.salman
+    position:
+        type: string
+        example: study
+    qualification:
+        type: number
+        example: "112qw24"
+    type:
+        type: string
+        example: "worker"
+    employer:
+        type: string
+        example: "worker"
+    experience:
+        type: string
+        example: "worker"
+    ageCategory:
+        type: string
+        example: moreThan55
+    work:
+        type: string
+        example: governmental

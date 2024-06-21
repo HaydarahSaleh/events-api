@@ -1,0 +1,5 @@
+description: Subscribers
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/subscriber/Subscribers.yaml"

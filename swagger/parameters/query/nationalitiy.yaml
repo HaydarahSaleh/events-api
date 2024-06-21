@@ -1,0 +1,7 @@
+name: nationalitiy
+in: query
+description: nationalitiy
+required: false
+schema:
+    type: string
+    string: firstName

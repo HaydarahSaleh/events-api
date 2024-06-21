@@ -1,0 +1,5 @@
+description: HappinessCenter
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/happinessCenter/HappinessCenterSuccess.yaml"

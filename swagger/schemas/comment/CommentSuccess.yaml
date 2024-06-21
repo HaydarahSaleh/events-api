@@ -1,0 +1,30 @@
+properties:
+    success:
+        type: boolean
+        example: true
+    id:
+        type: number
+        example: 2
+    postId:
+        type: number
+        example: 2
+    postTitle:
+        $ref: "../common/Title.yaml"
+    data:
+        type: string
+        example: the autual Comment is..
+    postLanguage:
+        type: string
+        example: "ar"
+    email:
+        type: string
+        example: "MyEmailIS@gmail.com"
+    name:
+        type: string
+        example: name
+    createdAt:
+        type: string
+        example: 2021-03-10T07:10:51.132Z
+    isPublished:
+        type: boolean
+        example: true

@@ -1,0 +1,26 @@
+post:
+  summary: Update
+  operationId: UpdateTheme
+  description: <p>Update one <b>Theme</b></p>Availiable for <b>editor</b></p>
+  tags:
+  - theme
+
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/path/id.yaml"
+    
+
+  requestBody:
+    $ref: "../../requests/theme/ThemeInput.yaml"
+  responses:
+    '201':
+      $ref: "../../responses/theme/Theme.yaml"
+          
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+      $ref: "../../responses/common/Forbidden.yaml"   
+    '404':
+      $ref: "../../responses/common/NotFound.yaml"
+    default:
+      $ref : "../../responses/common/UnexpectedError.yaml"

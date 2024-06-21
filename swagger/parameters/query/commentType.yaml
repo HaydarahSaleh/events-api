@@ -1,0 +1,7 @@
+name: type
+in: query
+description: type of posts Comments.
+required: false
+schema:
+    type: string
+    enum: ["openDatas", "opinions"]

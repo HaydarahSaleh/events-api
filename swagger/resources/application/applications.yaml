@@ -1,0 +1,47 @@
+get:
+  summary: List
+  operationId: listApplications
+  description: <p>List all  <b>Applications</b></p><p>Availablefor <b>editor</b></p>
+
+  tags:
+  - application
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/query/limit.yaml"
+    - $ref: "../../parameters/query/offset.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/application/Applications.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '402':
+      $ref: "../../responses/common/Forbidden.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+  summary: Create
+  operationId: createApplication
+  description: <p>Creates a new <b>Application</b>. <p>Available for <b>registered</b></p>
+
+  tags:
+  - application
+
+  requestBody:
+    $ref: "../../requests/application/ApplicationInput.yaml"
+  responses:
+    '201':
+      $ref: "../../responses/application/Application.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '402':
+      $ref: "../../responses/common/InvalidParameter.yaml" 
+    '403':
+      $ref: "../../responses/common/NotFound.yaml"
+    '404':
+      $ref: "../../responses/common/UsedFile.yaml"
+    '405':
+      $ref: "../../responses/application/Applied.yaml" 
+    default:
+      $ref : "../../responses/common/UnexpectedError.yaml"
+

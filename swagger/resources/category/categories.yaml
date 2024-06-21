@@ -1,0 +1,43 @@
+get:
+    summary: List
+    operationId: listCategories
+    description: <p>List all  <b>Categories</b></p><p>Availablefor <b>admin</b></p>
+
+    tags:
+        - category
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/query/categoryType.yaml"
+        - $ref: "../../parameters/query/categorySubType.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/isFeatured.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/category/Categories.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+post:
+    summary: Create
+    operationId: createCategory
+    description: <p>Creates a new <b>Category</b>. <p>Available for <b>admin</b></p>
+
+    tags:
+        - category
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    requestBody:
+        $ref: "../../requests/category/AddCategoryInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/category/Category.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

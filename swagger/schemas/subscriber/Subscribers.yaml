@@ -1,0 +1,15 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    subscribers:
+      type: array
+      items:
+        $ref: "./Subscriber.yaml"   
+    limit:
+        type: number
+        example: 100
+    offset:
+        type: number
+        example: 0

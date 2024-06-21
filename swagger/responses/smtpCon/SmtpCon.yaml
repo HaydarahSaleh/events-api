@@ -1,0 +1,5 @@
+description: Smtp
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/smtpCon/SmtpCon.yaml"

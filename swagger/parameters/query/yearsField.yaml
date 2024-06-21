@@ -1,0 +1,8 @@
+name: field
+in: query
+description: field to gets years according to
+required: true
+schema:
+    type: string
+    enum: ["startDate", "endDate", "privateDate"]
+    default: startDate

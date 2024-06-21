@@ -1,0 +1,15 @@
+post:
+  summary: Send EmailExternal
+  operationId: SendEmailEmailExternal
+  description: <p> sending Email </p>
+
+  tags:
+    - email
+
+  requestBody:
+    $ref: "../../requests/email/EmailInput.yaml"
+  responses:
+    "200":
+      $ref: "../../responses/email/Email.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

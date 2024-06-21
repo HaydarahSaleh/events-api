@@ -1,0 +1,36 @@
+post:
+  summary: confirmEmail
+  operationId: confirm email
+  description: <p>Confirms user email. Email is sent automaticly after signup (<b>/users/signup</b>)</p><p>Availablefor <b>guest</b></p><p><b>NOTE:</b> While emails are not beeing sent, <b>emailConfirmationCode</b> is always <b>123456</b></p>
+            
+  tags:
+    - users
+  
+  requestBody:
+    $ref: "../../requests/user/CodeConfirm.yaml"   
+  responses:
+    '200':
+      description: OK
+      content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    success:
+                                        type: boolean
+                                        example: true
+                                    id:
+                                        type: string
+                                        example: 100
+    '401':
+      $ref: "../../responses/common/Forbidden.yaml"
+    '402':
+      $ref: "../../responses/user/ErrorInvalidEmail.yaml"
+    '403':
+      $ref: "../../responses/common/NotFound.yaml"
+    '404':
+      $ref: "../../responses/common/InvalidAction.yaml"
+    '405':
+      $ref: "../../responses/user/ExpiredCodeConfirm.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

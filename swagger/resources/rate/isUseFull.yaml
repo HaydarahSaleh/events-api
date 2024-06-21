@@ -1,0 +1,18 @@
+post:
+    summary: add isUseFull
+    operationId: addIsUseFull
+    description: <p>add  <b>ISUSefull</b></p><p>Available for <b>admin</b></p>
+
+    tags:
+        - Rate
+
+    requestBody:
+        $ref: "../../requests/rate/IsUsefull.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/rate/IsUsefull.yaml"
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

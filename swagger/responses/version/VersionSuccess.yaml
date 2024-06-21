@@ -1,0 +1,5 @@
+description: Version
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/version/VersionSuccess.yaml"

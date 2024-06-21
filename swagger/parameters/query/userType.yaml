@@ -1,0 +1,8 @@
+name: userType
+in: query
+description: userType
+required: false
+schema:
+    type: string
+    default: employee
+    enum: [employee]

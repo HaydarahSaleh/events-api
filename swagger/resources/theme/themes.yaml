@@ -1,0 +1,34 @@
+get:
+  summary: List
+  operationId: listOfAllThemes
+  description:  <p>Gets a list of <b>Themes</b></p>Available for <b>All</b></p>
+            
+  tags:
+  - theme
+  parameters:
+
+    - $ref: "../../parameters/query/limit.yaml"
+    - $ref: "../../parameters/query/offset.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/theme/Themes.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+  summary: Create
+  operationId: createTheme
+  description: <p>Creates <b>theme</b></p>Availiable for <b>all</b></p>
+  tags:
+  - theme
+
+
+  requestBody:
+    $ref: "../../requests/theme/ThemeInput.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/theme/Theme.yaml"
+          
+    default:
+      $ref : "../../responses/common/UnexpectedError.yaml"
+

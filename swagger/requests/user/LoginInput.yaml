@@ -1,0 +1,5 @@
+description: A JSON object containing Login information    
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/user/LoginInput.yaml"

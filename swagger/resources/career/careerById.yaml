@@ -1,0 +1,21 @@
+get:
+    summary: career
+    operationId: showCareerById
+    description: <p> show  <b>career</b>Available for <b>All</b></p>
+
+    tags:
+        - career
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/career/Career.yaml"
+        "400":
+            $ref: "../../responses/common/NotFound.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

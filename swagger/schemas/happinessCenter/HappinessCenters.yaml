@@ -1,0 +1,9 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    happinessCenters:
+      type: array
+      items:
+        $ref: "./Message.yaml"

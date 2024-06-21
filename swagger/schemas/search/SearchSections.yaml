@@ -1,0 +1,12 @@
+type: object
+properties:
+    tags:
+        type: array
+        items:
+            type: object
+            properties:
+                key:
+                    type: string
+                    example: "news"
+                title:
+                    $ref: "../common/Title.yaml"

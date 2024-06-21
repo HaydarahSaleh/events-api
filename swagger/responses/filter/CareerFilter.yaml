@@ -1,0 +1,5 @@
+description: Carrer
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/filter/CareerFilter.yaml"

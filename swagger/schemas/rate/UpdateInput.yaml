@@ -1,0 +1,12 @@
+type: object
+properties:
+    pagePictureId:
+        type: number
+        example: 1
+    askForRating:
+        type: boolean
+        example: true
+    askForIsUseFull:
+        type: boolean
+        example: true
+    

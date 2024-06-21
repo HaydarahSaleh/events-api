@@ -1,0 +1,14 @@
+type: object
+required:
+    - title
+    - summary
+    - startDate
+    - photoId
+
+properties:
+    title:
+         $ref: "../common/Title.yaml"
+
+    fileId:
+       type: number
+       example: 1

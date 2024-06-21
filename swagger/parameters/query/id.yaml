@@ -1,0 +1,6 @@
+name: id
+in: query
+required: false
+description: The id
+schema:
+    type: string

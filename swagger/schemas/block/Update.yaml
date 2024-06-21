@@ -1,0 +1,13 @@
+type: object
+
+properties:
+    page:
+        $ref: "../common/Title.yaml"
+    type:
+        type: string
+        example: sliders
+    ids:
+        type: array
+        items:
+            type: number
+        example: 1,2,3

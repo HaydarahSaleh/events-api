@@ -1,0 +1,54 @@
+get:
+    summary: List
+    operationId: Services
+    description: <p>List all  <b>Services</b></p><p>Availablefor <b>ALL</b></p>
+
+    tags:
+        - Service
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+        - name: categoryId
+          in: query
+          description: categoryId
+          required: false
+          schema:
+              type: integer
+              format: int32
+              default: 1
+
+    responses:
+        "200":
+            $ref: "../../responses/service/Services.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: Create
+    operationId: Service
+    description: <p>Creates a new <b>Service</b>. <p>Available for <b>admin</b></p>
+
+    tags:
+        - Service
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+
+    requestBody:
+        $ref: "../../requests/service/ServiceInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/service/Service.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "404":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "405":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

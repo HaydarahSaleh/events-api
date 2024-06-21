@@ -1,0 +1,5 @@
+description: verifiUser
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/user/VerifiyInput.yaml"

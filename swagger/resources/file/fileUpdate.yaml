@@ -1,0 +1,25 @@
+post:
+  summary: Update 
+  operationId: UpdateFile
+  description: <p>Updates an existing <b>File</b>. <p>Available for <b>admin</b></p>
+
+  tags:
+  - file
+
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    # - $ref: "../../parameters/header/language.yaml"
+    - $ref: "../../parameters/path/id.yaml"
+
+  requestBody:
+    $ref: "../../requests/file/UpdateFileInput.yaml"
+  responses:
+    '201':
+      $ref: "../../responses/file/File.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+      $ref: "../../responses/common/Forbidden.yaml"   
+    default:
+      $ref : "../../responses/common/UnexpectedError.yaml"
+

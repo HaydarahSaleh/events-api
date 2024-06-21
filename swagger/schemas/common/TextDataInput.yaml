@@ -1,0 +1,11 @@
+type: object
+properties:
+    ar:
+        type: string
+        example: داتا
+    en:
+        type: string
+        example: TextData
+    fr:
+        type: string
+        example: TextData

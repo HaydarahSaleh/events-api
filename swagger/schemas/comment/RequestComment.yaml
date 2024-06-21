@@ -1,0 +1,11 @@
+type: object
+properties:
+    postId:
+        type: number
+        example: 2
+    postLanguage:
+        type: string
+        example: "ar"
+    isPublished:
+        type: boolean
+        example: true

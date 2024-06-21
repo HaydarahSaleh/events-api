@@ -1,0 +1,5 @@
+description: multiDelete response
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/common/MultiDeleteResponce.yaml"

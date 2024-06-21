@@ -1,0 +1,296 @@
+{
+    "USER_EXISTS": { "code": 1, "message": "User exists" },
+    "USER_NOT_FOUND": { "code": 2, "message": "User has not been found" },
+    "WRONG_CREDENTIALS": { "code": 3, "message": "Wrong credentials" },
+    "ACCESS_DENIED": { "code": 4, "message": "Access denied" },
+    "INVALID_ACTION": { "code": 5, "message": "Invalid action" },
+    "CODE_EXPIRED": {
+        "code": 6,
+        "message": "Confirmation code has been expired"
+    },
+    "INVALID_TOKEN": { "code": 7, "message": "Invalid token" },
+    "INVALID_PARAMETERS": { "code": 8, "message": "Invalid parameters" },
+    "NO_VERSION": { "code": 9, "message": "No version information" },
+    "POST_EXISTS": { "code": 10, "message": "Post is existed " },
+    "PARENT_NOT_EXIST": { "code": 11, "message": "Parent  has not been found" },
+    "POST_NOT_FOUND": { "code": 12, "message": "Post has not been found" },
+    "CRECULR_PARENT_ASSIGNING": {
+        "code": 15,
+        "message": "trying to convert child to parent"
+    },
+    "FILES_SET_CONFIGURATION_NOT_FOUND": {
+        "code": 16,
+        "message": "Files set configuration has not been found"
+    },
+    "EVENT_NOT_FOUND": { "code": 17, "message": "Event has not been found" },
+    "ARTICLE_NOT_FOUND": {
+        "code": 21,
+        "message": "Article has not been found"
+    },
+    "CATEGORY_NOT_FOUND": {
+        "code": 22,
+        "message": "Category has not been found"
+    },
+    "ROUTE_ALREADY_USED": {
+        "code": 23,
+        "message": "This route is already used"
+    },
+    "CONFIG_ALREADY_EXISTS": {
+        "code": 24,
+        "message": "This configuration key is already exist"
+    },
+    "SMTP_CONNFIG_NOT_FOUND": {
+        "code": 25,
+        "message": "This SMTP configuration  has not been found"
+    },
+    "MENU_ITEM_NOT_FOUND": {
+        "code": 26,
+        "message": "Menu Item has not been found"
+    },
+    "CHILD_PARENT_RECURCIVE": {
+        "code": 27,
+        "message": "child can not be parent to its parent or itself"
+    },
+    "PARENT_NOT_ALLOWED_TO_CHILD": {
+        "code": 28,
+        "message": "Parent is not allowed to this entity"
+    },
+    "USER_NOT_ACTIVE": { "code": 29, "message": "User is not active" },
+
+    "ADS_NOT_FOUND": { "code": 30, "message": "Ads has not been found" },
+    "ADS_EXISTS": { "code": 31, "message": "Ads exists" },
+    "MULTER_ERROR": { "code": 32, "message": "multer error" },
+    "UNKNOWN_UPLOADING_ERROR": { "code": 33, "message": "unknown error" },
+
+    "FILE_NOT_FOUND": { "code": 51, "message": "file has not been found" },
+
+    "PUBLICATION_NOT_FOUND": {
+        "code": 52,
+        "message": "publication has not been found"
+    },
+    "PUBLICATION_EXISTS": { "code": 53, "message": "Publication exists" },
+    "NEWS_EXISTS": { "code": 54, "message": "News exists" },
+    "NEWS_NOT_FOUND": { "code": 55, "message": "News has not been found" },
+
+    "INITIATIVES_NOT_FOUND": {
+        "code": 56,
+        "message": "initatives has not been found"
+    },
+    "INITIATIVES_EXISTS": { "code": 57, "message": "initatives exists" },
+    "INVESTMENT_OPPORTUNITIES_NOT_FOUND": {
+        "code": 58,
+        "message": "investment opportunities has not been found"
+    },
+    "INVESTMENT_OPPORTUNITIES_EXISTS": {
+        "code": 59,
+        "message": "investment opportunities exists"
+    },
+
+    "BANNER_NOT_FOUND": { "code": 60, "message": "banner has not been found" },
+    "BANNER_EXISTS": { "code": 61, "message": "banner exists" },
+
+    "VIEWER_NOT_FOUND": { "code": 62, "message": "Viewer has not been found" },
+    "VIEWER_EXISTS": { "code": 63, "message": "cntainer exists" },
+
+    "SURVEY_NOT_FOUND": { "code": 64, "message": "survey not found" },
+    "SURVEY_ANSWER_NOT_FOUND": {
+        "code": 65,
+        "message": "survey answer not found"
+    },
+    "YOU_HAVE_ANSWERED_THIS_SURVEY": {
+        "code": 66,
+        "message": "you have answered this survey"
+    },
+
+    "OBJECT_EXIST": { "code": 67, "message": "object exists" },
+    "NOt_ALLOWED_OBJECT": { "code": 68, "message": "not allowd object" },
+    "CONTACT_MESSAGE_EXISTS": {
+        "code": 69,
+        "message": "Contact message exist"
+    },
+    "CONTACT_MESSAGE_NOT_FOUND": {
+        "code": 70,
+        "message": "contact message not found"
+    },
+    "TYPE_NOT_FOUND": { "code": 71, "message": "type not found" },
+    "OBJECT_NOT_FOUND": { "code": 72, "message": "object has not been found" },
+
+    "YOU_HAVE_APPLIED_TO_THIS_CAREER": {
+        "code": 73,
+        "message": "you have submited request to this careeer"
+    },
+    "CAREER_NOT_FOUND": { "code": 74, "message": "career has not been found" },
+    "THIS_FILE_IS_USED": { "code": 75, "message": "this file is used" },
+    "APPLICATION_NOT_FOUND": { "code": 76, "message": "application not found" },
+    "EXISTING_COMMENT": { "code": 77, "message": "Comment Exists" },
+    "COMMENT_NOT_FOUND": { "code": 78, "message": "Comment not found" },
+
+    "MESSAGE_EXISTS": { "code": 79, "message": "Message Exists" },
+    "MESSAGE_NOT_FOUND": { "code": 80, "message": "Message not found" },
+    "SUBSCRIBE_CONFIG_NOT_FOUND": {
+        "code": 81,
+        "message": "Subscribe Config not found"
+    },
+    "SUBSCRIBE_CONFIGURATION_EXISTS": {
+        "code": 82,
+        "message": "Subscribe Configuration Exists"
+    },
+    "SUBSCRIBER_EXIST": { "code": 83, "message": "Subscriber Exists" },
+    "SUBSCRIBER_NOT_FOUND": { "code": 84, "message": "Subscriber not found" },
+
+    "ACL_NAME_MUST_BE_UNIQUE": {
+        "code": 85,
+        "message": "Acl name must be unique "
+    },
+    "ACL_NOT_FOUND": { "code": 86, "message": "ACL not found" },
+    "PUBLIC_IS_IMMUTABLE": { "code": 87, "message": "public is imMutable" },
+    "SUPER_USER_IS_IMMUTABLE": {
+        "code": 88,
+        "message": "supper user in imMutable"
+    },
+    "LINK_NOT_FOUND": { "code": 89, "message": "link Not found" },
+    "INVALID_TYPE": {
+        "code": 90,
+        "message": "child type and parent type are defferent "
+    },
+    "SERVICE_NOT_FOUND": {
+        "code": 91,
+        "message": "service not found "
+    },
+    "SERVICE_REQUEST_EXISTS": {
+        "code": 92,
+        "message": "service request exist "
+    },
+    "CATEGORY_HAS_CHILDRENS": {
+        "code": 93,
+        "message": "cateory has children "
+    },
+    "START_DATE_AFTER_END_DATE": {
+        "code": 94,
+        "message": "Start Date must be befor End Date"
+    },
+
+    "REQUEST_NOT_FOUND": {
+        "code": 95,
+        "message": "service request not Found"
+    },
+
+    "REPLAY_NOT_FOUND": {
+        "code": 96,
+        "message": "replay not found"
+    },
+    "NOTE_EXIST": {
+        "code": 97,
+        "message": "this note exist"
+    },
+    "IMMUTABLE_CATEGORY": {
+        "code": 98,
+        "message": "this category is immutable"
+    },
+    "ORDER_IS_USED": {
+        "code": 99,
+        "message": "this order is used"
+    },
+
+    "ALIAS_IS_EXIST": { "code": 98, "message": "Alias exist" },
+    "WRONG_ENDPOINT": { "code": 100, "message": "Endpoind does not exist" },
+
+    "THEME_NOT_FOUND": { "code": 110, "message": "theme not exist" },
+
+    "FILE_TYPE_NOT_ALLOWED": {
+        "code": 111,
+        "message": "File type not allowed"
+    },
+    "FILE_TOO_LARGE": { "code": 112, "message": "File too large" },
+    "FEED_BACK_TYPE_NOT_FOUND": {
+        "code": 113,
+        "message": "feedBack Type not found"
+    },
+    "RATE_NOT_AVILABLE": {
+        "code": 114,
+        "message": "rate isnt avilable for this object right now"
+    },
+
+    "IS_USEFUL_NOT_AVILABLE": {
+        "code": 115,
+        "message": "isUseFull isnt avilable for this object right now"
+    },
+    "FEEDBACK_EXIST": {
+        "code": 115,
+        "message": "similar feedBack exist"
+    },
+    "ROOM_NOT_FOUND": {
+        "code": 116,
+        "message": "room not found"
+    },
+    "BOOKING_REQUEST_NOT_FOUND": {
+        "code": 117,
+        "message": "booking request not found"
+    },
+    "EXCLUDED_DAY": {
+        "code": 118,
+        "message": "this is excluded day for this room"
+    },
+    "EXCLUDED_HOUR": {
+        "code": 119,
+        "message": "this is excluded hour for this room"
+    },
+    "OVERLAP_EXISTS": {
+        "code": 120,
+        "message": "this reservation overlaps with other paid or unavilable reservation"
+    },
+
+    "INVALID_DURATION": {
+        "code": 121,
+        "message": "invalid duration for this room reservations"
+    },
+    "NOT_CONFIRMED": { "code": 122, "message": "this User is not confirmed" },
+    "HAPPINESS_CENTER_NOT_FOUND": {
+        "code": 123,
+        "message": "happiness center not found"
+    },
+    "MISSING_DATE": {
+        "code": 123,
+        "message": "invalid time to apply for this career"
+    },
+    "THIS_SURVEY_ISNT_AVILABLE_AT_THIS_TIME": {
+        "code": 124,
+        "message": "this survey isnt avilable now"
+    },
+    "DOMAIN_CURRENCY_AMOUNT_NOT_FOUND": {
+        "code": 125,
+        "message": "domain or currency or amount not found  "
+    },
+    "SUPPLIER_REQEUTS_EXIST": {
+        "code": 125,
+        "message": "Supplier reqeust exist"
+    },
+    "CATEGORY_HAS_ITEMS": {
+        "code": 126,
+        "message": "Category has related Content"
+    },
+    "USER_GROUP_NOT_FOUND": {
+        "code": 127,
+        "message": "User Group not found"
+    },
+    "CHANNEL_NOT_FOUND": {
+        "code": 128,
+        "message": "Channel not found"
+    },
+    "INNER_STATUS_NOT_VALID": {
+        "code": 129,
+        "message": "Not  Valide value for inner status"
+    },
+    "WRITER_NOT_FOUND": {
+        "code": 130,
+        "message": "Writer not found"
+    },
+    "WINNER_NOT_FOUND": {
+        "code": 131,
+        "message": "winner not found"
+    },
+    "USED_EMAIL": {
+        "code": 132,
+        "message": "This email is used before"
+    }
+}

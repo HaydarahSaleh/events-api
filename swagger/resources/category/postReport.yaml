@@ -1,0 +1,23 @@
+post:
+    summary: Create
+    description: <p>Creates a new <b>Report</b>. <p>Available for <b>All</b></p>
+
+    tags:
+        - category
+    
+    parameters:
+        
+        - $ref: "../../parameters/path/id.yaml"
+    requestBody:
+        $ref: "../../requests/rate/Report.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/rate/Report.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

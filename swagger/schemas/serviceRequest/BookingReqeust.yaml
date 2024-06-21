@@ -1,0 +1,44 @@
+type: object
+properties:
+    name:
+        type: string
+        example: name
+    email:
+        type: string
+        example: repEmail@gmail.com
+    fax:
+        type: number
+        example: "112qw24"
+    phoneNumber:
+        type: string
+        example: "+963932322322"
+    phoneNumber2:
+        type: string
+        example: "+963932322322"
+    entityName:
+        type: string
+        example: name
+    facility:
+        type: string
+        example: work@work.com
+    businessCategory:
+        type: nustringmber
+        example: businessCategory
+    title:
+        type: nustringmber
+        example: businessCategory
+    numberOfSpeackers:
+        type: number
+        example: 10
+    comments:
+        type: string
+        example: comments
+    roomId:
+        type: number
+        example: 1
+    startDate:
+        type: Date
+        example: 2020-03-01T12:01:00
+    endDate:
+        type: Date
+        example: 2020-03-01T13:01:00

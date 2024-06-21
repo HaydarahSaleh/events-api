@@ -1,0 +1,20 @@
+get:
+    summary: writer
+    operationId: showWriterByAlias
+    description: <p> show  <b>writer</b>Available for <b>All</b></p>
+
+    tags:
+        - writer
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/alias.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/writer/Writer.yaml"
+        "400":
+            $ref: "../../responses/common/NotFound.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

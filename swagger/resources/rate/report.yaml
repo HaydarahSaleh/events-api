@@ -1,0 +1,18 @@
+post:
+    summary: add report
+    operationId: add report
+    description: <p>add  <b>report</b></p><p>Available for <b>all</b></p>
+
+    tags:
+        - Rate
+
+    requestBody:
+        $ref: "../../requests/rate/Report.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/rate/Report.yaml"
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

@@ -1,0 +1,45 @@
+type: object
+required:
+    - name
+    - email
+    - password
+
+properties:
+    id:
+        type: number
+        example: 2
+    name:
+        $ref: "../common/TextDataInput.yaml"
+    email:
+        type: string
+        example: mayas.salman@infostrategic.com
+    userGroups:
+        type: array
+        items:
+            type: number
+        example: [1, 2]
+    password:
+        type: string
+        example: "0000"
+    userName:
+        type: string
+        example: UserName
+    phoneNumber:
+        type: string
+        example: "+963932322322"
+
+    prefferedLanguage:
+        type: string
+        example: "ar"
+
+    prefferedMean:
+        type: string
+        example: "email,phone"
+
+    notificationByEmail:
+        type: boolean
+        example: true
+
+    notificationBySms:
+        type: boolean
+        example: true

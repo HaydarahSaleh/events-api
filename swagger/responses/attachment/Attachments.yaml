@@ -1,0 +1,5 @@
+description: Attachments
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/attachment/Attachments.yaml"

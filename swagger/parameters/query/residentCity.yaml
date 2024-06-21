@@ -1,0 +1,7 @@
+name: residentCity
+in: query
+description: residentCity
+required: false
+schema:
+    type: string
+    string: residentCity

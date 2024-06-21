@@ -1,0 +1,31 @@
+get:
+    summary: show userACL
+    operationId: showUserACLById
+    description: <p>  <b>userACL</b> by id avilable for admin </p>
+    tags:
+        - users
+    parameters:
+        - $ref: "../../parameters/path/id.yaml"
+        - $ref: "../../parameters/header/token.yaml"
+    responses:
+        "200":
+            description: OK
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            success:
+                                type: boolean
+                                example: true
+                            acls:
+                                type: array
+                                items:
+                                    type: string
+                                example: [admin, author, another]
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

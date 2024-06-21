@@ -1,0 +1,16 @@
+get:
+    summary: Roots
+    operationId: getAllRoots
+    description: <p> getAllRoots</p>
+
+    tags:
+        - menuItem
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/menu/MenuItems.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

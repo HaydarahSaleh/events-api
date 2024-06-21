@@ -1,0 +1,34 @@
+post:
+    summary: Delete
+    operationId: Delete serviceRequest
+    description: <p>Delete one <b>Servise</b></p>Availiable for <b>editor</b></p>
+    tags:
+        - ServiceRequest
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "201":
+            description: OK
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            success:
+                                type: boolean
+                                example: true
+                            id:
+                                type: number
+                                example: 1
+
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

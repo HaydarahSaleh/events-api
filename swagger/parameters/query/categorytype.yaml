@@ -1,0 +1,7 @@
+name: type
+in: query
+description: type of category to return.
+required: true
+schema:
+    type: string
+    enum: ["post", "image", "video", "file", "service"]

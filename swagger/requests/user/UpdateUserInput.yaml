@@ -1,0 +1,6 @@
+    content:
+      application/json:
+        schema:
+           $ref: "../../schemas/user/UpdateUserInput.yaml"
+        
+                 

@@ -1,0 +1,27 @@
+type: object
+properties:
+  title:
+    $ref: "../common/Title.yaml"
+  description:
+    $ref: "../common/Description.yaml"
+  publishMode:
+    type: number
+    example: 2
+  # configurationId:
+  #   type: number
+  #   example: 6  
+  files:  
+    type: array
+    items:
+      type: string
+    example: [1,2,8]         
+  startDate:
+    type: string
+    example: 2021-02-01T12:20:00.000Z
+  endDate:
+    type: string
+    example: 2021-02-01T15:20:00.000Z      
+
+
+
+   

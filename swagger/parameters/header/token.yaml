@@ -1,0 +1,6 @@
+name: token
+in: header
+required: true
+description: authentication token
+schema:
+  type: string

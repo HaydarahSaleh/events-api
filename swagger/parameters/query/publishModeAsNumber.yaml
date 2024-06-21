@@ -1,0 +1,8 @@
+name: publishMode
+in: query
+description: publishMode
+required: false
+schema:
+  type: number
+  default: 1
+  enum: [1, 2]

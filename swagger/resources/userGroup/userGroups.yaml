@@ -1,0 +1,41 @@
+get:
+  summary: List
+  operationId: listuserGroups
+  description: <p>List all  <b>UserGroups</b></p><p>Availablefor <b>admin</b></p>
+
+  tags:
+  - userGroup
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/query/limit.yaml"
+    - $ref: "../../parameters/query/offset.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/userGroup/UserGroups.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"
+post:
+  summary: Create
+  operationId: createUserGroup
+  description: <p>Creates a new <b>Usergroup</b>. <p>Available for <b>editor</b></p>
+
+  tags:
+  - userGroup
+
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+
+  requestBody:
+    $ref: "../../requests/userGroup/UserGroupInput.yaml"
+  responses:
+    '201':
+      $ref: "../../responses/userGroup/UserGroup.yaml"
+    '400':
+      $ref: "../../responses/userGroup/Recurcive.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+      $ref: "../../responses/common/Forbidden.yaml"   
+    default:
+      $ref : "../../responses/common/UnexpectedError.yaml"
+

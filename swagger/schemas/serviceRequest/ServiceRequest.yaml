@@ -1,0 +1,39 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 12
+    status:
+        type: string
+        example: new
+    serviceId:
+        type: number
+        example: 1
+    fileId:
+        type: number
+        example: 1
+
+    name:
+        type: string
+        example: name
+
+    email:
+        type: string
+        example: work@work.com
+
+    memberShipId:
+        type: string
+        example: "1"
+
+    emirate:
+        type: string
+        example: dubai
+    fax:
+        type: number
+        example: "112qw24"
+    phoneNumber:
+        type: string
+        example: "+963932322322"
+    position:
+        type: string
+        example: companyName

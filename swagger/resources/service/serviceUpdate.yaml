@@ -1,0 +1,30 @@
+post:
+    summary: Create
+    operationId: UpdateService
+    description: <p>Update  <b>Service</b> by its id. <p>Available for <b>admin</b></p>
+
+    tags:
+        - Service
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    requestBody:
+        $ref: "../../requests/service/ServiceInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/service/Service.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "404":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "405":
+            $ref: "../../responses/common/Forbidden.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

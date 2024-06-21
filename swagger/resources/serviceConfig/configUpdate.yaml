@@ -1,0 +1,22 @@
+post:
+    summary: UpdateServiceConfig
+    operationId: UpdateServiceConfig
+    description: <p>update<b>service config</b></p><p> all parameter are optional </b></p>
+    tags:
+        - serviceConfig
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+    requestBody:
+        $ref: "../../requests/serviceConfig/ConfigInput.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/serviceConfig/Config.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

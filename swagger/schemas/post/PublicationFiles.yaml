@@ -1,0 +1,16 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 55
+    uuid:
+        type: string
+        example: uuid_example
+    title:
+        $ref: "../common/Title.yaml"
+    viewed:
+        $ref: "../common/FullText.yaml"
+    downloaded:
+        $ref: "../common/FullText.yaml"
+    postTitle:
+        $ref: "../common/FullText.yaml"

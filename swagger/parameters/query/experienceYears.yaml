@@ -1,0 +1,7 @@
+name: experienceYears
+in: query
+description: experienceYears
+required: false
+schema:
+    type: number
+    string: experienceYears

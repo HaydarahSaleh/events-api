@@ -1,0 +1,7 @@
+name: activeSupplier
+in: query
+description: activeSupplier
+required: false
+schema:
+    type: string
+    enum: ["true", "false"]

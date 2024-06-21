@@ -1,0 +1,11 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: false
+    code:
+        type: number
+        example: 1
+    message:
+        type: string
+        example: "Acl name must be unique"

@@ -1,0 +1,5 @@
+description: statistics
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/statistics/ContactLinks.yaml"

@@ -1,0 +1,21 @@
+get:
+    summary: trustee
+    operationId: showtrusteeById
+    description: <p> show  <b>trustee</b>Available for <b>All</b></p>
+
+    tags:
+        - trustee
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/trustees/Trustee.yaml"
+        "400":
+            $ref: "../../responses/common/NotFound.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

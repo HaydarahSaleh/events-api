@@ -1,0 +1,19 @@
+get:
+  summary: Get groups of user
+  operationId: Get groups of user
+  description: <p> Get groups of user </p>
+  tags:
+    - users
+  parameters:
+    - $ref: "../../parameters/path/id.yaml"
+    - $ref: "../../parameters/header/token.yaml"
+
+  responses:
+    "200":
+      $ref: "../../responses/user/SimpleGroups.yaml"
+    "401":
+      $ref: "../../responses/common/Unauthorized.yaml"
+    "403":
+      $ref: "../../responses/common/Forbidden.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

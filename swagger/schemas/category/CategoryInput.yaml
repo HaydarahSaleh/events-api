@@ -1,0 +1,55 @@
+type: object
+properties:
+    title:
+        $ref: "../common/Title.yaml"
+    publishMode:
+        type: number
+        example: 2
+    startDate:
+        type: string
+        example: "2021-02-01T15:20:00.000Z"
+
+    endDate:
+        type: string
+        example: "2021-02-01T15:20:00.000Z"
+    startTime:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    endTime:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    cardImagesIds:
+        type: array
+        items:
+            type: nmber
+        example: [5, 6]
+    # filesSetId:
+    #     type: number
+    #     example: 2
+    parentId:
+        type: number
+        example: 100
+    type:
+        type: string
+        example: post
+    subType:
+        type: string
+        example: rooms
+    order:
+        type: number
+        example: 1
+    isFeatured:
+        type: boolean
+        example: false
+    extensions:
+        type: array
+        items:
+            type: string
+        example: [".jpg"]
+    maxSize:
+        type: number
+        example: 8000000
+
+    pagePicture:
+        type: number
+        example: 3

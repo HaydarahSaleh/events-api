@@ -1,0 +1,18 @@
+type: object
+required:
+properties:
+    id:
+      type: number
+      example: 2
+    name:
+      type: string
+      example: name of access list
+    parentId:
+       type: number
+       example: 2
+    acls:
+      type: array
+      items:
+        type: number
+      example: [1,2,3]  
+  

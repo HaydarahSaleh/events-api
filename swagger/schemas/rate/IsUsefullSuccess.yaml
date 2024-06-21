@@ -1,0 +1,21 @@
+object:
+    properties:
+        success:
+            type: boolean
+            example: true
+        id: 
+           type: number
+           example: 1
+        rateId:
+            type: number
+            example: 1
+        isUsefull:
+            type: boolean
+            example: true 
+        alias:
+            type: string
+            example: homePage
+        reason:
+            type: string
+            example: reason
+

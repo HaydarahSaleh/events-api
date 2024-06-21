@@ -1,0 +1,51 @@
+type: object
+required:
+    - name
+    - email
+    - password
+    
+properties:
+    name:
+        $ref: "../common/TextDataInput.yaml"
+    email:
+        type: string
+        example: mayas.salman@infostrategic.com
+    userGroups: 
+      type: array
+      items:
+       type: number
+      example: [1,2]
+    password:
+        type: string
+        example: "0000" 
+    userName:
+        type: string
+        example: UserName 
+    phoneNumber:
+        type: string
+        example: "+963932322322"
+    memberShipNumber:
+        type: number
+        example: 123123
+    tradeRegistrationNumber:
+        type: number
+        example: 222
+    memberSince:
+        type: date
+        example: 2021-02-01
+    dateOfBirth:
+        type: date
+        example: 2021-02-01
+    communicatinMean:
+        type: number
+        example: 1
+    gender:
+        type: number
+        example: 1
+    workType:
+        type: number
+        example: 1
+    
+    
+    
+    

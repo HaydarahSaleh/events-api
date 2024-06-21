@@ -1,0 +1,41 @@
+{
+    "port": 8444,
+    "adminBuildPath": "../admin-build",
+    "useHttps": false,
+    "siteBuildPath": "../site-build",
+    "siteUrl": "https://theicons.ae/",
+    "jwt": {
+        "secret": "Nz63JS77@SCnNZt6L6!$",
+        "expiresIn": 86400,
+        "issuer": "com.localhost.icons",
+        "refreashToeknExpiresIn": 1200,
+        "audience": "com.localhost.icons",
+        "otpCodeExpiresIn": 600
+    },
+    "emailConfirmationCodeLifetime": 86400,
+    "passwordResetingCodeLifetime": 300,
+    "enableRedis": true,
+    "logFile": {
+        "datePattern": "YYYY-DD-MM",
+        "filename": " ../../../../../logs/logs",
+        "userLoggerFileName": " ../../../../../logs/userActions"
+    },
+    "postgres": {
+        "host": "localhost",
+        "port": 5432,
+        "username": "localhost",
+        "password": "localhost",
+        "database": "localhost",
+        "synchronize": false,
+        "logging": false,
+        "entities": ["src/entity/**/*.ts"],
+        "migrations": ["src/entity/migration/*.ts"],
+        "cli": {
+            "entitiesDir": "src/entity/**/*.ts",
+            "migrationsDir": "src/entity/migration/*.ts"
+        }
+    },
+
+    "files_upload": "../uploads-new",
+    "environment": "staging"
+}

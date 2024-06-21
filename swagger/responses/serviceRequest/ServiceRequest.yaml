@@ -1,0 +1,5 @@
+description: ServiceRequest
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/serviceRequest/ServiceRequestSuccess.yaml"

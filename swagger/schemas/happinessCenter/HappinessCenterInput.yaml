@@ -1,0 +1,38 @@
+type: object
+required:
+    - title
+    - subject
+    - content
+properties:
+    title:
+        $ref: "../common/Title.yaml"
+    description:
+        $ref: "../common/Description.yaml"
+
+    location:
+        $ref: "../common/Description.yaml"
+    workingHours:
+        $ref: "../common/Description.yaml"
+    email:
+        type: string
+        example: "admin@gmail.com"
+    telePhone:
+        type: string
+        example: "+963963963963"
+    extraData:
+        type: string
+        example: "{extra:\"extra\",\ndata:\"data\"}"
+    latitude:
+        type: string
+        example: "33.33.33"
+    longitude:
+        type: string
+        example: "33.33.33"
+
+    publishMode:
+        type: number
+        example: 3
+
+    branchNum:
+        type: number
+        example: 3

@@ -1,0 +1,5 @@
+description: UserGroup
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/userGroup/UserGroup.yaml"

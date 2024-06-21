@@ -1,0 +1,22 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 2
+    name:
+        type: string
+        example: "MyName"
+    email:
+        type: string
+        example: "MyEmailIS@gmail.com"
+    descreption:
+        type: string
+        example: "descreption"
+                
+    uploadedFileId:
+        type: number 
+        example: 2    
+    createdAt:
+        type: string
+        example: 2021-03-10T07:10:51.132Z
+    

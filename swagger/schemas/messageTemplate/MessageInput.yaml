@@ -1,0 +1,15 @@
+type: object
+required:
+    - title
+    - subject
+    - content
+properties:
+    title:
+        type: string
+        example: title..
+    subject:
+        type: string
+        example: subject....
+    content:
+        type: string
+        example: content... 

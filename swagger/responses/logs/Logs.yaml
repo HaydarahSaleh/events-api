@@ -1,0 +1,5 @@
+description: Block
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/block/Block.yaml"

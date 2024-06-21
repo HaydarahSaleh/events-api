@@ -1,0 +1,4 @@
+name: title
+in: query
+description: title to search in
+required: false

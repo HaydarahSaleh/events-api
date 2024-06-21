@@ -1,0 +1,18 @@
+get:
+    summary: serviceRequests
+    operationId: serviceRequests
+    description: <p> get  <b>serviceRequests</b>Available for <b>admin</b></p>
+
+    tags:
+        - Service
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/serviceRequest/ServiceRequests.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

@@ -1,0 +1,15 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    users:
+      type: array
+      items:
+        $ref: "./User.yaml"   
+    limit:
+        type: number
+        example: 100
+    offset:
+        type: number
+        example: 0

@@ -1,0 +1,20 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    block:
+        type: number
+        example: 2
+    contentType:
+        type: string
+        example: sliders
+    page:
+        type: string
+        example: homePage
+
+    objects:
+        type: array
+        items:
+            type: object
+        example: {}

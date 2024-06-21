@@ -1,0 +1,16 @@
+get:
+    summary: List
+    operationId: allBlocks
+    description: <p>List all  <b>Blocks</b></p><p>Availablefor <b>all</b></p>
+
+    tags:
+        - block
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/block/Blocks.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

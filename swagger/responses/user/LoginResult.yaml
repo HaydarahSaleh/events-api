@@ -1,0 +1,5 @@
+description: Login result
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/user/Login.yaml"

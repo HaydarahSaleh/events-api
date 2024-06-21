@@ -1,0 +1,11 @@
+type: object
+properties:
+    url:
+        type: string
+        example: www.homePage.com
+    isUsefull:
+        type: boolean
+        example: true
+    reason:
+        type: string
+        example: reason

@@ -1,0 +1,12 @@
+type: object
+properties:
+  success:
+      type: boolean
+      example: false
+  code:
+    type: integer
+    format: int32
+    example: 0
+  message:
+    type: string
+    example: "Internal server error: UNHADLED_ERROR_SHORTCUT"

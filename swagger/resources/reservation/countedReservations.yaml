@@ -1,0 +1,18 @@
+get:
+    summary: countedReservations
+    operationId: countedReservations
+    description: <p> get  <b>room countedReservations</b>Available for <b>all</b></p>
+
+    tags:
+        - Resservation
+    parameters:
+        - $ref: "../../parameters/query/id.yaml"
+        - $ref: "../../parameters/query/optionalStartDate.yaml"
+        - $ref: "../../parameters/query/optionalEndDate.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/reservation/CountedReservations.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

@@ -1,0 +1,20 @@
+get:
+    summary: channel
+    operationId: showChannelById
+    description: <p> show  <b>channel</b>Available for <b>All</b></p>
+
+    tags:
+        - Channel
+    parameters:
+        - $ref: "../../parameters/header/language.yaml"
+
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/channel/Channel.yaml"
+        "400":
+            $ref: "../../responses/common/NotFound.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

@@ -1,0 +1,23 @@
+
+post:
+    summary: Create
+    operationId: createRepalyFromSUer
+    description: <p>Creates a new <b>Replay</b>. <p>Available for <b>Admin</b></p>
+
+    tags:
+        - Replay
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+    requestBody:
+        $ref: "../../requests/replay/Replay.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/replay/Replay.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

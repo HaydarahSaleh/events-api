@@ -1,0 +1,139 @@
+type: object
+properties:
+    title:
+        $ref: "../common/Title.yaml"
+    fullText:
+        $ref: "../common/FullText.yaml"
+    caption:
+        $ref: "../common/FullText.yaml"
+    decision:
+        $ref: "../common/FullText.yaml"
+    objective:
+        $ref: "../common/FullText.yaml"
+    consultation:
+        $ref: "../common/FullText.yaml"
+    description:
+        $ref: "../common/Description.yaml"
+    link:
+        $ref: "../common/Description.yaml"
+    linkType:
+        $ref: "../common/Description.yaml"
+    locationName:
+        $ref: "../common/Description.yaml"
+    type:
+        type: string
+        example: articles
+    alias:
+        type: string
+        example: travel-to-moon
+    newsLink:
+        type: string
+        example: hhtps://adfp.infostragic.com/media/news/alias
+    photoGalleryLink:
+        type: string
+        example: hhtps://adfp.infostragic.com/media/news/photoGalleryLink
+    videoGalleryLink:
+        type: string
+        example: hhtps://adfp.infostragic.com/media/news/videoGalleryLink
+    surveyLink:
+        type: string
+        example: hhtps://adfp.infostragic.com/media/news/surveyLink
+    categoryId:
+        type: number
+        example: 8
+    writerId:
+        type: number
+        example: 3
+    acl:
+        type: number
+        example: 8
+    tags:
+        $ref: "../common/Tags.yaml"
+    # filesSetId:
+    #   type: number
+    #   example: 2
+    files:
+        $ref: "../file/Files.yaml"
+    pagePicture:
+        $ref: "../file/File.yaml"
+
+    links:
+        type: array
+        items:
+            type: nmber
+        example: [2, 5, 1]
+    details:
+        type: array
+        items:
+            type: object
+            properties:
+                id:
+                    type: number
+                    example: 2
+                title:
+                    $ref: "../common/Title.yaml"
+                description:
+                    $ref: "../common/Description.yaml"
+    facilites:
+        type: array
+        items:
+            type: object
+            properties:
+                id:
+                    type: number
+                    example: 2
+                title:
+                    $ref: "../common/Title.yaml"
+                description:
+                    $ref: "../common/Description.yaml"
+                cost:
+                    type: number
+                    example: 6
+    order:
+        type: number
+        example: 0
+    isFeatured:
+        type: boolean
+        example: false
+    askForRating:
+        type: boolean
+        example: false
+    askIfIsUseful:
+        type: boolean
+        example: false
+    allowComment:
+        type: boolean
+        example: false
+    publishMode:
+        type: number
+        example: 3
+    liveBroadCastLink:
+        type: string
+        example: www.link.com
+    startDate:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    endDate:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    startTime:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    endTime:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    activeFrom:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    activeTo:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    sector:
+        type: string
+        example: sector
+    privateDate:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    extraData:
+        type: string
+        example: "{extra:\"extra\",\ndata:\"data\"}"

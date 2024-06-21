@@ -1,0 +1,14 @@
+get:
+    summary: statistics
+    operationId: statisticsForContent
+    description: <p> Info of <b>content</b></p>
+    tags:
+        - statistics
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/statistics/Statistics.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

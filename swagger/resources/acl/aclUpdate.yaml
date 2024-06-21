@@ -1,0 +1,26 @@
+post:
+    summary: Update
+    operationId: UpdateAcl
+    description: <p>Updates an existing <b>Acl</b>. <p>Available for <b>editor</b></p>
+
+    tags:
+        - acl
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+    requestBody:
+        $ref: "../../requests/acl/AclInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/acl/Acl.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "405":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

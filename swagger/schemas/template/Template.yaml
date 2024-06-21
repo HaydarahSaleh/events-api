@@ -1,0 +1,13 @@
+type: object
+properties:
+  id:
+    type: string
+    example: 1
+  title:
+    $ref: "../common/Title.yaml"
+  publishMode:
+    type: number
+    example: 3
+  # positions:
+  #   type:  
+  

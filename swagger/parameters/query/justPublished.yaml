@@ -1,0 +1,7 @@
+name: justPublished
+in: query
+description: retrive just published objects? true or false.
+required: false
+schema:
+  type: boolean
+  example: true

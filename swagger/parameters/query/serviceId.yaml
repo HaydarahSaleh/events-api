@@ -1,0 +1,7 @@
+name: serviceId
+in: query
+description: serviceId
+required: true
+schema:
+    type: number
+    example: 1

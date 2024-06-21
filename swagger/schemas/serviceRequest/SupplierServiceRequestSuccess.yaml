@@ -1,0 +1,154 @@
+type: object
+properties:
+    success:
+        type: boolean
+        exmple: true
+    Id:
+        type: number
+        example: 12
+    status:
+        type: string
+        example: new
+    serviceId:
+        type: number
+        example: 1
+    serviceTitle:
+        $ref: "../common/Title.yaml"
+    name:
+        type: string
+        example: name
+    email:
+        type: string
+        example: work@work.com
+    message:
+        type: string
+        example: null
+    subject:
+        type: string
+        example: null
+    fax:
+        type: number
+        example: 123321123
+    phoneNumber:
+        type: string
+        example: "+963932322322"
+    companyName:
+        type: string
+        example: null
+    responseTypes:
+        type: array
+        items:
+            type: string
+        example: []
+    dataNatures:
+        type: array
+        items:
+            type: string
+        example: []
+    tradeName:
+        type: string
+        example: tradeName
+    pledgeName:
+        type: string
+        example: pledgeName
+    directorName:
+        type: string
+        example: directorName
+    sponsorName:
+        type: string
+        example: sponsorName
+    website:
+        type: string
+        example: website
+    city:
+        type: string
+        example: city
+    address:
+        type: string
+        example: address
+    emirate:
+        type: string
+        example: emirate
+    country:
+        type: string
+        example: country
+    phone:
+        type: stringpledge
+        example: "+963932322322"
+    repPhone:
+        type: string
+        example: "+963932322322"
+    repMobile:
+        type: string
+        example: "+963932322322"
+    repEmail:
+        type: string
+        example: repEmail@gmail.com
+    licenceNo:
+        type: number
+        example: 123321123
+    issueDate:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    chamberNo:
+        type: number
+        example: 123321123
+    taxRecord:
+        type: boolean
+        example: false
+    licenceInfo:
+        type: string
+        example: company
+    taxRegisteredNo:
+        type: number
+        example: 123321123
+    approvedActivity:
+        type: array
+        items:
+            type: string
+        example: ["work", "activity"]
+    accountName:
+        type: string
+        example: accountName
+    accountNumber:
+        type: number
+        example: 1212
+    iban:
+        type: number
+        example: 1212
+    bankName:
+        type: string
+        example: bankName
+    bankBranchName:
+        type: string
+        example: bankBranchName
+    date:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    expireDate:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    signtureId:
+        type: number
+        example: 4
+    stampId:
+        type: number
+        example: 4
+    tradeLicenceId:
+        type: number
+        example: 4
+    chamberMembershipCertificateId:
+        type: number
+        example: 4
+    certificateForRegisteriationForVTAId:
+        type: number
+        example: 4
+    ownerPassportId:
+        type: number
+        example: 4
+    representativePassportId:
+        type: number
+        example: 4
+    companyProfileId:
+        type: number
+        example: 4

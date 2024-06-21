@@ -1,0 +1,46 @@
+type: object
+properties:
+    title:
+        $ref: "../common/Title.yaml"
+    uuid:
+        type: string
+        example: 7cefb478-39c5-41cc-a1a6-6c81823d828f
+    publishMode:
+        type: number
+        example: 2
+    categoryId:
+        type: number
+        example: 6
+    source:
+        type: string
+        example: client
+    link:
+        type: string
+        example: www.rak.com/fifa/cups
+    extension:
+        type: string
+        example: jpg
+    size:
+        type: number
+        example: 253265
+    mimitype:
+        type: string
+        example: image/png
+    description:
+        $ref: "../common/Description.yaml"
+    alt:
+        $ref: "../common/Alt.yaml"
+    startDate:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    endDate:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    acl:
+        type: number
+        example: 1
+    pagesUrls:
+        type: array
+        items:
+            type: string
+            example: "/services/booking/room/big_hall"

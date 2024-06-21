@@ -1,0 +1,18 @@
+get:
+    summary: SearchList
+    operationId: searchInPosts
+    description: <p>search List all  <b>Posts</b></p><p>Availablefor <b>all</b></p>
+
+    tags:
+        - post
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/subSort.yaml"
+        - $ref: "../../parameters/query/year.yaml"
+        - $ref: "../../parameters/query/phrase.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/post/Posts.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

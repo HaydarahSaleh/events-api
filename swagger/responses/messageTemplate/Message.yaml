@@ -1,0 +1,5 @@
+description: Message
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/messageTemplate/MessageSuccess.yaml"

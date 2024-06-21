@@ -1,0 +1,5 @@
+description: Pay
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/serviceRequest/PaySuccess.yaml"

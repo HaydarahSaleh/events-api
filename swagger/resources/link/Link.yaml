@@ -1,0 +1,17 @@
+get:
+    summary: Detail
+    operationId: ShowLinkById
+    description: <p> Info for a specific <b> Link </b>Available for <b>admin</b></p>
+
+    tags:
+        - link
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/link/Link.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

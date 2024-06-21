@@ -1,0 +1,5 @@
+description: Positions
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/position/Positions.yaml"

@@ -1,0 +1,21 @@
+get:
+  summary: careerFilter
+  operationId: careerFilter
+  description: <p> careerFilter </p>
+
+  tags:
+    - Filters
+  parameters:
+    - $ref: "../../parameters/header/language.yaml"
+    - $ref: "../../parameters/query/title.yaml"
+    - $ref: "../../parameters/query/department.yaml"
+    - $ref: "../../parameters/query/level.yaml"
+
+    - $ref: "../../parameters/query/limit.yaml"
+    - $ref: "../../parameters/query/offset.yaml"
+
+  responses:
+    "200":
+      $ref: "../../responses/filter/CareerFilter.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

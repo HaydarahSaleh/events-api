@@ -1,0 +1,10 @@
+properties:
+    success:
+        type: boolean
+        example: false
+    code:
+        type: number
+        example: 9
+    message:
+        type: string
+        example: No version information

@@ -1,0 +1,48 @@
+type: object
+properties:
+    title:
+        $ref: "../common/Title.yaml"
+    description:
+        $ref: "../common/Description.yaml"
+    tags:
+        $ref: "../common/Tags.yaml"
+    acl:
+        type: number
+        example: 1
+    alias:
+        type: string
+        example: travel-to-moon
+    publishMode:
+        type: number
+        example: 1
+    startDate:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    endDate:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    startTime:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    endTime:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    accessAsPrivate:
+        type: Boolean
+        example: true
+    type:
+        type: string
+        example: survey
+    files:
+        type: array
+        items:
+            type: number
+        example: [5, 6]
+
+    pagePicture:
+        type: number
+        example: 3
+
+    questions:
+        type: string
+        example: "{\n \"pages\": [\n  {\n   \"name\": \"page1\",\n   \"elements\": [\n    {\n     \"type\": \"checkbox\",\n     \"name\": \"question1\",\n     \"title\": \"ss\",\n     \"choices\": [\n      {\n       \"value\": \"item1\",\n       \"text\": \"ss\"\n      },\n      \"item2\",\n      \"item3\"\n     ]\n    }\n   ]\n  }\n ]\n}"

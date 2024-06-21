@@ -1,0 +1,21 @@
+get:
+  summary: FeedBack
+  operationId: FeedBack
+  description: <p> get FeedBack for this  <b>user</b> avilable for <b>admin</b> </p>
+  tags:
+    - users
+  parameters:
+    - $ref: "../../parameters/path/id.yaml"
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/header/language.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/user/UserFeedBack.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+      $ref: "../../responses/common/Forbidden.yaml"
+    '404':
+      $ref: "../../responses/common/NotFound.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

@@ -1,0 +1,21 @@
+get:
+    summary: List
+    operationId: list of ContactUsObjects by type
+    description: <p>Gets a list of  <b>ContactUsObjects</b> by its type</b></p>Availiable for <b>editor</b></p>
+
+    tags:
+        - ContactUsObject
+    parameters:
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/type.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/contactUsObject/ContactUsObjects.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

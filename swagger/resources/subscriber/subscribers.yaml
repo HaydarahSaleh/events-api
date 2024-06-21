@@ -1,0 +1,41 @@
+get:
+    summary: List
+    operationId: listSubscriber
+    description: <p>List all  <b>Suscribers</b></p><p>Availablefor <b>admin</b></p>
+
+    tags:
+        - subscriber
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/subscriber/Subscribers.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+post:
+    summary: Create
+    operationId: createSubscriber
+    description: <p>Creates a new <b>Subscriber</b>
+
+    tags:
+        - subscriber
+
+    requestBody:
+        $ref: "../../requests/subscriber/SubscriberInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/subscriber/Subscriber.yaml"
+        "x-201-1":
+            $ref: "../../responses/user/UserExists.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

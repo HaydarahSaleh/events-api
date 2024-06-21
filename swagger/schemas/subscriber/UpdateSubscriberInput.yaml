@@ -1,0 +1,12 @@
+type: object
+properties:
+    email:
+        type: string
+        example: mayas.salman
+    subjects:
+     type: array
+     items:
+       type: nmber
+     example: [2,5,1]
+    
+   

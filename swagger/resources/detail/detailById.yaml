@@ -1,0 +1,19 @@
+get:
+    summary: Detail
+    operationId: DetailById
+    description: <p> get  <b>Detail</b>Available for <b>all</b></p>
+
+    tags:
+        - Detail
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/detail/Detail.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

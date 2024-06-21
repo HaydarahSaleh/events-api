@@ -1,0 +1,5 @@
+type: object
+
+properties:
+    groups:
+        $ref: "./SimpleGroup.yaml"

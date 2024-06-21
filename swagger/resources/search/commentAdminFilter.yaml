@@ -1,0 +1,26 @@
+get:
+    summary: CommentAdminFilter
+    operationId: CommentAdminFilter
+    description: <p> CommentAdminFilter in <b>site</b></p>
+
+    tags:
+        - adminFilter
+    parameters:
+        - name: searchWord
+          in: query
+          description: phrase to search for
+          required: false
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/query/createdAt.yaml"
+        - $ref: "../../parameters/query/email.yaml"
+        - $ref: "../../parameters/query/data.yaml"
+       
+
+        - $ref: "../../parameters/query/offset.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/search/SearchResult.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

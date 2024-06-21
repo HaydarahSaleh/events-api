@@ -1,0 +1,56 @@
+type: object
+required:
+    - title
+    - summary
+    - startDate
+    - photoId
+
+properties:
+    title:
+        $ref: "../common/Title.yaml"
+    summary:
+        $ref: "../common/Description.yaml"
+    conditions:
+        $ref: "../common/Description.yaml"
+    skills:
+        $ref: "../common/Description.yaml"
+    qualification:
+        $ref: "../common/Description.yaml"
+    tasksAndResponsibilities:
+        $ref: "../common/Description.yaml"
+        
+    startDate:
+        type: string
+        example: "2021-02-01 07:20:00"
+    endDate:
+        type: string
+        example: "2021-02-01 07:20:00"
+    startTime:
+        type: string
+        example: 2021-08-20T04:00:00.000Z
+    endTime:
+        type: string
+        example: 2021-08-20T04:00:00.000Z
+    alias:
+        type: string
+        example: alias
+    level:
+        type: string
+        example: leader
+    department:
+        type: string
+        example: directorGeneralOffice
+    tags:
+        $ref: "../common/Tags.yaml"
+    acl:
+        type: number
+        example: 1
+    publishMode:
+        type: number
+        example: 1
+    files:
+        $ref: "../file/Files.yaml"
+
+    pagePicture:
+        type: number
+        example: 3

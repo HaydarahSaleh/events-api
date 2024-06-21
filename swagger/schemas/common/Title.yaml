@@ -1,0 +1,11 @@
+type: object
+properties:
+    ar:
+        type: string
+        example: "العنوان"
+    en:
+        type: string
+        example: "title goes here"
+    fr:
+        type: string
+        example: "title goes here"

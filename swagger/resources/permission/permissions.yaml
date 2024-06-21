@@ -1,0 +1,15 @@
+get:
+    summary: List
+    operationId: listOfPermissions
+    description: <p>List all  <b>Permissions</b></p><p>Availablefor <b>admin</b></p>
+
+    tags:
+        - userGroup
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/permission/Permissions.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

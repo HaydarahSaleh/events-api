@@ -1,0 +1,5 @@
+description: Encyclopedia
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/filter/encyclopediaFilter.yaml"

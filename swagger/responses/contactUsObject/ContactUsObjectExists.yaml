@@ -1,0 +1,5 @@
+description: ContactUsObjectExists
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/contactUsObject/ContactUsObjectExists.yaml"

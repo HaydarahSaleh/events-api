@@ -1,0 +1,11 @@
+type: object
+properties:
+    url:
+        type: string
+        example: www.homePage.com
+    rate:
+        type: number
+        example: 2
+    reason:
+        type: string
+        example: reason

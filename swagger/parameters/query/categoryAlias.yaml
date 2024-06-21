@@ -1,0 +1,7 @@
+name: categoryAlias
+in: query
+description: categoryAlias
+required: false
+schema:
+    type: string
+    format: categoryAlias

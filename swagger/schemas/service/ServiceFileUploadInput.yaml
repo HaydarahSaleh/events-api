@@ -1,0 +1,8 @@
+type: object
+properties:
+    file:
+        type: string
+        format: binary
+    url:
+        type: string
+        example: "https://www.rakchamber.ae/gateway_test/scripts/controllers/upload_req_attach.php?membership_code=6347"

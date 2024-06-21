@@ -1,0 +1,23 @@
+object:
+    properties:
+        success:
+            type: boolean
+            example: true
+        id:
+            type: number
+            example: 1
+        overallRate:
+            type: number
+            example: 1
+        rateId:
+            type: number
+            example: 1
+        rating:
+            type: number
+            example: 2
+        alias:
+            type: string
+            example: homePage
+        reason:
+            type: string
+            example: reason

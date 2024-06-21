@@ -1,0 +1,23 @@
+type: object
+required:
+    - title
+    - summary
+    - startDate
+    - photoId
+
+properties:
+    postId:
+        type: number
+        example: 1
+    data:
+        type: string
+        example: the actual comment
+    postLanguage:
+        type: string
+        example: ar
+    email:
+        type: string
+        example: myEmailIs@gmail.com
+    name:
+        type: string
+        example: name

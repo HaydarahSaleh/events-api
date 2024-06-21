@@ -1,0 +1,5 @@
+description: Rate
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/rate/Rate.yaml"

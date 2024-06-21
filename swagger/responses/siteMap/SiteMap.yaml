@@ -1,0 +1,5 @@
+description: SiteMap
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/siteMap/SiteMap.yaml"

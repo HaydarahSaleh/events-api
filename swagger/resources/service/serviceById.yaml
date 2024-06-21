@@ -1,0 +1,19 @@
+get:
+    summary: service
+    operationId: serviceById
+    description: <p> get  <b>service</b>Available for <b>all</b></p>
+
+    tags:
+        - Service
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/service/Service.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

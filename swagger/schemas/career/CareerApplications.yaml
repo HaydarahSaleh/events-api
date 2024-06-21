@@ -1,0 +1,9 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    application:
+      type: array
+      items:
+        $ref: "../application/Application.yaml"

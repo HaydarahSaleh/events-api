@@ -1,0 +1,5 @@
+description: Configuration
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/configuration/ConfigurationSuccess.yaml"

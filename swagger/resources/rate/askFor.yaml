@@ -1,0 +1,15 @@
+get:
+    summary: askFor
+    operationId: askFor
+    description: <p>ask if cureent user can rat, isUseFUll and return totla rate and voters count</p>
+
+    tags:
+        - Rate
+    parameters:
+        - $ref: "../../parameters/query/url.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/rate/AskFor.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

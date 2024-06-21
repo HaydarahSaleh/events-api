@@ -1,0 +1,5 @@
+description: CommentExists
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/messageTemplate/MessageExists.yaml"

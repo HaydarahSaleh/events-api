@@ -1,0 +1,9 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    acls:
+        type: array
+        items:
+            $ref: "./Acl.yaml"

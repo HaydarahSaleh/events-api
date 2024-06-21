@@ -1,0 +1,5 @@
+description: Surveys
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/survey/Surveys.yaml"

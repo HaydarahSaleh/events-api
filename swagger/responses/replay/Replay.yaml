@@ -1,0 +1,5 @@
+description: Repaly
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/replay/ReplayWithSuccess.yaml"

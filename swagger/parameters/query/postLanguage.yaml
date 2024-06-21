@@ -1,0 +1,8 @@
+name: postLanguage
+in: query
+description: postLanguage
+required: false
+schema:
+    type: string
+    default: all
+    enum: [ar,en,all]

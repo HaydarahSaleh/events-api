@@ -1,0 +1,11 @@
+type: object
+properties:
+    success:
+        $ref: "../common/Title.yaml"
+    years:
+        items:
+            type: number
+        example: [2021]
+
+    returnedTypeName:
+        $ref: "../common/FullText.yaml"

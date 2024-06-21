@@ -1,0 +1,7 @@
+name: categoryAliases
+in: query
+description: categoryAliases
+required: required
+schema:
+    type: string
+    example: "AnnualReport,AnnualReport"

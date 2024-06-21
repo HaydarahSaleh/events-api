@@ -1,0 +1,17 @@
+type: object
+properties:
+    Id:
+        type: number
+        example: 12
+    type:
+        type: string
+        example: subject
+    data:
+        type: string
+        example: work
+    reatedBy:
+        type: string
+        example: Mayas.salman
+    createdAt:
+        type: string
+        example: 2021-02-01T15:20:00.000Z

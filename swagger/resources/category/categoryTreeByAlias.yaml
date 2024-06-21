@@ -1,0 +1,17 @@
+get:
+    summary: categortTreeByID
+    operationId: ShowCategoryreeById
+    description: <p> Info for a specific <b>Category</b>Available for <b>guest</b></p>
+
+    tags:
+        - category
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/alias.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/category/Category.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

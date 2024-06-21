@@ -1,0 +1,5 @@
+description: Careers
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/career/Careers.yaml"

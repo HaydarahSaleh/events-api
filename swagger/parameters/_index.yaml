@@ -1,0 +1,19 @@
+#header  
+language:
+  $ref: './header/language.yaml'  
+optionalToken:
+  $ref: './header/optionalToken.yaml' 
+token:
+  $ref: './header/token.yaml' 
+
+# path
+id:
+  $ref: './path/id.yaml'
+
+# query
+limit:
+  $ref: './query/limit.yaml'
+offset:
+  $ref: './query/offset.yaml'
+postType:
+  $ref: './query/postType.yaml'

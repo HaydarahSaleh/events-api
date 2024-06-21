@@ -1,0 +1,53 @@
+type: object
+properties:
+    success:
+        type: boolean
+        exmple: true
+    Id:
+        type: number
+        example: 12
+    status:
+        type: string
+        example: new
+    serviceId:
+        type: number
+        example: 1
+    serviceTitle:
+        $ref: "../common/Title.yaml"
+    name:
+        type: string
+        example: name
+    ideaTitle:
+        type: string
+        example: ideaTitle
+    email:
+        type: string
+        example: work@work.com
+    message:
+        type: string
+        example: hello from Mayas.salman
+    subject:
+        type: string
+        example: study
+    fax:
+        type: number
+        example: 123321123
+    phoneNumber:
+        type: string
+        example: "+963932322322"
+    companyName:
+        type: string
+        example: companyName
+    responseTypes:
+        type: array
+        items:
+            type: string
+        example: ["email"]
+    dataNatures:
+        type: array
+        items:
+            type: string
+        example: ["statistical report"]
+    memberShipId:
+        type: string
+        example: "1"

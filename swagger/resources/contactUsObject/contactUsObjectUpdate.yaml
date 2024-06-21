@@ -1,0 +1,29 @@
+post:
+  summary: Update
+  operationId: update Contact Us object
+  description: <p>Update one <b>Contact Us object</b></p>Availiable for <b>editor</b></p>
+  tags:
+  - ContactUsObject
+
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/header/language.yaml"
+    - $ref: "../../parameters/path/id.yaml"
+    
+
+  requestBody:
+    $ref: "../../requests/contactUsObject/ContactUsObjectInput.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/contactUsObject/ContactUsObject.yaml"
+    'x-201-1':
+      $ref: "../../responses/contactUsObject/ContactUsObjectExists.yaml" 
+          
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+      $ref: "../../responses/common/Forbidden.yaml"   
+    '404':
+      $ref: "../../responses/common/NotFound.yaml"
+    default:
+      $ref : "../../responses/common/UnexpectedError.yaml"

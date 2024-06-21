@@ -1,0 +1,27 @@
+type: array
+items:
+    type: object
+    properties:  
+      id:
+        type: number
+        example: 20
+      childs:
+        type: array
+        items:  
+           schema:
+            $ref:"."
+# example: [
+#             { "id": 10 },
+#             {
+#                 "id": 12,
+#                 "childs": [
+#                         { "id": 22 },
+#                         { "id": 14, 
+#                           "childs": [
+#                                     { "id": 8 },
+#                                     { "id": 32 }
+#                                   ]
+#                         }
+#                 ],
+#             },
+#         ]

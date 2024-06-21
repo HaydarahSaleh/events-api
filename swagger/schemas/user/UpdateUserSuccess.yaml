@@ -1,0 +1,30 @@
+properties:
+    success:
+        type: boolean
+        example: true
+    id:
+        type: string
+        example: 1
+    name:
+        type: string
+        example: mayas.salman
+    userName:
+        type: string
+        example: userName
+    email:
+        type: string
+        example: mayas.salman@infostrategic.com
+    userGroups: 
+      type: array
+      items:
+       $ref: "./../userGroup/UserGroup.yaml"
+   
+    isActive:
+        type: boolean
+        example: true
+    language:
+        type: string
+        example: ar
+    phoneNumber:
+        type: number
+        example: +963963963963

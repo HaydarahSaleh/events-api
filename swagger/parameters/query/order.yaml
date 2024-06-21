@@ -1,0 +1,7 @@
+name: order
+in: query
+description: order
+required: false
+schema:
+    type: string
+    enum: ["ASC", "DESC"]

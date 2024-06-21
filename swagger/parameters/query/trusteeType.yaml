@@ -1,0 +1,7 @@
+name: trusteeType
+in: query
+description: trusteeType
+required: required
+schema:
+    type: string
+    enum: ["offices", "members"]

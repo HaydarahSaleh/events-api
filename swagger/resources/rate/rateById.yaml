@@ -1,0 +1,16 @@
+get:
+    summary: rateByID
+    operationId: RateByID
+    description: <p>get  <b>Rate</b></p><p>Available for <b>admin</b></p>
+
+    tags:
+        - Rate
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/rate/Rates.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

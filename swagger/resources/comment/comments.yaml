@@ -1,0 +1,44 @@
+get:
+    summary: List
+    operationId: allComments
+    description: <p>List all  <b>Comments</b></p><p>Availablefor <b>editor</b></p>
+
+    tags:
+        - comment
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+        - $ref: "../../parameters/query/commentType.yaml"
+        
+    responses:
+        "200":
+            $ref: "../../responses/comment/Comments.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: Create
+    operationId: createComment
+    description: <p>Creates a new <b>Comment</b>. <p>Available for <b>All</b></p>
+
+    tags:
+        - comment
+
+    requestBody:
+        $ref: "../../requests/comment/CommentInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/comment/Comment.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/comment/CommentExists.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

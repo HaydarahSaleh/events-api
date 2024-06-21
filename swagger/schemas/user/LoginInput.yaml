@@ -1,0 +1,8 @@
+type: object
+properties:
+    email:
+        type: string
+        example: admin@gmail.com
+    otp:
+        type: string
+        example: "0000"

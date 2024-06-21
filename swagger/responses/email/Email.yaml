@@ -1,0 +1,5 @@
+description: Email
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/email/Email.yaml"

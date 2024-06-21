@@ -1,0 +1,28 @@
+post:
+    summary: Create
+    operationId: creat supplierServiceRequest
+    description: <p>Creates one <b>supplierServiceRequest</b></p>Availiable for <b>All</b></p>
+    tags:
+        - ServiceRequest
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    requestBody:
+        $ref: "../../requests/serviceRequest/SupplierServiceRequest.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/serviceRequest/SupplierServiceRequest.yaml"
+        "x-201-1":
+            $ref: "../../responses/serviceRequest/ServiceRequest.yaml"
+
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

@@ -1,0 +1,5 @@
+description: VideoGallery
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/filter/VideoGalleryFilter.yaml"

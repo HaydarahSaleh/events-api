@@ -1,0 +1,9 @@
+type: object
+required:
+properties:
+    name:
+        type: string
+        example: name of user group
+    parentId:
+        type: number
+        example: 2

@@ -1,0 +1,5 @@
+description: Trustees
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/trustees/Trustee.yaml"

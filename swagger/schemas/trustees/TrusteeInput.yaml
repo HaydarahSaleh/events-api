@@ -1,0 +1,49 @@
+type: object
+required:
+    - title
+    - speach
+    - position
+
+properties:
+    title:
+        $ref: "../common/Title.yaml"
+    speach:
+        $ref: "../common/Description.yaml"
+    position:
+        $ref: "../common/Description.yaml"
+    imageId:
+        type: number
+        example: 5
+    type:
+        type: string
+        example: members
+    location:
+        type: string
+        example: location..
+    telephone:
+        type: string
+        example: "+963932322322"
+    mobile:
+        type: string
+        example: "+963932322322"
+    email:
+        type: string
+        example: admin@gmail.com
+    url:
+        type: string
+        example: hhtps://office.com/office
+    publishMode:
+        type: number
+        example: 1
+    startDate:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    endDate:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    startTime:
+        type: string
+        example: 2021-08-20T04:00:00.000Z
+    endTime:
+        type: string
+        example: 2021-08-20T04:00:00.000Z

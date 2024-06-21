@@ -1,0 +1,27 @@
+get:
+    summary: adminFilter
+    operationId: adminFilter
+    description: <p> adminFilter in <b>site</b></p>
+
+    tags:
+        - adminFilter
+    parameters:
+        - name: searchWord
+          in: query
+          description: phrase to search for
+          required: false
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/query/categoryTitle.yaml"
+        - $ref: "../../parameters/query/optionalStartDate.yaml"
+        - $ref: "../../parameters/query/optionalEndDate.yaml"
+        - $ref: "../../parameters/query/postType.yaml"
+        - $ref: "../../parameters/query/publishMode.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/search/SearchResult.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

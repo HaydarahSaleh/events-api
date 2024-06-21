@@ -1,0 +1,20 @@
+type: object
+properties:
+  success:
+    type: boolean
+    example: true
+  links:
+    type: array
+    items:
+      type: object
+      properties:
+        key:
+          type: string
+          example: EMAIL
+        value:
+          type: string
+          example: EMAIL
+
+  returnedTypeName:
+    type: string
+    example: statistics

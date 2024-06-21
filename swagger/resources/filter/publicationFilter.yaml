@@ -1,0 +1,21 @@
+get:
+  summary: publicationFilter
+  operationId: publicationFilter
+  description: <p> publicationFilter </p>
+
+  tags:
+    - Filters
+  parameters:
+    - $ref: "../../parameters/header/language.yaml"
+    - $ref: "../../parameters/query/title.yaml"
+    - $ref: "../../parameters/query/year.yaml"
+    - $ref: "../../parameters/query/categoryId.yaml"
+
+    - $ref: "../../parameters/query/limit.yaml"
+    - $ref: "../../parameters/query/offset.yaml"
+
+  responses:
+    "200":
+      $ref: "../../responses/filter/EventsFilter.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

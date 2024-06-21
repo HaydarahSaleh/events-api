@@ -1,0 +1,5 @@
+description: ExpiriedConfirmationCode
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/user/ConfirmCodeExpired.yaml"

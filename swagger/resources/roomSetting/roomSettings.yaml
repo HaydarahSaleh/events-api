@@ -1,0 +1,46 @@
+get:
+    summary: List
+    operationId: roomSettings
+    description: <p>List all  <b>RoomSettings</b></p><p>Availablefor <b>ALL</b></p>
+
+    tags:
+        - RoomSetting
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/roomSetting/RoomSettings.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: Create
+    operationId: RoomSetting
+    description: <p>Creates a new <b>RoomSetting</b>. <p>Available for <b>admin</b></p>
+
+    tags:
+        - RoomSetting
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+
+    requestBody:
+        $ref: "../../requests/roomSetting/RoomSettingInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/roomSetting/RoomSetting.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "404":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "405":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

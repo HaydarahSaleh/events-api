@@ -1,0 +1,6 @@
+name: alias
+in: path
+required: true
+description: The alias
+schema:
+    type: string

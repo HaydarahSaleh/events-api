@@ -1,0 +1,5 @@
+name: categoryTitle
+in: query
+description: title of category to return.
+required: false
+

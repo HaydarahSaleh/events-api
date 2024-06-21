@@ -1,0 +1,5 @@
+description: search
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/search/SearchSections.yaml"

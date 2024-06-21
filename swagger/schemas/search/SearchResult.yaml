@@ -1,0 +1,19 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 100
+    type:
+        type: string
+        example: post
+    title:
+        type: number
+        example: title
+    description:
+        type: string
+        example: descreption
+    tags:
+        type: array
+        items:
+            type: string
+        example: [tag, tags]

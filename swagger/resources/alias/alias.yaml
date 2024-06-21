@@ -1,0 +1,14 @@
+get:
+    summary: AllAlias
+    operationId: alias
+    description: <p> All alias in db</p>
+
+    tags:
+        - alias
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/alias/alias.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

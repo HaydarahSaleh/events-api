@@ -1,0 +1,7 @@
+name: type
+in: query
+description: type of survey.
+required: false
+schema:
+    type: string
+    enum: ["survey", "poll"]

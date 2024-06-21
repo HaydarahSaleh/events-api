@@ -1,0 +1,6 @@
+name: code
+in: path
+required: true
+description: The code 
+schema:
+  type: string

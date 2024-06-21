@@ -1,0 +1,5 @@
+description: Menu
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/menu/MenuItem.yaml"

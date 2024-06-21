@@ -1,0 +1,15 @@
+get:
+  summary: Version
+  operationId: versionInformation
+  description: <p> Info of <b>version</b></p>
+  tags:
+    - version
+ 
+  responses:
+    '200':
+      $ref: "../../responses/version/VersionSuccess.yaml"
+    '401':
+      $ref: "../../responses/version/VersionFailed.yaml"
+    
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

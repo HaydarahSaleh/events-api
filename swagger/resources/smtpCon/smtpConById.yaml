@@ -1,0 +1,23 @@
+get:
+  summary: Get SMTP Configuration By its Id
+  operationId: smtpById
+  description: <p>Gets a <b>SMTP Configuration</b> By ID </p>Availablefor <b>Editor</b></p>
+
+  tags:
+  - SMTPConfiguration
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/path/id.yaml"
+
+  responses:
+    '200':
+      $ref: "../../responses/smtpCon/SmtpCon.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '402':
+      $ref: "../../responses/common/Forbidden.yaml"
+    '403':
+      $ref: "../../responses/common/NotFound.yaml"
+    
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

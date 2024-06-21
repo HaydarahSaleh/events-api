@@ -1,0 +1,12 @@
+get:
+    summary: MapConfig
+    operationId: MapConfig
+    description: <p> <b>MapConfig</b></p>
+    tags:
+        - configuration
+
+    responses:
+        "200":
+            $ref: "../../responses/configuration/MapConfig.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

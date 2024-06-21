@@ -1,0 +1,11 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: false
+    code:
+        type: number
+        example: 8
+    message:
+        type: string
+        example: "Invalid parameters: Email must be a string"

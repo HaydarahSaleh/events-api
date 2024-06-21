@@ -1,0 +1,7 @@
+name: lastName
+in: query
+description: firstName
+required: false
+schema:
+    type: string
+    string: firstName

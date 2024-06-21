@@ -1,0 +1,27 @@
+get:
+    summary: publicationFiles.yaml
+    operationId: publicationFiles.yaml
+    description: <p> publicationFiles.yaml</p>
+
+    tags:
+        - post
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+
+        - $ref: "../../parameters/query/offset.yaml"
+        - name: searchWord
+          in: query
+          description: phrase to search for
+          required: false
+        - $ref: "../../parameters/query/title.yaml"
+        - $ref: "../../parameters/query/postTitle.yaml"
+        - $ref: "../../parameters/query/publishModeAsNumber.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/post/PublicationFiles.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

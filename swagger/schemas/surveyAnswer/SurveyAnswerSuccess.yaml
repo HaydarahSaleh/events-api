@@ -1,0 +1,36 @@
+type: object
+properties:
+    sucess:
+        type: boolean
+        exmple: true
+    id:
+        type: number
+        example: 12
+    title:
+        type: string
+        example: football
+    description:
+        type: string
+        example: this content is a sub content of sport
+    tags:
+        type: array
+        items:
+            type: string
+        example: ["travel","moon","sky","dream"]
+    isPublished:
+        type: boolean
+        example: true
+    route:
+        type: string
+        example: route
+    startDate:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    endDate:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+
+    fileId:
+        type: number
+        example: 100
+    

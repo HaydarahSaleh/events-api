@@ -1,0 +1,16 @@
+post:
+    summary: count
+    operationId: count
+    description: <p>count <b>Code</b></p><p>Availablefor <b>all</b></p>
+
+    tags:
+        - Service
+    parameters:
+        - $ref: "../../parameters/path/code.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/service/Count.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

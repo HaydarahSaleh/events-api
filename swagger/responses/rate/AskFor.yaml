@@ -1,0 +1,5 @@
+description: askFor
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/rate/AskForSuccess.yaml"

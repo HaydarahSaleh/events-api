@@ -1,0 +1,75 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    statistics:
+        type: object
+        properties:
+            publishedLiveBroadcasts:
+                type: number
+                example: 10
+            publishedInvestmentOpportunities:
+                type: number
+                example: 10
+            publishedPublications:
+                type: number
+                example: 10
+            totalNews:
+                type: number
+                example: 10
+            publishedNews:
+                type: number
+                example: 10
+            publishedSurveys:
+                type: number
+                example: 10
+            totalCareers:
+                type: number
+                example: 10
+            totaIitiatives:
+                type: number
+                example: 10
+            totalEvents:
+                type: number
+                example: 10
+            totaOpenDatas:
+                type: number
+                example: 10
+            totalSurveys:
+                type: number
+                example: 10
+            publishedOpenDatas:
+                type: number
+                example: 10
+            publishedPolls:
+                type: number
+                example: 10
+            publishedInitiatives:
+                type: number
+                example: 10
+            totaInvestmentOpportunities:
+                type: number
+                example: 10
+            totalPolls:
+                type: number
+                example: 10
+            publishedEvents:
+                type: number
+                example: 10
+            totaLiveBroadcasts:
+                type: number
+                example: 10
+            publishedCareers:
+                type: number
+                example: 10
+            totaPublications:
+                type: number
+                example: 10
+            siteVisitors:
+                type: number
+                example: 10
+
+    returnedTypeName:
+        type: string
+        example: statistics

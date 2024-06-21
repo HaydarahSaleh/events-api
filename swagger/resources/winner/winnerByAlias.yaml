@@ -1,0 +1,20 @@
+get:
+    summary: winner
+    operationId: showWinnerByAlias
+    description: <p> show  <b>winner</b>Available for <b>All</b></p>
+
+    tags:
+        - winner
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/alias.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/winner/Winner.yaml"
+        "400":
+            $ref: "../../responses/common/NotFound.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

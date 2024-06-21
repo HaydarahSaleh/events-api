@@ -1,0 +1,5 @@
+description: Request
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/request/RequestSuccess.yaml"

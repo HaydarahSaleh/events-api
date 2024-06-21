@@ -1,0 +1,14 @@
+type: object
+properties:
+    title:
+        type: nustringmber
+        example: businessCategory
+    roomId:
+        type: number
+        example: 1
+    startDate:
+        type: Date
+        example: 2020-03-01T12:01:00
+    endDate:
+        type: Date
+        example: 2020-03-01T13:01:00

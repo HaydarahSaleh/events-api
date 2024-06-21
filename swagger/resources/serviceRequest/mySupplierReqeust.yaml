@@ -1,0 +1,22 @@
+get:
+    summary: mySupplierReqeust
+    operationId: mySupplierReqeust
+    description: <p>Gets a <b>ServiceRequest</b> by its Id</p>Available for <b>editor</b></p>
+
+    tags:
+        - ServiceRequest
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/serviceRequest/ServiceRequest.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

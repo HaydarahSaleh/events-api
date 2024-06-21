@@ -1,0 +1,15 @@
+get:
+    summary: topPublications
+    operationId: topPublications
+    description: <p>  <b>topPublications</b></p>
+
+    tags:
+        - post
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/post/Posts.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

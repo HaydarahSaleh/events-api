@@ -1,0 +1,25 @@
+get:
+    summary: List
+    operationId: postComments
+    description: <p>List all  <b>Comments</b></p><p>isPublished=true avilablie for <b>all</b> </p><p> isPublished=false avilablie for <b>admin</b> </p><p> all parameter are optional to specifiy search query</b></p>
+    tags:
+        - post
+    parameters:
+        - $ref: "../../parameters/path/id.yaml"
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/query/justPublished.yaml"
+        - $ref: "../../parameters/query/postLanguage.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/comment/Comments.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

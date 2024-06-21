@@ -1,0 +1,16 @@
+get:
+    summary: List of userGroups as tree
+    operationId: listuserGroups as tree
+    description: <p>List all  <b>UserGroups</b> as tree </p><p>Availablefor <b>admin</b></p>
+
+    tags:
+        - userGroup
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/userGroup/UserGroups.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

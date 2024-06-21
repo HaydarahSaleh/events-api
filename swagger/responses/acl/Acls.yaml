@@ -1,0 +1,5 @@
+description: Acls
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/acl/Acls.yaml"

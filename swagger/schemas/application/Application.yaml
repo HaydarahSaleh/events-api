@@ -1,0 +1,71 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 2
+    firstName:
+        type: string
+        example: firstName
+    lastName:
+        type: string
+        example: last
+
+    gender:
+        type: string
+        example: male
+    nationality:
+        type: string
+        example: Syrian
+    religon:
+        type: string
+        example: religon
+    dateOfBirth:
+        type: string
+        example: "2021-02-01 07:20:00"
+    placeOfBirth:
+        type: string
+        example: whashington
+    phone:
+        type: string
+        example: +963937345035
+    homeNumber:
+        type: string
+        example: "2"
+    experienceYears:
+        type: number
+        example: 2
+    email:
+        type: string
+        example: trytry@gmail.com
+    skybeId:
+        type: string
+        example: try003
+    currentLocation:
+        type: string
+        example: UAE
+    qualification:
+        type: string
+        example: UAE
+    residentCity:
+        type: string
+        example: UAE
+    residentCountry:
+        type: string
+        example: UAE
+    cvId:
+        type: number
+        example: 2
+    cvUUID:
+        type: number
+        example: ddd9016d-4e22-45f7-accd-1f3a526a9c82
+    photoId:
+        type: number
+        example: 1
+    photoUUID:
+        type: number
+        example: ddd9016d-4e22-45f7-accd-1f3a526a9c82
+    careerId:
+        type: number
+        example: 3
+    careerTitle:
+        $ref: "../common/Title.yaml"

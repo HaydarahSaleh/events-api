@@ -1,0 +1,4 @@
+name: phrase
+in: query
+description: phrase to search for
+required: false

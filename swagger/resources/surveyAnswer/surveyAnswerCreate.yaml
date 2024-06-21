@@ -1,0 +1,26 @@
+post:
+    summary: Create
+    operationId: createSurveyAnswer
+    description: <p>Creates one <b>surveyAnswer</b></p>Availiable for <b>All</b></p>
+    tags:
+        - SurveyAnswer
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+
+    requestBody:
+        $ref: "../../requests/surveyAnswer/SurveyAnswerInput.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/surveyAnswer/SurveyAnswer.yaml"
+        "x-201-1":
+            $ref: "../../responses/surveyAnswer/SurveyCompleted.yaml"
+
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

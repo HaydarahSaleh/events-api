@@ -1,0 +1,12 @@
+type: object
+required:
+    - email
+    - emailConfirmationCode
+properties:
+    email:
+        type: string
+        example: mayas.salman@infostrategic.com
+    emailConfirmationCode:
+        type: string
+        example: "QWE123"    
+    

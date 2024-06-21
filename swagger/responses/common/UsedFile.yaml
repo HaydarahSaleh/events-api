@@ -1,0 +1,5 @@
+description: Used File
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/common/UsedFile.yaml"

@@ -1,0 +1,6 @@
+name: createdAt
+in: query
+description: createdAt.
+required: false
+schema:
+    type: string

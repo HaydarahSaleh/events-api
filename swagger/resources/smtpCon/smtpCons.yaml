@@ -1,0 +1,46 @@
+get:
+  summary: List
+  operationId: listSmtpCons
+  description: <p>List all  <b>SmtpCons</b></p><p>Availablefor <b>editor</b></p>
+
+  tags:
+  - SMTPConfiguration
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    
+  responses:
+    '200':
+      $ref: "../../responses/smtpCon/SmtpCons.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '402':
+      $ref: "../../responses/common/Forbidden.yaml"  
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+  summary: Create
+  operationId: createSmtpCon
+  description: <p>Creates a new <b>SmtpCon</b>. <p>Available for <b>admin</b></p>
+
+  tags:
+  - SMTPConfiguration
+
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+   
+
+  requestBody:
+    $ref: "../../requests/smtpCon/AddSmtpCon.yaml"
+  responses:
+    '201':
+      $ref: "../../responses/smtpCon/SmtpCon.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+      $ref: "../../responses/common/Forbidden.yaml" 
+    '404':
+      $ref: "../../responses/common/InvalidParameter.yaml"  
+    default:
+      $ref : "../../responses/common/UnexpectedError.yaml"
+

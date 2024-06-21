@@ -1,0 +1,17 @@
+get:
+  summary: get one theme
+  operationId: ThemeById
+  description:  <p>Gets a <b>Theme</b> by its Id</p>Available for <b>All registered users</b>if it is published, else it is avoilable for<b>Editor</b> </p>
+            
+  tags:
+  - theme
+  parameters:
+    - $ref: "../../parameters/path/id.yaml"
+    
+  responses:
+    '200':
+      $ref: "../../responses/theme/Theme.yaml"
+    '404':
+      $ref: "../../responses/common/NotFound.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

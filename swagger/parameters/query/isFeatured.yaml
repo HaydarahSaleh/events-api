@@ -1,0 +1,6 @@
+name: isFeatured
+in: query
+description: isFeatured
+required: false
+schema:
+    type: boolean

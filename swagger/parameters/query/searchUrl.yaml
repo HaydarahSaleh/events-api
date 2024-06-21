@@ -1,0 +1,7 @@
+name: url
+in: query
+description: url
+required: false
+schema:
+    type: string
+    example: https:www.homePage.com

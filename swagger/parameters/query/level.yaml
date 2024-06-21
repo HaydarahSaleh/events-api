@@ -1,0 +1,7 @@
+name: level
+in: query
+description: level
+required: required
+schema:
+    type: string
+    enum: ["creative", "leader"]

@@ -1,0 +1,9 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    services:
+        type: array
+        items:
+            $ref: "./Service.yaml"

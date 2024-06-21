@@ -1,0 +1,5 @@
+description: Post
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/post/Post.yaml"

@@ -1,0 +1,10 @@
+type: object
+properties:
+   
+    surveyId:
+         type: number
+         example: 1
+    answer: 
+       type: string
+       example: "{\n \"pages\": [\n  {\n   \"name\": \"page1\",\n   \"elements\": [\n    {\n     \"type\": \"checkbox\",\n     \"name\": \"question1\",\n     \"title\": \"ss\",\n     \"choices\": [\n      {\n       \"value\": \"item1\",\n       \"text\": \"ss\"\n      },\n      \"item2\",\n      \"item3\"\n     ]\n    }\n   ]\n  }\n ]\n}"
+    

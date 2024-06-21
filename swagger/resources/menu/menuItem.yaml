@@ -1,0 +1,17 @@
+get:
+    summary: Detail
+    operationId: ShowMenuItemById
+    description: <p> Info for a specific <b>Menu Item</b>Available for <b>guest</b></p>
+
+    tags:
+        - menuItem
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/menu/MenuItem.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

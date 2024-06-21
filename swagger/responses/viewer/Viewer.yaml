@@ -1,0 +1,5 @@
+description: Viewer
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/viewer/Viewer.yaml"

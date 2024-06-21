@@ -1,0 +1,21 @@
+post:
+  summary:  Generate QR-Code from text
+  operationId: ShowPostById
+  description: <p>generate <b>QR-Code</b> for input text</p>Availablefor <b>guest</b></p>
+  tags:
+  - qrcode
+  requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                text:
+                                    type: string
+                                    example: mayas-salman
+
+  responses:
+    200:
+       $ref: "../../responses/qrCode/QRCode.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

@@ -1,0 +1,9 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    files:
+        type: array
+        items:
+            $ref: "./UploadFile.yaml"

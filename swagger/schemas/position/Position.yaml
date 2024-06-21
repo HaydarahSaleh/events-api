@@ -1,0 +1,28 @@
+type: object
+properties:
+  id:
+    type: number
+    example: 5
+  template:
+    type: number
+    example: 3  
+  publishMode:
+    type: number
+    example: 3
+  blockId:
+    type: number
+    example: 5
+  contentId:
+    type: number
+    example: 5
+  contentType:
+    type: string
+    example: article
+  contentOrder:
+    type: number
+    example: 0
+  viewers:
+    type: array
+    items:
+      type: number
+      example: [3,8]     

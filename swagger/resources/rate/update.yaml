@@ -1,0 +1,16 @@
+post:
+    summary: getAliasRate
+    operationId: update rate
+    description: <p>get alias  <b>Rate</b></p><p>Available for <b>All</b></p>
+
+    tags:
+        - Rate
+    parameters:
+        - $ref: "../../parameters/path/id.yaml"
+    requestBody:
+        $ref: "../../requests/rate/UpdateRate.yaml"
+    responses:
+       
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

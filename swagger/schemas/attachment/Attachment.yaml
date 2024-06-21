@@ -1,0 +1,19 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 2
+    title:
+        type: string
+        example: title
+
+    file:
+        $ref: "../file/File.yaml"
+
+    createdAt:
+        type: string
+        example: 1-1-2020
+    createdBy:
+        $ref: "../user/User.yaml"
+    updatedBy:
+        $ref: "../user/User.yaml"

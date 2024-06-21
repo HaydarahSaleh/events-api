@@ -1,0 +1,18 @@
+get:
+    summary: LastUpdate
+    operationId: last update Information
+    description: <p> Info of <b>LastUpdate</b></p>
+    tags:
+        - lastUpdate
+
+    responses:
+        "200":
+            application/json:
+                type: object
+                properties:
+                    lastUpdate:
+                        type: string
+                        example: "2020-2-2"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

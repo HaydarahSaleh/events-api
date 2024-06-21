@@ -1,0 +1,22 @@
+get:
+    summary: Report
+    operationId: ReportById
+    description: <p> get  <b>Report</b>by id </p> <p>Available for <b>admin</b></p>
+
+    tags:
+        - Rate
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/rate/Report.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

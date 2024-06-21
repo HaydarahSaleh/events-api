@@ -1,0 +1,21 @@
+type: object
+properties:
+    Id:
+        type: number
+        example: 12
+    name:
+       type: string
+       example: travel-to-moon
+    isActive:       
+        type: boolean
+        example: true
+    createdAt:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    updatedAt:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    elements:
+        $ref: "./Elements.yaml"
+
+    

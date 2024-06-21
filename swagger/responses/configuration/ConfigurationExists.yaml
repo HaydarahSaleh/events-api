@@ -1,0 +1,5 @@
+description: ConfigurationExists
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/configuration/ConfigurationExists.yaml"

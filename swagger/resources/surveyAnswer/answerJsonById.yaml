@@ -1,0 +1,24 @@
+get:
+  summary: answer json
+  operationId: answer Json
+  description:  <p>Gets a <b>answer json</b> by its Id</p>Available for <b>admin editor,owner</b></p>
+            
+  tags:
+  - SurveyAnswer
+  parameters:
+
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/path/id.yaml"
+    - $ref: "../../parameters/header/language.yaml"
+    
+  responses:
+    '200':
+      $ref: "../../responses/surveyAnswer/Answer.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+       $ref: "../../responses/common/Forbidden.yaml"
+    '404':
+      $ref: "../../responses/common/NotFound.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

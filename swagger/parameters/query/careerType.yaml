@@ -1,0 +1,7 @@
+name: careerType
+in: query
+description: careerType
+required: required
+schema:
+    type: string
+    enum: ["career", "academy"]

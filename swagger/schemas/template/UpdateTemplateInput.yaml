@@ -1,0 +1,17 @@
+type: object
+properties:
+  title:
+    $ref: "../common/Title.yaml"
+  publishMode:
+    type: number
+    example: 2
+  positions:
+    type: array
+    items:
+      $ref: "../position/Position.yaml"
+  startDate:
+    type: string
+    example: 2021-02-01T12:20:00.000Z
+  endDate:
+    type: string
+    example: 2021-02-01T15:20:00.000Z      

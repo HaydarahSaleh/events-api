@@ -1,0 +1,19 @@
+post:
+    summary: Upload
+    operationId: uploadFile
+    description: <p>Upload a new <b> file </b>. <p>Available for <b>admin</b></p>
+
+    tags:
+        - Service
+
+    # parameters:
+    #   - $ref: "../../parameters/header/token.yaml"
+
+    requestBody:
+        $ref: "../../requests/service/ServiceFileUpload.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/service/ServiceFileUpload.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

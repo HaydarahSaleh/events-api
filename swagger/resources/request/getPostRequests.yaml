@@ -1,0 +1,25 @@
+get:
+    summary: List
+    operationId: listRequests
+    description: <p>List all  <b>Requests</b></p> <p>Available for <b>editor</b></p> <p> all parameter are optional to specifiy search query</b></p>
+
+    tags:
+        - post
+    parameters:
+        - $ref: "../../parameters/path/id.yaml"
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/query/postLanguage.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/request/Requests.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

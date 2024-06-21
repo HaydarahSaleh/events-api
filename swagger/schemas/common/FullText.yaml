@@ -1,0 +1,11 @@
+type: object
+properties:
+    ar:
+        type: string
+        example: "النص الكامل"
+    en:
+        type: string
+        example: "full text goes here"
+    fr:
+        type: string
+        example: "full text goes here"

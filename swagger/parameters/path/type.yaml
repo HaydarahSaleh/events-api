@@ -1,0 +1,7 @@
+name: type
+in: path
+required: true
+description: the type
+schema:
+    type: string
+    enum: ["subject", "responseType", "dataNature"]

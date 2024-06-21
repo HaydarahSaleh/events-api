@@ -1,0 +1,23 @@
+get:
+    summary: one survey question as json string
+    operationId: SurveyQuestionsByAlias
+    description: <p>Gets a <b>Survey Questions</b> by its Alias</p>Available for <b>All registered users</b></p>
+
+    tags:
+        - Survey
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/path/alias.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/survey/SurveyQuestions.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

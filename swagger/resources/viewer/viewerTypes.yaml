@@ -1,0 +1,15 @@
+get:
+  summary: Detail
+  operationId: ShowViewerTypes
+  description: <p> get viewer  <b>Types</b> Available for <b>editor</b></p>
+
+  tags:
+  - viewer
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+
+  responses:
+    '200':
+      $ref: "../../responses/viewer/ViewerTypes.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

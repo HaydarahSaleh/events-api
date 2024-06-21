@@ -1,0 +1,26 @@
+name: subType
+in: query
+description: type of category to return.
+required: false
+schema:
+    type: string
+    enum:
+        [
+            "articles",
+            "messages",
+            "events",
+            "news",
+            "initiatives",
+            "investmentOpportunities",
+            "openDatas",
+            "opinions",
+            "publications",
+            "generalPages",
+            "faq",
+            "rooms",
+            "notifications",
+            "indicators",
+            "partners",
+            "laws",
+            "policies",
+        ]

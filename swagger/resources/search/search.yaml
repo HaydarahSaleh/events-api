@@ -1,0 +1,22 @@
+get:
+    summary: Search
+    operationId: Search
+    description: <p> search in <b>site</b></p>
+
+    tags:
+        - search
+    parameters:
+        - name: phrase
+          in: query
+          description: phrase to search for
+          required: true
+        - $ref: "../../parameters/query/offset.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/sections.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/search/SearchResult.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

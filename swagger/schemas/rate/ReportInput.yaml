@@ -1,0 +1,8 @@
+type: object
+properties:
+    reason:
+        type: string
+        example: reason
+    url:
+        type: string
+        example: https://localhost:3000/open-data/page/newddds

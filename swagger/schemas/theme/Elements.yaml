@@ -1,0 +1,23 @@
+type: json
+example: {
+  "Elements": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "question1",
+          "title": "ss",
+          "choices": [
+            {
+              "value": "item1",
+              "text": "ss"
+            },
+            "item2",
+            "item3"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+post:
+  summary: Send Email
+  operationId: SendEmail
+  description: <p> sending Email </p>
+
+  tags:
+  - email
+  
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+  requestBody:
+    $ref: "../../requests/email/EmailInput.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/email/Email.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

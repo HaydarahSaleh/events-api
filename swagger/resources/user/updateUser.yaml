@@ -1,0 +1,27 @@
+post:
+    summary: UpdateUser
+    operationId: updateUser
+    description: <p>Updates <b>User</b> by id</p><p>Availablefor <b>admin</b></p><p>Request body is a <i>patch</i> object. All parameters are optional</b><p>The next user roles presents in the system available <b>admin, editor, registred, guest</b></p>
+    tags:
+        - users
+    requestBody:
+        $ref: "../../requests/user/UpdateUserInput.yaml"
+
+    parameters:
+        - $ref: "../../parameters/path/id.yaml"
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/user/UpdateUser.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        "405":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

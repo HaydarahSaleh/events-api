@@ -1,0 +1,5 @@
+description: PublicationFiles
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/post/PublicationFiles.yaml"

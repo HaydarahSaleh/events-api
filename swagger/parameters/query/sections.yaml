@@ -1,0 +1,7 @@
+name: sections
+in: query
+description: sections to search in
+required: false
+schema:
+  type: string
+  example: "career,poll"

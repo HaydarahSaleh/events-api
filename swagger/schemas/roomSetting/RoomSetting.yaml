@@ -1,0 +1,21 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 2
+    location:
+        $ref: "../common/Title.yaml"
+    startDayHour:
+        type: nmber
+        example: 9
+    endDayHour:
+        type: nmber
+        example: 19
+    excludedDays:
+        type: array
+        items:
+            type: number
+        example: [4, 5]
+    cellDuration:
+        type: nmber
+        example: 60

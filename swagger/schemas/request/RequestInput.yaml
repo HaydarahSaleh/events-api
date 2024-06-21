@@ -1,0 +1,23 @@
+type: object
+properties:
+ 
+  name:
+    type: string
+    example: myName
+  email:
+    type: string
+    example: myEmail@yahoo.com
+  descreption:
+    type: string
+    example: descreption
+ 
+  uploadedFileId:
+    type: number
+    example: 2
+  
+
+  
+    
+    
+   
+       

@@ -1,0 +1,5 @@
+description: statusChange
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/statusChange/StatusChange.yaml"

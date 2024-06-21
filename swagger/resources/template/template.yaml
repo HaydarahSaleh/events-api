@@ -1,0 +1,16 @@
+get:
+  summary: Detail
+  operationId: ShowTemplateById
+  description: <p> Info for a specific <b>Template</b>Available for <b>admin</b></p>
+
+  tags:
+  - template
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/path/id.yaml"
+
+  responses:
+    '200':
+      $ref: "../../responses/template/Template.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

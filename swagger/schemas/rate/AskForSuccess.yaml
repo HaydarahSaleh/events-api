@@ -1,0 +1,17 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    askForRating:
+        type: boolean
+        example: true
+    askForIsUseFull:
+        type: boolean
+        example: true
+    rate:
+        type: number
+        example: 1
+    voters:
+        type: number
+        example: 500

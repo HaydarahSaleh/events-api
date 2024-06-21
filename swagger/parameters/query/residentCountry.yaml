@@ -1,0 +1,7 @@
+name: residentCountry
+in: query
+description: residentCountry
+required: false
+schema:
+    type: string
+    string: residentCountry

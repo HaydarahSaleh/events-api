@@ -1,0 +1,5 @@
+description: NoteExists
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/note/NoteExists.yaml"

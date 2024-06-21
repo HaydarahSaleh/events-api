@@ -1,0 +1,9 @@
+type: object
+properties:
+    userGroupId:
+        type: number
+        example: 1
+    permissions:
+        type: array
+        items:
+            $ref: "./PermissionInput.yaml"

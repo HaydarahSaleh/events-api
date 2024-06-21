@@ -1,0 +1,14 @@
+type: object
+properties:
+    answer:
+        type: json
+        example: { "answer": {} }
+    createdAt:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    userId:
+        type: number
+        example: 12
+    surveyId:
+        type: number
+        example: 12

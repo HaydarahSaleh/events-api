@@ -1,0 +1,6 @@
+description: File
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/filesSet/FilesSets.yaml"
+

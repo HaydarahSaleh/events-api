@@ -1,0 +1,7 @@
+name: startDate
+in: query
+description: startDate
+required: true
+schema:
+    type: string
+    string: "2020-1-1 01:01:01"

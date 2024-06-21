@@ -1,0 +1,39 @@
+get:
+    summary: List
+    operationId: AllRequests
+    description: <p>List all  <b>Requests</b></p><p>Availablefor <b>editor</b></p>
+
+    tags:
+        - request
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/request/Requests.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: Create
+    operationId: createRequest
+    description: <p>Creates a new <b>Request</b>. <p>Available for <b>All</b></p>
+
+    tags:
+        - request
+
+    requestBody:
+        $ref: "../../requests/request/RequestInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/request/Request.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

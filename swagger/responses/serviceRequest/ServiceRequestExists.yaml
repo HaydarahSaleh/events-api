@@ -1,0 +1,5 @@
+description: ServiceRequestExists
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/serviceRequest/ServiceRequestExists.yaml"

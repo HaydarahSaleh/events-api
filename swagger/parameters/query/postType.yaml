@@ -1,0 +1,34 @@
+name: type
+in: query
+description: type of posts to return.
+required: true
+schema:
+    type: string
+    enum:
+        [
+            "all",
+            "articles",
+            "messages",
+            "events",
+            "encyclopedia",
+            "news",
+            researches,
+            "initiatives",
+            "investmentOpportunities",
+            "openDatas",
+            "opinions",
+            "publications",
+            "generalPages",
+            "faq",
+            "rooms",
+            "notifications",
+            "indicators",
+            "eventsOnThisDay",
+            "directors",
+            "partners",
+            "liveBroadcasts",
+            "laws",
+            "policies",
+            "basicPage",
+        ]
+    default: all

@@ -1,0 +1,22 @@
+get:
+    summary: userAdminFilter
+    operationId: userAdminFilter
+    description: <p> userAdminFilter in <b>site</b></p>
+
+    tags:
+        - adminFilter
+    parameters:
+        - name: searchWord
+          in: query
+          description: phrase to search for
+          required: false
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/userType.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/search/SearchResult.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

@@ -1,0 +1,7 @@
+name: categoryId
+in: query
+description: category id
+required: false
+schema:
+    type: integer
+    format: int32

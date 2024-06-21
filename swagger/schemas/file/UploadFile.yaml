@@ -1,0 +1,29 @@
+type: object
+properties:
+    mimitype:
+        type: string
+        example: image/png
+    fieldname:
+        type: string
+        example: files
+    originalname:
+        type: string
+        example: fifa-2002.PNG
+    destination:
+        type: string
+        example: uploads/temp
+    source:
+        type: string
+        example: client
+    filename:
+        type: string
+        example: 7cefb478-39c5-41cc-a1a6-6c81823d828f
+    path:
+        type: string
+        example: uploads\\temp\\7cefb478-39c5-41cc-a1a6-6c81823d828f
+    size:
+        type: number
+        example: 253265
+    acl:
+        type: number
+        example: 1

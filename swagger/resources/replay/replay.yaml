@@ -1,0 +1,38 @@
+get:
+    summary: List
+    operationId: AllReplays
+    description: <p>List all  <b>Repalys</b></p><p>Available for <b>admin</b></p>
+
+    tags:
+        - Replay
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/replay/Replays.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: Create
+    operationId: createRepaly
+    description: <p>Creates a new <b>Replay</b>. <p>Available for <b>Admin</b></p>
+
+    tags:
+        - Replay
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+    requestBody:
+        $ref: "../../requests/replay/Replay.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/replay/Replay.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

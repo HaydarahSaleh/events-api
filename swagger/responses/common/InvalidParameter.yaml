@@ -1,0 +1,5 @@
+description: invalidParameter
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/common/InvalidParameter.yaml"

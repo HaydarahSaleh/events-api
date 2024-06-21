@@ -1,0 +1,26 @@
+post:
+    summary: UpdateSubscriber
+    operationId: updateSubscriber
+    description: <p>Updates <b>Subscriber</b> by id</p><p>Availablefor <b>admin</b></p><p>Request body is a <i>patch</i> object. All parameters are optional</b>
+    tags:
+        - subscriber
+    requestBody:
+        $ref: "../../requests/subscriber/UpdateSubscriberInput.yaml"
+
+    parameters:
+        - $ref: "../../parameters/path/id.yaml"
+        - $ref: "../../parameters/header/token.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/subscriber/Subscriber.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        "405":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

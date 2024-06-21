@@ -1,0 +1,20 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    viewerTypes:
+      type: array
+      items:
+        type: string
+      example: [
+        "NEWS",
+        "EVENT",
+        "ARTICLE",
+        "BANNER",
+        "PHOTO_GALLERY",
+        "POST_LIST",
+        "POST_BLOG",
+        "HORIZONAL_MENU"
+      ]
+   

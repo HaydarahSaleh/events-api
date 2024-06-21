@@ -1,0 +1,21 @@
+get:
+    summary: List my ServiceRequest
+    operationId: list of All my ServiceRequests
+    description: <p>Gets a list of  <b>ServiceRequests</b></b></p>Availiable for <b>All</b></p>
+
+    tags:
+        - ServiceRequest
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/serviceRequest/ServiceRequest.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

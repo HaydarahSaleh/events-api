@@ -1,0 +1,22 @@
+type: object
+required:
+    - title
+    - subject
+    - content
+properties:
+    title:
+        $ref: "../common/Title.yaml"
+    description:
+        $ref: "../common/Description.yaml"
+    publishMode:
+        type: number
+        example: 1
+    cost:
+        type: number
+        example: 1
+    photoId:
+        type: number
+        example: 1
+    date:
+        type: string
+        example: 2021-03-10T07:10:51.132Z

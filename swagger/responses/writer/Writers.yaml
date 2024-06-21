@@ -1,0 +1,5 @@
+description: Writers
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/writer/Writers.yaml"

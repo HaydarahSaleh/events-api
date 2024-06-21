@@ -1,0 +1,5 @@
+description: Applications
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/application/Applications.yaml"

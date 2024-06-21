@@ -1,0 +1,7 @@
+name: endTime
+in: query
+description: endTime
+required: false
+schema:
+    type: string
+    string: "2020-1-1 01:01:01"

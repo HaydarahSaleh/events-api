@@ -1,0 +1,133 @@
+Error:
+    $ref: "./common/Error.yaml"
+Forbidden:
+    $ref: "./common/Forbidden.yaml"
+NotFound:
+    $ref: "./common/NotFound.yaml"
+Unauthorized:
+    $ref: "./common/Unauthorized.yaml"
+
+ViewerItems:
+    $ref: "./common/ViewerItems.yaml"
+
+User:
+    $ref: "./user/User.yaml"
+SignUp:
+    $ref: "./user/SignUp.yaml"
+UserSuccess:
+    $ref: "./user/UserSuccess.yaml"
+UserInput:
+    $ref: "./user/UserInput.yaml"
+Users:
+    $ref: "./user/Users.yaml"
+Login:
+    $ref: "./user/Login.yaml"
+LoginInput:
+    $ref: "./user/LoginInput.yaml"
+ConfirmCode:
+    $ref: "./user/ConfirmCode.yaml"
+ConfirmCodeExpired:
+    $ref: "./user/ConfirmCodeExpired.yaml"
+ErrorInvalidEmail:
+    $ref: "./user/ErrorInvalidEmail.yaml"
+ErrorWrongCredentials:
+    $ref: "./user/ErrorWrongCredentials.yaml"
+ForgetPasswordInput:
+    $ref: "./user/ForgetPasswordInput.yaml"
+ForgetPasswordSuccess:
+    $ref: "./user/ForgetPasswordSuccess.yaml"
+ResetPasswordInput:
+    $ref: "./user/ResetPasswordInput.yaml"
+UpdatePassword:
+    $ref: "./user/UpdatePassword.yaml"
+UpdatePasswordInput:
+    $ref: "./user/UpdatePasswordInput.yaml"
+UpdateUserInput:
+    $ref: "./user/UpdateUserInput.yaml"
+UpdateUserSuccess:
+    $ref: "./user/UpdateUserSuccess.yaml"
+
+UserExists:
+    $ref: "./user/UserExists.yaml"
+
+MenuItem:
+    $ref: "./menu/MenuItem.yaml"
+AddMenuItemInput:
+    $ref: "./menu/AddMenuItemInput.yaml"
+UpdateMenuItemInput:
+    $ref: "./menu/UpdateMenuItemInput.yaml"
+MenuItems:
+    $ref: "./menu/MenuItems.yaml"
+
+Viewer:
+    $ref: "./viewer/Viewer.yaml"
+AddViewerInput:
+    $ref: "./viewer/AddViewerInput.yaml"
+UpdateViewerInput:
+    $ref: "./viewer/UpdateViewerInput.yaml"
+Viewers:
+    $ref: "./viewer/Viewers.yaml"
+
+MessageInput:
+    $ref: "./email/EmailInput.yaml"
+
+CategoryInput:
+    $ref: "./category/CategoryInput.yaml"
+Categories:
+    $ref: "./category/Categories.yaml"
+Category:
+    $ref: "./category/Category.yaml"
+CategorySuccess:
+    $ref: "./category/CategorySuccess.yaml"
+Recurcive:
+    $ref: "./category/Recurcive.yaml"
+Career:
+    $ref: "./career/Career.yaml"
+
+UploadFile:
+    $ref: "./file/UploadFile.yaml"
+
+File:
+    $ref: "./file/File.yaml"
+AddFileInput:
+    $ref: "./file/AddFileInput.yaml"
+UpdateFileInput:
+    $ref: "./file/UpdateFileInput.yaml"
+Files:
+    $ref: "./file/Files.yaml"
+
+FilesSet:
+    $ref: "./filesSet/FilesSet.yaml"
+AddFilesSetInput:
+    $ref: "./filesSet/AddFilesSetInput.yaml"
+UpdateFilesSetInput:
+    $ref: "./filesSet/UpdateFilesSetInput.yaml"
+FilesSets:
+    $ref: "./filesSet/FilesSets.yaml"
+
+Template:
+    $ref: "./template/Template.yaml"
+AddTemplateInput:
+    $ref: "./template/AddTemplateInput.yaml"
+CloneTemplateInput:
+    $ref: "./template/CloneTemplateInput.yaml"
+UpdateTemplateInput:
+    $ref: "./template/UpdateTemplateInput.yaml"
+Templates:
+    $ref: "./template/Templates.yaml"
+
+Position:
+    $ref: "./position/Position.yaml"
+Positions:
+    $ref: "./position/Positions.yaml"
+UpdatePositionInput:
+    $ref: "./position/UpdatePositionInput.yaml"
+
+Link:
+    $ref: "./link/Link.yaml"
+AddLinkInput:
+    $ref: "./link/AddLinkInput.yaml"
+UpdateLinkInput:
+    $ref: "./link/UpdateLinkInput.yaml"
+Links:
+    $ref: "./link/Links.yaml"

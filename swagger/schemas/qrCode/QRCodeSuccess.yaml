@@ -1,0 +1,8 @@
+type: object
+properties:
+    success:
+       type: boolean
+       example: true
+    qrcode:
+       type: string
+       example: data:image/png;base64,iVB.......

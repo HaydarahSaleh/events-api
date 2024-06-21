@@ -1,0 +1,7 @@
+name: createdBy
+in: query
+description: createdBy
+required: false
+schema:
+    type: string
+    string: "admin"

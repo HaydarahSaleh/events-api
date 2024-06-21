@@ -1,0 +1,23 @@
+get:
+    summary: one category
+    operationId: category by Id
+    description: <p>Gets a <b>Category</b> by its Id</p>Available for <b>editor</b></p>
+
+    tags:
+        - category
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/alias.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/category/Category.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

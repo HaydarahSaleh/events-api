@@ -1,0 +1,23 @@
+get:
+    summary: happinessCenterAdminFilter
+    operationId: happinessCenterAdminFilter
+    description: <p> happinessCenterAdminFilter in <b>site</b></p>
+
+    tags:
+        - adminFilter
+    parameters:
+        - name: searchWord
+          in: query
+          description: phrase to search for
+          required: false
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/query/telePhone.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/search/SearchResult.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

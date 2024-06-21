@@ -1,0 +1,26 @@
+get:
+    summary: message
+    operationId: messageById
+    description: <p> get  <b>message</b>Available for <b>editor</b></p>
+
+    tags:
+        - message
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/messageTemplate/Message.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "405":
+            $ref: "../../responses/common/Forbidden.yaml" 
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

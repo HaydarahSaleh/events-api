@@ -1,0 +1,47 @@
+get:
+    summary: List
+    operationId: listPosts
+    description: <p>List all  <b>Posts</b></p><p>Availablefor <b>admin</b></p>
+
+    tags:
+        - post
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/postType.yaml"
+        - $ref: "../../parameters/query/categoryId.yaml"
+        - $ref: "../../parameters/query/categoryAlias.yaml"
+        - $ref: "../../parameters/query/isFeatured.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/order.yaml"
+        - $ref: "../../parameters/header/type.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/post/Posts.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: Create
+    operationId: createPost
+    description: <p>Creates a new <b>Post</b>. <p>Available for <b>editor</b></p>
+
+    tags:
+        - post
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    requestBody:
+        $ref: "../../requests/post/AddPostInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/post/Post.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

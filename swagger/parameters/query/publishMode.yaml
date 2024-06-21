@@ -1,0 +1,7 @@
+name: justPublished
+in: query
+description: publishMode
+required: false
+schema:
+  type: boolean
+  example: true

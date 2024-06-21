@@ -1,0 +1,5 @@
+description: Configurations
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/configuration/Configurations.yaml"

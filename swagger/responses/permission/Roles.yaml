@@ -1,0 +1,5 @@
+description: Roles
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/permission/Roles.yaml"

@@ -1,0 +1,7 @@
+name: type
+in: query
+description: type of posts to return.
+required: false
+schema:
+    type: string
+    enum: ["feedBack", "reportProplem", "isUsefull"]

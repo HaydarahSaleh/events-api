@@ -1,0 +1,16 @@
+get:
+    summary: events on this day
+    operationId: git events on this day
+    description: <p> get <b>events</b>On this day for <b>guest</b></p>
+
+    tags:
+        - post
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/post/Post.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

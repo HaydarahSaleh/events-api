@@ -1,0 +1,18 @@
+type: object
+properties:
+  title:
+    $ref: "../common/Title.yaml"
+  type:
+    type: string
+    example: horizonalMenu  
+  publishMode:
+    type: number
+    example: 3
+  items:
+    $ref: "../common/ViewerItems.yaml"
+  startDate:
+    type: string
+    example: 2021-02-01T12:20:00.000Z
+  endDate:
+    type: string
+    example: 2021-02-01T15:20:00.000Z      

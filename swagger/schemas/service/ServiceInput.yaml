@@ -1,0 +1,161 @@
+type: object
+required:
+    - title
+    - subject
+    - content
+properties:
+    title:
+        $ref: "../common/Title.yaml"
+    description:
+        $ref: "../common/Description.yaml"
+    publishMode:
+        type: number
+        example: 1
+    duration:
+        $ref: "../common/Description.yaml"
+    forInquiries:
+        type: string
+        example: "+1111111\n rakchamber.com"
+    charges:
+        type: number
+        example: 10
+    alias:
+        type: string
+        example: new alias...
+    acl:
+        type: number
+        example: 8
+    sendStaffEmail:
+        type: boolean
+        example: false
+    templateId:
+        type: number
+        example: 8
+    changeStatusTemplateId:
+        type: number
+        example: 8
+    staffTemplateId:
+        type: number
+        example: 8
+    smtpId:
+        type: number
+        example: 8
+
+    pagePicture:
+        type: number
+        example: 3
+    service_type:
+        $ref: "../common/Title.yaml"
+    service_structure:
+        $ref: "../common/Title.yaml"
+    service_priorty:
+        $ref: "../common/Title.yaml"
+    service_parent_name:
+        $ref: "../common/Title.yaml"
+    service_group_name:
+        $ref: "../common/Title.yaml"
+    department_name:
+        $ref: "../common/Title.yaml"
+    service_name:
+        $ref: "../common/Title.yaml"
+
+    service_output:
+        type: string
+        example: new alias...
+    department_code:
+        type: string
+        example: new alias...
+    department_logo:
+        type: string
+        example: new alias...
+
+    department_id:
+        type: string
+        example: new alias...
+
+    service_additional_services:
+        type: string
+        example: new alias...
+
+    service_card_available:
+        type: string
+        example: new alias...
+
+    service_code:
+        type: string
+        example: new alias...
+
+    service_customer_description:
+        type: string
+        example: new alias...
+
+    service_description:
+        type: string
+        example: new alias...
+
+    service_fees:
+        type: string
+        example: new alias...
+
+    service_fees_description:
+        type: string
+        example: new alias...
+
+    service_forms:
+        type: string
+        example: new alias...
+
+    service_group_id:
+        type: string
+        example: new alias...
+
+    service_id:
+        type: string
+        example: new alias...
+
+    service_keywords:
+        type: string
+        example: new alias...
+
+    service_limitation:
+        type: string
+        example: new alias...
+
+    service_link:
+        type: string
+        example: new alias...
+
+    service_notes:
+        type: string
+        example: new alias...
+    service_terms:
+        type: string
+        example: new alias...
+
+    service_other_sub_services:
+        type: string
+        example: new alias...
+
+    service_parent_id:
+        type: string
+        example: new alias...
+
+    service_processing_time:
+        type: string
+        example: new alias...
+
+    service_published:
+        type: string
+        example: new alias...
+
+    service_status:
+        type: string
+        example: new alias...
+
+    service_useful_links:
+        type: string
+        example: new alias...
+
+    service_video:
+        type: string
+        example: new alias...

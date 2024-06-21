@@ -1,0 +1,25 @@
+post:
+  summary: Update 
+  operationId: UpdateFilesSet
+  description: <p>Updates an existing <b>FilesSet</b>. <p>Available for <b>admin</b></p>
+
+  tags:
+  - filesSet
+
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/header/language.yaml"
+    - $ref: "../../parameters/path/id.yaml"
+
+  requestBody:
+    $ref: "../../requests/filesSet/UpdateFilesSetInput.yaml"
+  responses:
+    '201':
+      $ref: "../../responses/filesSet/FilesSet.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+      $ref: "../../responses/common/Forbidden.yaml"   
+    default:
+      $ref : "../../responses/common/UnexpectedError.yaml"
+

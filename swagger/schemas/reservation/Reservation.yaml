@@ -1,0 +1,20 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 1
+    title:
+        type: string
+        example: title
+    status:
+        type: string
+        example: reserved
+    roomId:
+        type: number
+        example: 1
+    startDate:
+        type: Date
+        example: 2020-3-1 12:1:0
+    endDate:
+        type: Date
+        example: 2020-3-1 13:1:0

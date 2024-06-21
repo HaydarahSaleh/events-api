@@ -1,0 +1,5 @@
+description: Link
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/link/Link.yaml"

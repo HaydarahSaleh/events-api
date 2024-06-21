@@ -1,0 +1,47 @@
+get:
+    summary: ListServiceRequest
+    operationId: list of All ServiceRequests
+    description: <p>Gets a list of  <b>ServiceRequests</b></b></p>Availiable for <b>All</b></p>
+
+    tags:
+        - ServiceRequest
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+        - $ref: "../../parameters/query/email.yaml"
+        - $ref: "../../parameters/query/serviceId.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/serviceRequest/ServiceRequest.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+post:
+    summary: Create
+    operationId: creat ServiceRequest
+    description: <p>Creates one <b>ServiceRequest</b></p>Availiable for <b>All</b></p>
+    tags:
+        - ServiceRequest
+
+    parameters:
+        - $ref: "../../parameters/header/language.yaml"
+
+    requestBody:
+        $ref: "../../requests/serviceRequest/ServiceRequestInput.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/serviceRequest/ServiceRequest.yaml"
+
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

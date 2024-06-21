@@ -1,0 +1,5 @@
+description: Acl
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/acl/AclSuccess.yaml"

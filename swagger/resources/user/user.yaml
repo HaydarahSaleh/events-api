@@ -1,0 +1,19 @@
+get:
+  summary: Detail
+  operationId: showUserById
+  description: <p> Info for a specific <b>user</b></p>
+  tags:
+    - users
+  parameters:
+    - $ref: "../../parameters/path/id.yaml"
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/header/language.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/user/User.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+      $ref: "../../responses/common/Forbidden.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

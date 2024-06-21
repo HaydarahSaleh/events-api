@@ -1,0 +1,31 @@
+type: object
+required:
+    - name
+    - email
+    - password
+    - isActive
+properties:
+    name:
+        $ref: "../common/TextDataInput.yaml"
+    email:
+        type: string
+        example: mayas.salman@infostrategic.com
+    userGroups: 
+      ype: array
+      items:
+       type: number
+      example: [1,2]
+    password:
+        type: string
+        example: "0000" 
+    userName:
+        type: string
+        example: UserName 
+    phoneNumber:
+        type: string
+        example: "+963932322322  "
+    isActive: 
+        type: boolean
+        example: true
+    
+    

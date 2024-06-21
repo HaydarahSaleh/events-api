@@ -1,0 +1,19 @@
+type: object
+required:
+    - name
+    - email
+    - password
+    - isActive
+properties:
+   
+    email:
+        type: string
+        example: mayas.salman@infostrategic.com
+    subjects:
+     type: array
+     items:
+       type: nmber
+     example: [2,5,1]
+
+    
+    

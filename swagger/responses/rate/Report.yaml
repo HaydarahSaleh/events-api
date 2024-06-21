@@ -1,0 +1,5 @@
+description: Report
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/rate/ReportSuccess.yaml"

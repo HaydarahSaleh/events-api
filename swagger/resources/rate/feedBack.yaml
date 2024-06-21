@@ -1,0 +1,18 @@
+post:
+    summary: add feedBack
+    operationId: addFeedBAck
+    description: <p>add  <b>feedBack</b></p><p>Available for <b>all</b></p>
+
+    tags:
+        - Rate
+
+    requestBody:
+        $ref: "../../requests/rate/FeedBack.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/rate/FeedBack.yaml"
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

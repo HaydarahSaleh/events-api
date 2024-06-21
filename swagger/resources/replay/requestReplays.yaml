@@ -1,0 +1,20 @@
+get:
+    summary: List
+    operationId: listOfReplaysOfReqeust
+    description: <p>List all  <b>Replays</b></p> <p>Available for <b>owner,admin</b></p>
+
+    tags:
+        - ServiceRequest
+    parameters:
+        - $ref: "../../parameters/path/id.yaml"
+        - $ref: "../../parameters/header/token.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/replay/Replays.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

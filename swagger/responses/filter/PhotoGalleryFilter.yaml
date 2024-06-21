@@ -1,0 +1,5 @@
+description: PhotGalleries
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/filter/PhotoGalleryFilter.yaml"

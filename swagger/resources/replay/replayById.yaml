@@ -1,0 +1,22 @@
+get:
+    summary: replay
+    operationId: replayById
+    description: <p> get  <b>replay</b>by id </p> <p>Available for <b>admin and owner</b></p>
+
+    tags:
+        - Replay
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/replay/Replay.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

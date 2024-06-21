@@ -1,0 +1,45 @@
+type: object
+properties:
+    Id:
+        type: number
+        example: 12
+    title:
+        $ref: "../common/Title.yaml"
+    description:
+        $ref: "../common/Description.yaml"
+    tags:
+        $ref: "../common/Tags.yaml"
+    acl:
+        type: number
+        example: 1
+    alias:
+        type: string
+        example: travel-to-moon
+    publishMode:
+        type: number
+        example: 0
+    startDate:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    endDate:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    startTime:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    endTime:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    type:
+        type: string
+        example: survey
+    files:
+        type: array
+        items:
+            type: number
+        example: [5, 6]
+    questions:
+        type: boolean
+        example: true
+    pagePicture:
+        $ref: "../file/File.yaml"

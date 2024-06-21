@@ -1,0 +1,34 @@
+AddMenuInput:
+  $ref: "./menu/AddMenuInput.yaml"
+UpdateMenuInput:
+  $ref: "./menu/UpdateMenuInput.yaml"  
+
+AddViewer:
+  $ref: "./viewer/AddViewer.yaml"
+UpdateViewer:
+  $ref: "./viewer/UpdateViewer.yaml"  
+
+UserInput:
+  $ref: "./user/UserInput.yaml"
+UpdateUserInput:
+  $ref: "./user/UpdateUserInput.yaml"
+UpdatePassword:
+  $ref: "./user/UpdatePassword.yaml"
+LoginInput:
+  $ref: "./user/LoginInput.yaml"
+ConfirmationCode:
+  $ref: "./user/CodeConfirm.yaml" 
+ForgetPassword:
+  $ref: "./user/ForgetPasswordInput.yaml" 
+ResetPasswordInput:
+  $ref: "./user/ResetPasswordInput.yaml" 
+SignUp:
+  $ref: "./user/SignUp.yaml"  
+  
+AddSmtpCon:
+  $ref: "./smtpCon/AddSmtpCon.yaml"
+UpdateSmtpCon:
+  $ref: "./smtpCon/UpdateSmtpCon.yaml"
+
+Email:
+  $ref: "./email/EmailInput.yaml"    

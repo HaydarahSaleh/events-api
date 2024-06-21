@@ -1,0 +1,5 @@
+description: AclExists
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/acl/AclExists.yaml"

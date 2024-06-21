@@ -1,0 +1,7 @@
+name: telePhone
+in: query
+description: telePhone
+required: false
+schema:
+    type: string
+    string: +963963963

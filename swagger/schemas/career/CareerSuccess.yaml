@@ -1,0 +1,62 @@
+properties:
+    success:
+        type: boolean
+        example: true
+    id:
+        type: number
+        example: 2
+    title:
+        type: string
+        example: title
+    summary:
+        type: string
+        example: summary
+    skills:
+        type: string
+        example: summary
+    conditions:
+        type: string
+        example: summary
+    qualification:
+        type: string
+        example: summary
+    tasksAndResponsibilitiesس:
+        type: string
+        example: summary
+
+    startDate:
+        type: string
+        example: 2021-08-20T04:00:00.000Z
+    endDate:
+        type: string
+        example: 2021-08-20T04:00:00.000Z
+    startTime:
+        type: string
+        example: 2021-08-20T04:00:00.000Z
+    endTime:
+        type: string
+        example: 2021-08-20T04:00:00.000Z
+    alias:
+        type: string
+        example: career-2
+    level:
+        type: string
+        example: leader
+    department:
+        type: string
+        example: directorGeneralOffice
+    tags:
+        type: array
+        items:
+            type: string
+        example: [".jpg", ".png"]
+    acl:
+        type: number
+        example: 1
+    publishMode:
+        type: number
+        example: 1
+    files:
+        $ref: "../file/Files.yaml"
+    pagePicture:
+        $ref: "../file/File.yaml"

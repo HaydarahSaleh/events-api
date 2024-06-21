@@ -1,0 +1,37 @@
+type: object
+properties:
+    title:
+        $ref: "../common/Title.yaml"
+    description:
+        $ref: "../common/Description.yaml"
+    publishMode:
+        type: number
+        example: 3
+    newTap:
+        type: number
+        example: 1
+    order:
+        type: number
+        example: 1
+    link:
+        type: string
+        example: travel-to-moon
+    linkType:
+        type: number
+        example: 1
+    startDate:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    endDate:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    acl:
+        type: number
+        example: 1
+    pagePicture:
+        $ref: "../file/File.yaml"
+    menuObject:
+        $ref: "./menuObject.yaml"
+    adminType:
+        type: string
+        example: string

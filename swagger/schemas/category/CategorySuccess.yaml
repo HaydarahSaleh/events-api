@@ -1,0 +1,70 @@
+type: object
+properties:
+    success:
+        type: boolean
+        exmple: true
+    Id:
+        type: number
+        example: 12
+    title:
+        $ref: "../common/Title.yaml"
+    publishMode:
+        type: number
+        example: 1
+    startDate:
+        type: string
+        example: "2021-02-01T15:20:00.000Z"
+    endDate:
+        type: string
+        example: "2021-02-01T15:20:00.000Z"
+    cardImages:
+        type: array
+        items:
+            $ref: "../file/File.yaml"
+    startTime:
+        type: string
+        example: 2021-02-01T12:20:00.000Z
+    endTime:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+    # filesSetId:
+    #     type: number
+    #     example: 2
+    files:
+        type: array
+        items:
+            $ref: "../file/File.yaml"
+    links:
+        type: array
+        items:
+            $ref: "../link/Link.yaml"
+    parents:
+        type: array
+        items:
+            $ref: "./BaseCategory.yaml"
+    childrens:
+        type: array
+        items:
+            $ref: "./BaseCategory.yaml"
+    type:
+        type: string
+        example: post
+    subType:
+        type: string
+        example: rooms
+    order:
+        type: number
+        example: 1
+    isFeatured:
+        type: boolean
+        example: false
+    extensions:
+        type: array
+        items:
+            type: string
+        example: [".jpg"]
+    maxSize:
+        type: number
+        example: 8000000
+    pagePicture:
+        $ref: "../file/File.yaml"

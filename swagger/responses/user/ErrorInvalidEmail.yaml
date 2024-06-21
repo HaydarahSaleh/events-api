@@ -1,0 +1,5 @@
+description: Invalid Email
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/user/ErrorInvalidEmail.yaml"

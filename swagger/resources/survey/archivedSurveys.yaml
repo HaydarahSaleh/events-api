@@ -1,0 +1,22 @@
+ get:
+    summary: List
+    operationId: listArchivedSurveys
+    description: <p>Gets a list of published and archived <b>survey</b></b></p>Availiable for <b>All  users</b></p>
+
+    tags:
+        - Survey
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/surveyType.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/survey/Surveys.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+           $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

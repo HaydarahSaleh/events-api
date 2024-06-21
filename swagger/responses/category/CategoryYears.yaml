@@ -1,0 +1,5 @@
+description: CategoryYears
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/category/CategoryYears.yaml"

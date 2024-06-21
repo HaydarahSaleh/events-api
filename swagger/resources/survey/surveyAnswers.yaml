@@ -1,0 +1,22 @@
+get:
+    summary: get all survey answers from all users
+    operationId: SurveyAnswersBySurveyId
+    description: <p>Gets a <b>Survey Answers</b> by its Id</p>Available for <b>admin,editor,owner</b></p>
+
+    tags:
+        - Survey
+    parameters:
+        #  - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/survey/SurveyAnswers.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

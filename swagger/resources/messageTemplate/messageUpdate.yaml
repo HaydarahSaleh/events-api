@@ -1,0 +1,31 @@
+post:
+    summary: Create
+    operationId: UpdateMessage
+    description: <p>Update  <b>Mssage</b> by its id. <p>Available for <b>editor</b></p>
+
+    tags:
+        - message
+ 
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    requestBody:
+        $ref: "../../requests/messageTemplate/MessageInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/messageTemplate/Message.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/messageTemplate/MessageExists.yaml"
+        "404":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "405":
+            $ref: "../../responses/common/Forbidden.yaml" 
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

@@ -1,0 +1,6 @@
+name: data
+in: query
+description: data.
+required: false
+schema:
+    type: data

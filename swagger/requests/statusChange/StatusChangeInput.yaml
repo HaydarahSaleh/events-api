@@ -1,0 +1,4 @@
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/statusChange/StatusChangeInput.yaml"

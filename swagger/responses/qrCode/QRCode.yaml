@@ -1,0 +1,5 @@
+description: QRCode
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/qrCode/QRCodeSuccess.yaml"

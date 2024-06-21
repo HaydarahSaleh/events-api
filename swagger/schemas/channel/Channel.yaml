@@ -1,0 +1,30 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 2
+    title:
+        type: string
+        example: title
+
+    file:
+        $ref: "../file/File.yaml"
+
+    createdAt:
+        type: string
+        example: 1-1-2020
+    order:
+        type: number
+        example: 2
+    type:
+        type: number
+        example: phone
+    value:
+        type: number
+        example: value
+    publishMode:
+        type: number
+        example: 2
+
+    updatedBy:
+        $ref: "../user/User.yaml"

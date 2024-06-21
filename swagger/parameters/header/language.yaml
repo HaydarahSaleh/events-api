@@ -1,0 +1,8 @@
+name: language
+in: header
+description: Default language
+required: true
+schema:
+  type: string
+  enum: ["all", "ar", "en", "fr"]
+  default: "all"

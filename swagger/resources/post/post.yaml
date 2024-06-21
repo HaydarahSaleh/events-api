@@ -1,0 +1,18 @@
+get:
+    summary: Detail
+    operationId: ShowPostById
+    description: <p> Info for a specific <b>Post</b>Available for <b>guest</b></p>
+
+    tags:
+        - post
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/header/type.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/post/Post.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

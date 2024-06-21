@@ -1,0 +1,42 @@
+get:
+    summary: List
+    operationId: allACL
+    description: <p>List all  <b>Acl</b></p><p>Availablefor <b>editor</b></p>
+
+    tags:
+        - acl
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/acl/Acls.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: Acl
+    operationId: createAcl
+    description: <p>Creates a new <b>Acl</b>. <p>Available for <b>editor</b></p>
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+
+    tags:
+        - acl
+
+    requestBody:
+        $ref: "../../requests/acl/AclInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/acl/Acl.yaml"
+
+        "401":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/comment/CommentExists.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

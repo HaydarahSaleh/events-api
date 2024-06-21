@@ -1,0 +1,604 @@
+openapi: 3.0.0
+info:
+    version: "0.1"
+    title: THE_ICONS
+    contact:
+    name: API Support
+    url: http://www.example.com/support
+    email: support@example.com
+servers:
+    - url: "http://localhost:8444/api"
+      description: Local development API
+    - url: "https://theicons.ae/api"
+      description: Production API
+
+tags:
+    - name: permission
+    - name: link
+    - name: file
+    # - name: filesSet
+    - name: post
+    - name: category
+    - name: menuItem
+    - name: SMTPConfiguration
+    - name: users
+      description: General users endpoints
+
+    - name: email
+      description: Email serviceRequest
+    - name: version
+      description: General app info
+    - name: application
+    - name: writer
+    - name: template
+    - name: viewer
+
+schemes:
+    - http
+    - https
+
+paths:
+    /version:
+        $ref: "./resources/version/version.yaml"
+    /lastUpdate:
+        $ref: "./resources/lastUpdate/lastUpdate.yaml"
+    /statistics:
+        $ref: "./resources/statistics/statistics.yaml"
+    /statistics/site:
+        $ref: "./resources/statistics/siteStatistics.yaml"
+    /statistics/contact/links:
+        $ref: "./resources/statistics/contactLinks.yaml"
+    /site/map:
+        $ref: "./resources/siteMap/siteMap.yaml"
+
+    /filter/survey:
+        $ref: "./resources/filter/surveyFilter.yaml"
+    /filter/news:
+        $ref: "./resources/filter/newsFilter.yaml"
+    /filter/posts:
+        $ref: "./resources/filter/postsFilter.yaml"
+    /filter/photo/gallery:
+        $ref: "./resources/filter/photoGalleryFilter.yaml"
+    /filter/video/gallery:
+        $ref: "./resources/filter/videoGalleryFilter.yaml"
+    /filter/events:
+        $ref: "./resources/filter/eventsFilter.yaml"
+    /filter/publication:
+        $ref: "./resources/filter/publicationFilter.yaml"
+    /filter/investment:
+        $ref: "./resources/filter/investmentFilter.yaml"
+    /filter/award:
+        $ref: "./resources/filter/awardFilter.yaml"
+    /filter/faq:
+        $ref: "./resources/filter/faqFilter.yaml"
+    /filter/open/data:
+        $ref: "./resources/filter/openData.yaml"
+
+    /search:
+        $ref: "./resources/search/search.yaml"
+    /search/sections:
+        $ref: "./resources/search/searchSections.yaml"
+    /search/admin/filter/user:
+        $ref: "./resources/search/userAdminFilter.yaml"
+    /search/admin/filter:
+        $ref: "./resources/search/adminFilter.yaml"
+    /search/admin/report:
+        $ref: "./resources/search/reportAdminFilter.yaml"
+    /search/admin/rate/all:
+        $ref: "./resources/search/rateAdminFilter.yaml"
+    /search/admin/rate:
+        $ref: "./resources/search/feedBackAdminFilter.yaml"
+    /search/admin/filter/service/request:
+        $ref: "./resources/search/serviceRequestAdminFilter.yaml"
+    /search/admin/filter/category:
+        $ref: "./resources/search/categoryAdminFilter.yaml"
+    # /search/admin/filter/writer:
+    #     $ref: "./resources/search/writerAdminFilter.yaml"
+    /search/admin/filter/happiness:
+        $ref: "./resources/search/happinessCenterAdminFilter.yaml"
+    /search/admin/filter/application:
+        $ref: "./resources/search/applicationAdminFilter.yaml"
+    /search/admin/filter/comment:
+        $ref: "./resources/search/commentAdminFilter.yaml"
+    /search/admin/filter/survey:
+        $ref: "./resources/search/surveyAdminFilter.yaml"
+    /alias:
+        $ref: "./resources/alias/alias.yaml"
+    /configuration:
+        $ref: "./resources/configuration/configuration.yaml"
+    /configuration/{id}/update:
+        $ref: "./resources/configuration/configurationUpdate.yaml"
+    /configuration/map/config:
+        $ref: "./resources/configuration/mapConfig.yaml"
+    /configuration/{id}:
+        $ref: "./resources/configuration/configurationById.yaml"
+
+    /qrCode/generate:
+        $ref: "./resources/qrCode/qrCode.yaml"
+
+    /post:
+        $ref: "./resources/post/posts.yaml"
+    /post/years:
+        $ref: "./resources/post/postsYears.yaml"
+    /post/publications:
+        $ref: "./resources/post/publicationByCategoryAliases.yaml"
+    /post/search:
+        $ref: "./resources/post/postsSearch.yaml"
+    /post/{id}:
+        $ref: "./resources/post/post.yaml"
+    /post/{id}/view/increase:
+        $ref: "./resources/post/postViewCounterIncrease.yaml"
+    /post/{alias}:
+        $ref: "./resources/post/postByAlias.yaml"
+    /post/{id}/update:
+        $ref: "./resources/post/postUpdate.yaml"
+    /post/{id}/delete:
+        $ref: "./resources/post/postDelete.yaml"
+    /post/delete/many:
+        $ref: "./resources/post/postMultiDelete.yaml"
+    /post/eventsOnThisDay:
+        $ref: "./resources/post/eventsOnThisDay.yaml"
+    /post/writer/{id}:
+        $ref: "./resources/post/postsByWriterId.yaml"
+    #  /post/{id}/report:
+    #     $ref: "./resources/post/postReport.yaml"
+    #/post/{id}/isUsefull:
+    #     $ref: "./resources/post/postIsUsefull.yaml"
+
+    /category:
+        $ref: "./resources/category/categories.yaml"
+    /category/years:
+        $ref: "./resources/category/categoryYears.yaml"
+
+    /category/{id}/:
+        $ref: "./resources/category/category.yaml"
+    /category/{alias}/:
+        $ref: "./resources/category/categoryByAlias.yaml"
+    /category/{id}/update:
+        $ref: "./resources/category/categoryUpdate.yaml"
+    /category/{id}/delete:
+        $ref: "./resources/category/categoryDelete.yaml"
+    /category/delete/many:
+        $ref: "./resources/category/categoryMultiDelete.yaml"
+    /category/{alias}/tree:
+        $ref: "./resources/category/categoryTreeByAlias.yaml"
+    #   /category/{id}/feedback:
+    #      $ref: "./resources/category/postFeedback.yaml"
+    #  /category/{id}/report:
+    #      $ref: "./resources/category/postReport.yaml"
+    #  /category/{id}/isUsefull:
+    #      $ref: "./resources/category/postIsUsefull.yaml"
+
+    /users:
+        $ref: "./resources/user/users.yaml"
+    /users/email/confirm:
+        $ref: "./resources/user/codeConfirm.yaml"
+    /users/me:
+        $ref: "./resources/user/userMe.yaml"
+    /users/{id}:
+        $ref: "./resources/user/user.yaml"
+    /users/{id}/groups:
+        $ref: "./resources/user/groups.yaml"
+    /users/{id}/acls:
+        $ref: "./resources/user/userACL.yaml"
+
+    /users/{id}/update:
+        $ref: "./resources/user/updateUser.yaml"
+    /users/password/update:
+        $ref: "./resources/user/updatePassword.yaml"
+    /users/password/forget:
+        $ref: "./resources/user/forgetPassword.yaml"
+    /users/password/reset:
+        $ref: "./resources/user/resetPassword.yaml"
+    /users/login:
+        $ref: "./resources/user/login.yaml"
+    /users/verifiy:
+        $ref: "./resources/user/verifiy.yaml"
+
+    /users/{id}/feedback:
+        $ref: "./resources/user/userFeedBack.yaml"
+    /users/code/resend/{type}:
+        $ref: "./resources/user/newConfirmationCode.yaml"
+
+    /smtp/configuration:
+        $ref: "./resources/smtpCon/smtpCons.yaml"
+    /smtp/configuration/{id}:
+        $ref: "./resources/smtpCon/smtpConById.yaml"
+    /smtp/configuration/{id}/update:
+        $ref: "./resources/smtpCon/smtpConUpdate.yaml"
+    /smtp/configuration/{id}/delete:
+        $ref: "./resources/smtpCon/smtpConDelete.yaml"
+
+    /menuItem:
+        $ref: "./resources/menu/menuItems.yaml"
+    /menuItem/roots:
+        $ref: "./resources/menu/roots.yaml"
+    /menuItem/{id}:
+        $ref: "./resources/menu/menuItem.yaml"
+    /menuItem/{id}/tree:
+        $ref: "./resources/menu/menuItemTreeById.yaml"
+    /menuItem/{id}/update:
+        $ref: "./resources/menu/menuItemUpdate.yaml"
+    /menuItem/multiupdate:
+        $ref: "./resources/menu/multiUpdate.yaml"
+    /menuItem/{id}/delete:
+        $ref: "./resources/menu/menuItemDelete.yaml"
+    /menuItem/delete/many:
+        $ref: "./resources/menu/menuMultiDelete.yaml"
+
+    /acl:
+        $ref: "./resources/acl/acls.yaml"
+    /acl/{id}:
+        $ref: "./resources/acl/aclById.yaml"
+    /acl/{id}/update:
+        $ref: "./resources/acl/aclUpdate.yaml"
+    /acl/{id}/delete:
+        $ref: "./resources/acl/aclDelete.yaml"
+    /acl/delete/many:
+        $ref: "./resources/acl/aclMultiDelete.yaml"
+
+    /channel:
+        $ref: "./resources/channel/channels.yaml"
+    /channel/{id}:
+        $ref: "./resources/channel/channelById.yaml"
+    /channel/{id}/update:
+        $ref: "./resources/channel/channelUpdate.yaml"
+    /channel/{id}/delete:
+        $ref: "./resources/channel/channelDelete.yaml"
+    /channel/delete/many:
+        $ref: "./resources/channel/channelMultiDelete.yaml"
+
+    /userGroup:
+        $ref: "./resources/userGroup/userGroups.yaml"
+    /userGroup/tree:
+        $ref: "./resources/userGroup/userGroupsTree.yaml"
+    /userGroup/{id}:
+        $ref: "./resources/userGroup/userGroupById.yaml"
+    /userGroup/{id}/users:
+        $ref: "./resources/userGroup/userGroupUsers.yaml"
+    /userGroup/{id}/permissions:
+        $ref: "./resources/permission/permissions.yaml"
+    /userGroup/{id}/delete:
+        $ref: "./resources/userGroup/userGroupDelete.yaml"
+    /userGroup/{id}/update:
+        $ref: "./resources/userGroup/userGroupUpdate.yaml"
+
+    /theme:
+        $ref: "./resources/theme/themes.yaml"
+    /theme/{id}:
+        $ref: "./resources/theme/themeById.yaml"
+    /theme/{id}/update:
+        $ref: "./resources/theme/themeUpdate.yaml"
+    /theme/{id}/delete:
+        $ref: "./resources/theme/themeDelete.yaml"
+
+    /email/external:
+        $ref: "./resources/email/externalEmail.yaml"
+
+    /application:
+        $ref: "./resources/application/applications.yaml"
+    /application/{id}:
+        $ref: "./resources/application/applicationById.yaml"
+
+    /application/{id}/delete:
+        $ref: "./resources/application/applicationDelete.yaml"
+    /application/delete/many:
+        $ref: "./resources/application/applicationMultiDelete.yaml"
+
+    /block:
+        $ref: "./resources/block/blocks.yaml"
+    /block/url:
+        $ref: "./resources/block/blockByUrl.yaml"
+    /block/{id}/update:
+        $ref: "./resources/block/update.yaml"
+
+    /winner:
+        $ref: "./resources/winner/winners.yaml"
+    /winner/{id}:
+        $ref: "./resources/winner/winnerById.yaml"
+    /winner/{id}/update:
+        $ref: "./resources/winner/winnerUpdate.yaml"
+    /winner/{id}/delete:
+        $ref: "./resources/winner/winnerDelete.yaml"
+
+    /writer:
+        $ref: "./resources/writer/writers.yaml"
+    /writer/{id}:
+        $ref: "./resources/writer/writerById.yaml"
+    /writer/{alias}:
+        $ref: "./resources/writer/writerByAlias.yaml"
+    /writer/{id}/update:
+        $ref: "./resources/writer/writerUpdate.yaml"
+    /writer/{id}/delete:
+        $ref: "./resources/writer/writerDelete.yaml"
+
+    # /contactUs/object:
+    #     $ref: "./resources/contactUsObject/contactUsObjects.yaml"
+    # /contactUs/object/{id}:
+    #      $ref: "./resources/contactUsObject/contactUsObjectById.yaml"
+    #  /contactUs/object/type/{type}:
+    #     $ref: "./resources/contactUsObject/contactUsObjectByType.yaml"
+    # /contactUs/object/{id}/delete:
+    #    $ref: "./resources/contactUsObject/contactUsObjectDelete.yaml"
+    # /contactUs/object/{id}/update:
+    #     $ref: "./resources/contactUsObject/contactUsObjectUpdate.yaml"
+
+    /replay:
+        $ref: "./resources/replay/replay.yaml"
+    /replay/{id}:
+        $ref: "./resources/replay/replayById.yaml"
+    /replay/user:
+        $ref: "./resources/replay/replayFromUSer.yaml"
+
+    /rate:
+        $ref: "./resources/rate/rate.yaml"
+    /rate/{id}:
+        $ref: "./resources/rate/rateById.yaml"
+    /rate/{id}/update:
+        $ref: "./resources/rate/update.yaml"
+    /rate/all:
+        $ref: "./resources/rate/rates.yaml"
+    /rate/askFor:
+        $ref: "./resources/rate/askFor.yaml"
+    /rate/feedback:
+        $ref: "./resources/rate/feedBack.yaml"
+    /rate/feedback/{id}:
+        $ref: "./resources/rate/feedBackById.yaml"
+    /rate/report:
+        $ref: "./resources/rate/report.yaml"
+
+    /rate/isUsefull:
+        $ref: "./resources/rate/isUseFull.yaml"
+
+    /service/request:
+        $ref: "./resources/serviceRequest/serviceRequests.yaml"
+
+    /service/request/{id}:
+        $ref: "./resources/serviceRequest/serviceRequestById.yaml"
+
+    /service/request/{id}/replays:
+        $ref: "./resources/replay/requestReplays.yaml"
+    /service/request/{id}/logs:
+        $ref: "./resources/logs/logs.yaml"
+    /service/request/{id}/note:
+        $ref: "./resources/note/notes.yaml"
+    /service/request/{id}/status/inner:
+        $ref: "./resources/serviceRequest/serviceRequestChangeInnerStatus.yaml"
+    /service/request/{id}/mark:
+        $ref: "./resources/serviceRequest/markServiceRequest.yaml"
+    # /service/{id}/feedback:
+    #     $ref: "./resources/service/postFeedback.yaml"
+    # /service/{id}/report:
+    #    $ref: "./resources/service/postReport.yaml"
+    # /service/{id}/isUsefull:
+    #     $ref: "./resources/service/postIsUsefull.yaml"
+
+    /service/request/mine:
+        $ref: "./resources/serviceRequest/myServiceRequest.yaml"
+    /service/request/{id}/delete:
+        $ref: "./resources/serviceRequest/serviceRequestDelete.yaml"
+    /service/request/{id}/status:
+        $ref: "./resources/statusChange/statusChange.yaml"
+
+    /detail:
+        $ref: "./resources/detail/details.yaml"
+    /detail/{id}:
+        $ref: "./resources/detail/detailById.yaml"
+    /detail/{id}/delete:
+        $ref: "./resources/detail/detailDelete.yaml"
+    /detail/{id}/update:
+        $ref: "./resources/detail/detailUpdate.yaml"
+
+    /service:
+        $ref: "./resources/service/services.yaml"
+    /service/{id}:
+        $ref: "./resources/service/serviceById.yaml"
+    /service/alias/{alias}:
+        $ref: "./resources/service/serviceByAlias.yaml"
+    /service/{id}/requests:
+        $ref: "./resources/service/serviceRequests.yaml"
+    /service/file/upload:
+        $ref: "./resources/service/serviceFileUpload.yaml"
+    /service/file/upload/{code}:
+        $ref: "./resources/service/serviceFileUploadUsingCode.yaml"
+
+    /service/{id}/delete:
+        $ref: "./resources/service/serviceDelete.yaml"
+    /service/{id}/update:
+        $ref: "./resources/service/serviceUpdate.yaml"
+    /service/most/used:
+        $ref: "./resources/service/mostUsed.yaml"
+    /service/{code}/count:
+        $ref: "./resources/service/count.yaml"
+
+    /comment:
+        $ref: "./resources/comment/comments.yaml"
+    /comment/{id}:
+        $ref: "./resources/comment/commentById.yaml"
+    /comment/{id}/update:
+        $ref: "./resources/comment/commentUpdate.yaml"
+    /comment/{id}/delete:
+        $ref: "./resources/comment/commentDelete.yaml"
+    /comment/{id}/toggle:
+        $ref: "./resources/comment/commentToggle.yaml"
+    /comment/delete/many:
+        $ref: "./resources/comment/commentMultiDelete.yaml"
+    /post/{id}/comments:
+        $ref: "./resources/comment/getPostComments.yaml"
+
+    /subscriber:
+        $ref: "./resources/subscriber/subscribers.yaml"
+    /subscriber/{id}/block/toggle:
+        $ref: "./resources/subscriber/activation.yaml"
+    #/subscriber/{id}/delete:
+    #     $ref: "./resources/subscriber/configDelete.yaml"
+    /subscriber/{id}/update:
+        $ref: "./resources/subscriber/updateSubscriber.yaml"
+    /subscriber/email/confirm:
+        $ref: "./resources/subscriber/codeConfirm.yaml"
+
+    /message/template:
+        $ref: "./resources/messageTemplate/messages.yaml"
+    /message/template/{id}:
+        $ref: "./resources/messageTemplate/messageById.yaml"
+    /message/template/{id}/delete:
+        $ref: "./resources/messageTemplate/messageDelete.yaml"
+    /message/template/{id}/update:
+        $ref: "./resources/messageTemplate/messageUpdate.yaml"
+
+    /happiness/center:
+        $ref: "./resources/happinessCenter/happinessCenters.yaml"
+    /happiness/center/{id}:
+        $ref: "./resources/happinessCenter/happinessCenterById.yaml"
+    /happiness/center/{id}/delete:
+        $ref: "./resources/happinessCenter/happinessCenterDelete.yaml"
+    /happiness/center/{id}/update:
+        $ref: "./resources/happinessCenter/happinessCenterUpdate.yaml"
+    /happiness/center/delete/many:
+        $ref: "./resources/happinessCenter/centerMultiDelete.yaml"
+
+    /request:
+        $ref: "./resources/request/request.yaml"
+    /request/{id}:
+        $ref: "./resources/request/requestById.yaml"
+    /request/{id}/delete:
+        $ref: "./resources/request/requestDelete.yaml"
+    /post/{id}/requests:
+        $ref: "./resources/request/getPostRequests.yaml"
+
+    /file/upload:
+        $ref: "./resources/file/fileUpload.yaml"
+    /file/download/{uuid}:
+        $ref: "./resources/file/fileDownload.yaml"
+
+    /file:
+        $ref: "./resources/file/files.yaml"
+    /file/{id}/rate:
+        $ref: "./resources/file/rate.yaml"
+    /file/{id}:
+        $ref: "./resources/file/file.yaml"
+    /file/{id}/update:
+        $ref: "./resources/file/fileUpdate.yaml"
+    /file/{id}/delete:
+        $ref: "./resources/file/fileDelete.yaml"
+    /file/{id}/count/read:
+        $ref: "./resources/file/increasDownload.yaml"
+    /file/{id}/count/download:
+        $ref: "./resources/file/increasRead.yaml"
+
+    # /file/set:
+    #   $ref: "./resources/filesSet/filesSets.yaml"
+    # /file/set/{id}:
+    #   $ref: "./resources/filesSet/filesSet.yaml"
+    # /file/set/{id}/update:
+    #   $ref: "./resources/filesSet/filesSetUpdate.yaml"
+    # /file/set/{id}/delete:
+    #   $ref: "./resources/filesSet/filesSetDelete.yaml"
+
+    /template:
+        $ref: "./resources/template/templates.yaml"
+    /template/{id}:
+        $ref: "./resources/template/template.yaml"
+    /template/{id}/update:
+        $ref: "./resources/template/templateUpdate.yaml"
+    /template/{id}/clone:
+        $ref: "./resources/template/templateClone.yaml"
+    /template/{id}/delete:
+        $ref: "./resources/template/templateDelete.yaml"
+
+    # /position/update:
+    #   $ref: "./resources/position/positionUpdate.yaml"
+
+    /viewer:
+        $ref: "./resources/viewer/viewers.yaml"
+    /viewer/{id}:
+        $ref: "./resources/viewer/viewer.yaml"
+    /viewer/{id}/update:
+        $ref: "./resources/viewer/viewerUpdate.yaml"
+    /viewer/{id}/delete:
+        $ref: "./resources/viewer/viewerDelete.yaml"
+    /viewer/types:
+        $ref: "./resources/viewer/viewerTypes.yaml"
+
+    /survey:
+        $ref: "./resources/survey/surveys.yaml"
+    /survey/archived:
+        $ref: "./resources/survey/archivedSurveys.yaml"
+    /survey/{id}:
+        $ref: "./resources/survey/surveyById.yaml"
+    /survey/{id}/copy:
+        $ref: "./resources/survey/copySurveyById.yaml"
+    /survey/{alias}:
+        $ref: "./resources/survey/surveyByAlias.yaml"
+    /survey/{id}/delete:
+        $ref: "./resources/survey/surveyDelete.yaml"
+    /survey/{id}/update:
+        $ref: "./resources/survey/surveyUpdate.yaml"
+    /survey/{id}/questions:
+        $ref: "./resources/survey/surveyQuestions.yaml"
+    /survey/{alias}/questionsbyalias:
+        $ref: "./resources/survey/surveyQuestionsByAlias.yaml"
+    /survey/{id}/answers:
+        $ref: "./resources/survey/surveyAnswers.yaml"
+    /survey/delete/many:
+        $ref: "./resources/survey/surveyMultiDelete.yaml"
+    # /survey/{id}/feedback:
+    #     $ref: "./resources/survey/postFeedback.yaml"
+    #  /survey/{id}/report:
+    #     $ref: "./resources/survey/postReport.yaml"
+    # /survey/{id}/isUsefull:
+    #     $ref: "./resources/survey/postIsUsefull.yaml"
+
+    /survey/answer:
+        $ref: "./resources/surveyAnswer/surveyAnswerCreate.yaml"
+    /survey/answer/{id}:
+        $ref: "./resources/surveyAnswer/AnswerJsonById.yaml"
+    /survey/answer/{id}/delete:
+        $ref: "./resources/surveyAnswer/surveyAnswerDelete.yaml"
+    /survey/answer/{id}/update:
+        $ref: "./resources/surveyAnswer/surveyAnswerUpdate.yaml"
+
+    /link:
+        $ref: "./resources/link/Links.yaml"
+    /link/{id}:
+        $ref: "./resources/link/Link.yaml"
+    /link/{id}/delete:
+        $ref: "./resources/link/LinkDelete.yaml"
+    /link/{id}/update:
+        $ref: "./resources/link/LinkUpdate.yaml"
+    #  /link/{id}/feedback:
+    #     $ref: "./resources/link/postFeedback.yaml"
+    #  /link/{id}/report:
+    #      $ref: "./resources/link/postReport.yaml"
+    #  /link/{id}/isUsefull:
+    #      $ref: "./resources/link/postIsUsefull.yaml"
+
+    #  /permission:
+    #     $ref: "./resources/permission/permissions.yaml"
+    # /permission/{id}:
+    #     $ref: "./resources/permission/Link.yaml"
+
+    /permission:
+        $ref: "./resources/permission/permissionsUpdate.yaml"
+
+    #   /permission/roles:
+    #    $ref: "./resources/permission/roles.yaml"
+
+    components:
+        parameters:
+            $ref: "./parameters/_index.yaml"
+    schemas:
+        $ref: "./schemas/_index.yaml"
+    # responses:
+    #   $ref: "./responses/_index.yaml"
+
+    /trustee:
+        $ref: "./resources/trustees/trustees.yaml"
+    /trustee/{id}:
+        $ref: "./resources/trustees/trusteeById.yaml"
+    /trustee/{alias}:
+        $ref: "./resources/trustees/trusteeByAlias.yaml"
+    /trustee/{id}/update:
+        $ref: "./resources/trustees/trusteeUpdate.yaml"
+    /trustee/{id}/delete:
+        $ref: "./resources/trustees/trusteeDelete.yaml"

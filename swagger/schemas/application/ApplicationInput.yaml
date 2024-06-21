@@ -1,0 +1,73 @@
+type: object
+required:
+  - firstName
+  - gender
+  - dateOfBirth
+  - placeOfBirth
+  - religon
+  - currentLocation
+  - lastName
+  - phone
+  - careerId
+  - photoId
+  - cvId
+  - nationality
+properties:
+  firstName:
+    type: string
+    example: firstName
+  gender:
+    type: string
+    example: male
+  dateOfBirth:
+    type: string
+    example: "2021-02-01 07:20:00"
+  placeOfBirth:
+    type: string
+    example: whashington
+  religon:
+    type: string
+    example: religon
+  email:
+    type: string
+    example: trytry@gmail.com
+  currentLocation:
+    type: string
+    example: UAE
+  nationality:
+    type: string
+    example: Syrian
+  lastName:
+    type: string
+    example: last
+  skybeId:
+    type: string
+    example: try003
+  phone:
+    type: string
+    example: "+963937345035"
+  qualification:
+    type: string
+    example: UAE
+  residentCity:
+    type: string
+    example: UAE
+  residentCountry:
+    type: string
+    example: UAE
+
+  careerId:
+    type: number
+    example: 3
+  photoId:
+    type: number
+    example: 1
+  cvId:
+    type: number
+    example: 2
+  homeNumber:
+    type: string
+    example: "6"
+  experienceYears:
+    type: number
+    example: 2

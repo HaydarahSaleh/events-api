@@ -1,0 +1,5 @@
+description: Reservations
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/reservation/Reservations.yaml"

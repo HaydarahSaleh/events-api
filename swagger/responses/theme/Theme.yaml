@@ -1,0 +1,5 @@
+description: theme
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/theme/ThemeSuccess.yaml"

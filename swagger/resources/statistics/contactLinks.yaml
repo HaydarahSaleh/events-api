@@ -1,0 +1,13 @@
+get:
+    summary: contactLinks
+    operationId: contactLinks
+    description: <p> Info of <b>contactLinks</b></p>
+    tags:
+        - statistics
+
+    responses:
+        "200":
+            $ref: "../../responses/statistics/ContactLinks.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

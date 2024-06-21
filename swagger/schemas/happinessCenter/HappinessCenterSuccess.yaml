@@ -1,0 +1,48 @@
+properties:
+    success:
+        type: boolean
+        example: true
+    id:
+        type: number
+        example: 2
+    title:
+        type: string
+        example: title..
+    description:
+        type: string
+        example: subject....
+    location:
+        type: string
+        example: title..
+    latitude:
+        type: string
+        example: "33.33.33"
+    longitude:
+        type: string
+        example: "33.33.33"
+    workingHours:
+        type: string
+        example: subject....
+    email:
+        type: string
+        example: "admin@gmail.com"
+    telePhone:
+        type: string
+        example: "+963963963963"
+    createdAt:
+        type: string
+        example: 2021-03-10T07:10:51.132Z
+    updatedAt:
+        type: string
+        example: 2021-03-10T07:10:51.132Z
+    publishMode:
+        type: number
+        example: 3
+    createdby:
+        $ref: "../user/User.yaml"
+    branchNum:
+        type: number
+        example: 3
+    extraData:
+        type: string
+        example: "{extra:\"extra\",\ndata:\"data\"}"

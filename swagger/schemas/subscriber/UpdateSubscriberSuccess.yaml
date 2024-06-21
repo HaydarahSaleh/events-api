@@ -1,0 +1,14 @@
+properties:
+    success:
+        type: boolean
+        example: true
+    id:
+        type: string
+        example: 1
+    email:
+        type: string
+        example: mayas.salman@mail.com
+    subjects:
+        type: array
+        items: number
+        example: 1,2,3

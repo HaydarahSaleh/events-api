@@ -1,0 +1,25 @@
+post:
+  summary: confirmEmail
+  operationId: confirm email
+  description: <p>Confirms Suscriber email. Email is sent automaticly after subscribe (<b>/users/signup</b>)</p><p>Availablefor <b>guest</b></p><p><b>NOTE:</b> While emails are not beeing sent, <b>emailConfirmationCode</b> is always <b>123456</b></p>
+            
+  tags:
+    - subscriber
+  
+  requestBody:
+    $ref: "../../requests/user/CodeConfirm.yaml"   
+  responses:
+    '200':
+       $ref: "../../responses/subscriber/Subscriber.yaml" 
+    '401':
+      $ref: "../../responses/common/Forbidden.yaml"
+    '402':
+      $ref: "../../responses/user/ErrorInvalidEmail.yaml"
+    '403':
+      $ref: "../../responses/common/NotFound.yaml"
+    '404':
+      $ref: "../../responses/common/InvalidAction.yaml"
+    '405':
+      $ref: "../../responses/user/ExpiredCodeConfirm.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

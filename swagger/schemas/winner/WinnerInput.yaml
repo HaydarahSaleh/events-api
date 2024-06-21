@@ -1,0 +1,23 @@
+type: object
+required:
+    - title
+    - summary
+    - startDate
+    - photoId
+
+properties:
+    name:
+        $ref: "../common/Title.yaml"
+    description:
+        $ref: "../common/Description.yaml"
+    position:
+        $ref: "../common/Description.yaml"
+    imageId:
+        type: number
+        example: 1
+    initiativeId:
+        type: number
+        example: 1
+    year:
+        type: string
+        example: 2021-02-01T15:20:00.000Z

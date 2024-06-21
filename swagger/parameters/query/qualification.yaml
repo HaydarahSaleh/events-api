@@ -1,0 +1,7 @@
+name: qualification
+in: query
+description: qualification
+required: false
+schema:
+    type: string
+    string: qualification

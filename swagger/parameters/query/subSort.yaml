@@ -1,0 +1,25 @@
+name: subSort
+in: query
+description: type of subSort to search.
+required: false
+schema:
+    type: string
+    enum:
+        [
+            "articles",
+            "messages",
+            "events",
+            "news",
+            "initiatives",
+            "investmentOpportunities",
+            "openDatas",
+            "opinions",
+            "publications",
+            "generalPages",
+            "faq",
+            "rooms",
+            "notifications",
+            "indicators",
+            researches,
+            "encyclopedia",
+        ]

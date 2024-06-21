@@ -1,0 +1,19 @@
+type: object
+properties:
+  publishMode:
+    type: number
+    example: 3
+  contentId:
+    type: number
+    example: 5
+  contentType:
+    type: string
+    example: article
+  contentOrder:
+    type: number
+    example: 0
+  viewers:
+    type: array
+    items:
+      type: number
+      example: [3,8]     

@@ -1,0 +1,5 @@
+description: Comments
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/comment/Comments.yaml"

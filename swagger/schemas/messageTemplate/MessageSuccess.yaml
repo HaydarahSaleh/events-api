@@ -1,0 +1,22 @@
+properties:
+    success:
+        type: boolean
+        example: true
+    id:
+        type: number
+        example: 2
+    title:
+        type: string
+        example: title..
+    subject:
+        type: string
+        example: subject....
+    content:
+        type: string
+        example: content...    
+    createdAt:
+        type: string
+        example: 2021-03-10T07:10:51.132Z
+    updatedAt:
+        type: string
+        example: 2021-03-10T07:10:51.132Z

@@ -1,0 +1,11 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 2
+    title:
+        type: string
+        example: title
+    summary:
+        type: string
+        example: summary

@@ -1,0 +1,5 @@
+description: Boolean value indicates the success of process
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/user/ReciveCodeInput.yaml"

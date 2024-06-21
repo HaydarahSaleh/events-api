@@ -1,0 +1,14 @@
+get:
+  summary: List
+  operationId: listOfRoles
+  description: <p>List all  <b>Roles</b></p><p>Availablefor <b>admin</b></p>
+
+  tags:
+  - permission
+  parameters:
+    - $ref: "../../parameters/header/optionalToken.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/permission/Roles.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

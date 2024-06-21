@@ -1,0 +1,16 @@
+post:
+    summary: increas read Count
+    operationId: ReadCount
+    description: <p>increas read count for <b> File </b>Available for <b>all</b></p>
+
+    tags:
+        - file
+    parameters:
+        - $ref: "../../parameters/path/id.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/file/File.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

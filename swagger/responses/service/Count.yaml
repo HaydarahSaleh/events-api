@@ -1,0 +1,5 @@
+description: Count
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/service/CountSucccess.yaml"

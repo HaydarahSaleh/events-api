@@ -1,0 +1,16 @@
+get:
+    summary: Detail
+    operationId: ShowPostsByWriterId
+    description: <p> Show <b>Posts</b> for specific<b>Writer</b>Available for <b>guest</b></p>
+
+    tags:
+        - post
+    parameters:
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/post/Post.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

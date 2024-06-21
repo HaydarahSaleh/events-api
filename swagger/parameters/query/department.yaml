@@ -1,0 +1,4 @@
+name: department
+in: query
+description: department
+required: false

@@ -1,0 +1,7 @@
+name: classification
+in: query
+description: classification
+required: false
+schema:
+    type: string
+    format: external

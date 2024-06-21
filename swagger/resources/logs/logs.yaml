@@ -1,0 +1,29 @@
+get:
+    summary: logs
+    operationId: Log
+    description: <p>List all  <b>request log</b></p><p>Availablefor <b>admin</b></p>
+
+    tags:
+        - log
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+    responses:
+        "200":
+            content:
+            type: array
+            items:
+                type: object
+                properties:
+                id:
+                    type: number
+                    example: 1
+                message:
+                    $ref: "../../schemas/common/Title.yaml"
+                createdBy:
+                    type: string
+                    example: admin
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

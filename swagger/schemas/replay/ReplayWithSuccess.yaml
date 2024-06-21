@@ -1,0 +1,26 @@
+object:
+    properties:
+        success:
+            type: boolean
+            example: true
+        id:
+            type: number
+            example: 1
+        from:
+            type: string
+            exmple: from@gmail.com
+        to:
+            type: string
+            example: to@gmail.cm
+        subject:
+            type: string
+            example: subject
+        message:
+            type: string
+            example: message
+        fileId:
+            type: number
+            example: 1
+        requestId:
+            type: number
+            example: 1

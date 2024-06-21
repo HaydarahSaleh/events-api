@@ -1,0 +1,17 @@
+get:
+    summary: getAliasRate
+    operationId: Rate
+    description: <p>get alias  <b>Rate</b></p><p>Available for <b>All</b></p>
+
+    tags:
+        - Rate
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/query/optionalUrl.yaml"
+        - $ref: "../../parameters/query/feedBackType.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/rate/Rates.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

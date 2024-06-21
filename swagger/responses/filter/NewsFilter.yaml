@@ -1,0 +1,5 @@
+description: News
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/filter/NewsFilter.yaml"

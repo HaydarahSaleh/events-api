@@ -1,0 +1,25 @@
+properties:
+    success:
+        type: boolean
+        example: true
+    id:
+        type: number
+        example: 2
+    name:
+        type: string
+        example: title
+    description:
+        type: string
+        example: summary
+    position:
+        type: string
+        example: summary
+    year:
+        type: string
+        example: 2021-02-01T15:20:00.000Z
+
+    imageId:
+        type: number
+        example: 1
+    initiative:
+        $ref: "../post/Post.yaml"

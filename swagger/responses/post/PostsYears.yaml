@@ -1,0 +1,5 @@
+description: PostsYears
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/post/PostsYears.yaml"

@@ -1,0 +1,16 @@
+get:
+    summary: mostUsed
+    operationId: mostUsed
+    description: <p>List all  <b>mostUsed</b></p><p>Availablefor <b>all</b></p>
+
+    tags:
+        - Service
+
+    
+
+    responses:
+        "200":
+            $ref: "../../responses/service/MostUsed.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

@@ -1,0 +1,26 @@
+post:
+    summary: ChangeInnerStatus
+    operationId: ChangeInnerStatus of serviceRequest
+    description: <p>ChangeStatus status of <b>ServiseRequest</b></p>Availiable for <b>admin</b></p>
+    tags:
+        - ServiceRequest
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    requestBody:
+        $ref: "../../requests/serviceRequest/InnerStatus.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/serviceRequest/ServiceRequest.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

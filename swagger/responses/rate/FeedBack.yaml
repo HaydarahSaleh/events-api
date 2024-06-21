@@ -1,0 +1,5 @@
+description: FeedBack
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/rate/FeedBackSuccess.yaml"

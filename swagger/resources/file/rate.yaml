@@ -1,0 +1,33 @@
+post:
+  summary: Rate 
+  operationId: rateFile
+  description: <p>Rate File</p>
+
+  tags:
+  - file
+
+  parameters:
+    - $ref: "../../parameters/path/id.yaml"
+
+  requestBody:
+        $ref: "../../requests/file/Rate.yaml"
+  responses:
+    '201':
+      content:
+    application/json:
+        schema:
+            success:
+               type: boolean
+               example: true
+            id:
+              type: number
+              example: 1
+
+
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+      $ref: "../../responses/common/Forbidden.yaml"   
+    default:
+      $ref : "../../responses/common/UnexpectedError.yaml"
+

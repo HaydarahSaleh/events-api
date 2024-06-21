@@ -1,0 +1,15 @@
+get:
+    summary: SiteMAp
+    operationId: SiteMap
+    description: <p> get  <b>SiteMap</b>Available for <b>All</b></p>
+
+    tags:
+        - siteMap
+    parameters:
+        - $ref: "../../parameters/header/language.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/siteMap/SiteMap.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

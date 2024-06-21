@@ -1,0 +1,5 @@
+description: Viewer Types
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/viewer/ViewerTypes.yaml"

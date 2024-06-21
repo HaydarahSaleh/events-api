@@ -1,0 +1,5 @@
+description: ReciveCode
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/user/ReciveCode.yaml"

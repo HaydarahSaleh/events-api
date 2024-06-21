@@ -1,0 +1,19 @@
+get:
+  summary: get current User
+  operationId: currentUser
+  description: <p> get current <b>user</b></p>
+  tags:
+    - users
+  
+  parameters:
+    
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/header/language.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/user/UpdateUser.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

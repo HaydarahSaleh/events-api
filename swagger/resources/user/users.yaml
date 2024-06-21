@@ -1,0 +1,48 @@
+get:
+  summary: List
+  operationId: listUsers
+  description: <p>List all active <b>Users</b></p><p>Availablefor <b>admin</b></p><p>The next user roles present in the system available <b>admin, editor, registred, guest</b></p>
+
+  tags:
+  - users
+  parameters:
+
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/header/language.yaml"
+    - $ref: "../../parameters/query/limit.yaml"
+    - $ref: "../../parameters/query/offset.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/user/Users.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+       $ref: "../../responses/common/Forbidden.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"
+post:
+  summary: Create
+  operationId: createUser
+  description: <p>Creates a new <b>User</b>. Email automaticly confirmed</p><p>Available for <b>admin</b></p><p>Default role is <b>registred</b></p>
+
+  tags:
+  - users
+
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/header/language.yaml"
+
+  requestBody:
+    $ref: "../../requests/user/UserInput.yaml"
+  responses:
+    '201':
+      $ref: "../../responses/user/User.yaml"
+    'x-201-1':
+      $ref: "../../responses/user/UserExists.yaml"     
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+      $ref: "../../responses/common/Forbidden.yaml"   
+    default:
+      $ref : "../../responses/common/UnexpectedError.yaml"
+

@@ -1,0 +1,14 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    id:
+      type: number
+      example: 1
+    code:
+        type: number
+        example: 1234
+    counter:
+        type: number
+        example: 555

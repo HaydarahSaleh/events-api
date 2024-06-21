@@ -1,0 +1,5 @@
+description: winners
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/winner/Winners.yaml"

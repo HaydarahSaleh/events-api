@@ -1,0 +1,27 @@
+post:
+    summary: Update
+    operationId: UpdateBlocks
+    description: <p>Updates an existing <b>Block</b>. <p>Available for <b>Admin</b></p>
+
+    tags:
+        - block
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+    requestBody:
+        $ref: "../../requests/block/Update.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/block/Block.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "405":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

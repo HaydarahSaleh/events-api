@@ -1,0 +1,12 @@
+type: object
+required:
+properties:
+  id:
+    type: number
+    example: 2
+  name:
+    type: string
+    example: name
+  email:
+    type: string
+    example: "email"

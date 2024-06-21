@@ -1,0 +1,9 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    replays:
+        type: array
+        items:
+            $ref: "./Replay.yaml"

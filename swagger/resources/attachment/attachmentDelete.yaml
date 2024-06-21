@@ -1,0 +1,35 @@
+post:
+    summary: Delete
+    operationId: DeleteAttachment
+    description: <p>Deletes an existing <b>Attachment</b>. <p>Available for <b>editor</b></p>
+
+    tags:
+        - Attachment
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+
+    responses:
+        "201":
+            description: OK
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            success:
+                                type: boolean
+                                example: true
+                            id:
+                                type: number
+                                example: 1
+
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

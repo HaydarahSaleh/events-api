@@ -1,0 +1,16 @@
+get:
+    summary: ListYears
+    operationId: listCategoryYears
+    description: <p>List Years </p>
+
+    tags:
+        - category
+    parameters:
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/categorytype.yaml"
+        - $ref: "../../parameters/query/yearsField.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/category/CategoryYears.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

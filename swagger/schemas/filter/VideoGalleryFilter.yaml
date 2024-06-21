@@ -1,0 +1,16 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    videoGalleries:
+      type: array
+      items:
+        $ref: "../category/Category.yaml"
+   
+    limit:
+        type: number
+        example: 100
+    offset:
+        type: number
+        example: 0

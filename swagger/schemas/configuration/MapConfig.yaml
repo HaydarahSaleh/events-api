@@ -1,0 +1,19 @@
+type: object
+properties:
+    id:
+      type: number
+      example: 100
+    title:
+      type: string
+      example: webiste language
+    description:
+      type: string
+      example: defualt language used for website
+    key:
+      type: string
+      example: language    
+    value:
+        type: string
+        example: {"key":"ssss",
+        "lat":"-23,3232",
+        "lng":"-23,3232"}

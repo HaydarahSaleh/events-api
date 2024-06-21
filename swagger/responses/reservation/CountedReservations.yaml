@@ -1,0 +1,5 @@
+description: CountedReservations
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/reservation/CountedReservations.yaml"

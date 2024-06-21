@@ -1,0 +1,7 @@
+name: type
+in: query
+description: type of serviceRequest.
+required: false
+schema:
+    type: string
+    enum: ["contact us", "legal", "economic", "technical support"]

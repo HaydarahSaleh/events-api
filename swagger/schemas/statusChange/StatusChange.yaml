@@ -1,0 +1,17 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 1
+    from:
+        type: string
+        example: "new"
+    to:
+        type: string
+        example: "pending"
+    by:
+        type: string
+        example: "adminName"
+    createdAt:
+        type: Date
+        example: 2020-3-3

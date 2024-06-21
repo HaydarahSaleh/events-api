@@ -1,0 +1,11 @@
+type: object
+properties:
+  success:
+      type: boolean
+      example: false
+  code:
+      type: number
+      example: 6
+  message:
+      type: string
+      example: "Confirm Code Expired"

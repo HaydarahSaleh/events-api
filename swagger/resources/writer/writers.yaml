@@ -1,0 +1,47 @@
+get:
+    summary: List
+    operationId: listWriters
+    description: <p>List all  <b>Writers</b></p><p>Availablefor <b>all</b></p>
+
+    tags:
+        - writer
+    parameters:
+        - $ref: "../../parameters/header/optionalToken.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/writer/writers.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: Create
+    operationId: createWriter
+    description: <p>Creates a new <b>Writer</b>. <p>Available for <b>Admin</b></p>
+
+    tags:
+        - writer
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    requestBody:
+        $ref: "../../requests/writer/WriterInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/writer/Writer.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "403":
+            $ref: "../../responses/common/NotFound.yaml"
+        "404":
+            $ref: "../../responses/common/UsedFile.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

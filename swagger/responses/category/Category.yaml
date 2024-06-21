@@ -1,0 +1,5 @@
+description: Category
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/category/Category.yaml"

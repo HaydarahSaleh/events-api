@@ -1,0 +1,61 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 2
+    title:
+        $ref: "../common/Title.yaml"
+    description:
+        $ref: "../common/Description.yaml"
+
+    requestsIds:
+        type: array
+        items:
+            type: number
+
+        example: [1, 2]
+    details:
+        type: array
+        items:
+            type: object
+            properties:
+                id:
+                    type: number
+                    example: 2
+                title:
+                    $ref: "../common/Title.yaml"
+                description:
+                    $ref: "../common/Description.yaml"
+
+    alias:
+        type: string
+        example: new alias...
+
+    acl:
+        type: number
+        example: 8
+    publishMode:
+        type: number
+        example: 1
+    duration:
+        $ref: "../common/Description.yaml"
+    forInquiries:
+        type: string
+        example: "+1111111\n rakchamber.com"
+    charges:
+        type: number
+        example: 10
+    createdAt:
+        type: string
+        example: 2021-03-10T07:10:51.132Z
+    updatedAt:
+        type: string
+        example: 2021-03-10T07:10:51.132Z
+    createdByid:
+        type: number
+        example: 1
+    updatedByid:
+        type: number
+        example: 1
+    pagePicture:
+        $ref: "../file/File.yaml"

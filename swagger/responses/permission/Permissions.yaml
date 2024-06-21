@@ -1,0 +1,5 @@
+description: Permissions
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/permission/Permissions.yaml"

@@ -1,0 +1,46 @@
+get:
+    summary: List
+    operationId: listChannels
+    description: <p>List all  <b>Channel</b></p><p>Availablefor <b>all</b></p>
+
+    tags:
+        - Channel
+    parameters:
+        - $ref: "../../parameters/header/language.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+    responses:
+        "200":
+            $ref: "../../responses/channel/Channels.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"
+
+post:
+    summary: Create
+    operationId: createChannel
+    description: <p>Creates a new <b>Channel</b>. <p>Available for <b>Admin</b></p>
+
+    tags:
+        - Channel
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+
+    requestBody:
+        $ref: "../../requests/channel/ChannelInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/channel/Channel.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "402":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        "403":
+            $ref: "../../responses/common/NotFound.yaml"
+        "404":
+            $ref: "../../responses/common/UsedFile.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

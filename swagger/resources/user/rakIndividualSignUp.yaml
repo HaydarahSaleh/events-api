@@ -1,0 +1,23 @@
+post:
+  summary: SignUp
+  operationId: IndividualSignUp
+  description: <p>Creates a new <b>User AS Individual</b> in the system</p><p>Availablefor <b>ALL</b></p><p>Signup endpoint also sends a <i>confirmation</i> email with <b>emailConfirmationCode</b></p><p><b>NOTE:</b> For now, emails are not beeing sent</p><p>Default role is <b>individual</b></p>
+  
+  tags:
+    - users
+  parameters:
+        - $ref: "../../parameters/header/language.yaml"
+
+  requestBody:
+    $ref: "../../requests/user/RakIndividualSignUp.yaml"          
+  
+  
+    
+  responses:
+    '200':
+      $ref: "../../responses/user/RakIndividual.yaml"
+    '401':
+      $ref: "../../responses/user/UserExists.yaml"
+    
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"

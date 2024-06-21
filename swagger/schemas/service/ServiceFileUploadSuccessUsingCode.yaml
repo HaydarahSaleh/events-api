@@ -1,0 +1,8 @@
+type: object
+properties:
+    answer:
+        type: string
+        example: File transfer completed
+    url:
+        file_name: string
+        example: "6347_qP41_210706.jpg"

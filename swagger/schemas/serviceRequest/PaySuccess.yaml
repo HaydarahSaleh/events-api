@@ -1,0 +1,12 @@
+type: object
+properties:
+    success:
+        type: boolean
+        exmple: true
+    serviceRequestId:
+        type: number
+        example: 12
+
+    status:
+        type: string
+        example: pending

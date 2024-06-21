@@ -1,0 +1,5 @@
+description: User exists
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/user/UserExists.yaml"

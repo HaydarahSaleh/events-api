@@ -1,0 +1,4 @@
+name: postTitle
+in: query
+description: postTitle
+required: false

@@ -1,0 +1,20 @@
+type: object
+required:
+  - host
+  - port
+  - username
+  - password
+  - from
+  - to
+  - subject
+  - message
+properties:
+  to:
+    type: string
+    example: musa@hamadi.com
+  subject:
+    type: string
+    example: hello from mayas salman
+  body:
+    type: string
+    example: hello musa ..

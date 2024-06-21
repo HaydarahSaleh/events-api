@@ -1,0 +1,5 @@
+description: RoomSetting
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/roomSetting/RoomSettingSuccess.yaml"

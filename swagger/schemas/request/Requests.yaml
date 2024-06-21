@@ -1,0 +1,9 @@
+type: object
+properties:
+    success:
+        type: boolean
+        example: true
+    Requests:
+        type: array
+        items:
+            $ref: "./Request.yaml"

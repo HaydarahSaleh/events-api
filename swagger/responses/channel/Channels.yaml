@@ -1,0 +1,5 @@
+description: Channels
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/channel/Channels.yaml"

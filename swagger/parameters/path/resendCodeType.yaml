@@ -1,0 +1,7 @@
+name: type
+in: path
+required: true
+description: resendCodeType
+schema:
+    type: string
+    enum: ["employee"]

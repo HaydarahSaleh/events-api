@@ -1,0 +1,14 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 1
+    url:
+        type: string
+        example: homePage
+    rate:
+        type: number
+        example: 3
+    votersCount:
+        type: number
+        example: 100

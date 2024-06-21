@@ -1,0 +1,39 @@
+get:
+  summary: List
+  operationId: listFilesSets
+  description: <p>List all  <b>Files Sets/b></p><p>Availablefor <b>admin</b></p>
+
+  tags:
+  - filesSet
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/header/language.yaml"
+  responses:
+    '200':
+      $ref: "../../responses/filesSet/FilesSets.yaml"
+    default:
+      $ref: "../../responses/common/UnexpectedError.yaml"
+post:
+  summary: Create
+  operationId: createFilesSet
+  description: <p>Creates a new <b>Files Set</b>. <p>Available for <b>admin</b></p>
+
+  tags:
+  - filesSet
+
+  parameters:
+    - $ref: "../../parameters/header/token.yaml"
+    - $ref: "../../parameters/header/language.yaml"
+
+  requestBody:
+    $ref: "../../requests/filesSet/AddFilesSetInput.yaml"
+  responses:
+    '201':
+      $ref: "../../responses/filesSet/FilesSet.yaml"
+    '401':
+      $ref: "../../responses/common/Unauthorized.yaml"
+    '403':
+      $ref: "../../responses/common/Forbidden.yaml"   
+    default:
+      $ref : "../../responses/common/UnexpectedError.yaml"
+

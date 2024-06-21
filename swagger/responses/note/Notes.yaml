@@ -1,0 +1,5 @@
+description: Notes
+content:
+    application/json:
+        schema:
+            $ref: "../../schemas/note/Notes.yaml"

@@ -1,0 +1,27 @@
+post:
+    summary: Update
+    operationId: UpdateTrustee
+    description: <p>Updates an existing <b>trustee</b>. <p>Available for <b>Admin</b></p>
+
+    tags:
+        - trustee
+
+    parameters:
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/path/id.yaml"
+        - $ref: "../../parameters/header/language.yaml"
+    requestBody:
+        $ref: "../../requests/trustees/TrusteeInput.yaml"
+    responses:
+        "201":
+            $ref: "../../responses/trustees/Trustee.yaml"
+        "401":
+            $ref: "../../responses/common/Unauthorized.yaml"
+        "404":
+            $ref: "../../responses/common/NotFound.yaml"
+        "403":
+            $ref: "../../responses/common/Forbidden.yaml"
+        "405":
+            $ref: "../../responses/common/InvalidParameter.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

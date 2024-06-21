@@ -1,0 +1,13 @@
+type: object
+properties:
+    id:
+        type: number
+        example: 2
+    name:
+        type: string
+        example: name
+    userGroups:
+        type: array
+        items:
+            type: number
+        example: [1, 2, 3]

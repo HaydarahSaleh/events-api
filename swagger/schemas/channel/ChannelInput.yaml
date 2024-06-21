@@ -1,0 +1,27 @@
+type: object
+required:
+    - title
+    - summary
+    - startDate
+    - photoId
+
+properties:
+    title:
+        $ref: "../common/Title.yaml"
+
+    fileId:
+        type: number
+        example: 1
+
+    publishMode:
+        type: number
+        example: 2
+    order:
+        type: number
+        example: 2
+    type:
+        type: number
+        example: phone
+    value:
+        type: number
+        example: value

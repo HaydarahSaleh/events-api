@@ -1,0 +1,5 @@
+description: Banner exists
+content:
+  application/json:
+    schema:
+      $ref : "../../schemas/contactUsObject/NotAllowedObject.yaml"

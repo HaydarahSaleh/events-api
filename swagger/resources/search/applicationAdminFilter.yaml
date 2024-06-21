@@ -1,0 +1,29 @@
+get:
+    summary: applicationAdminFilter
+    operationId: applicationAdminFilter
+    description: <p> applicationAdminFilter in <b>site</b></p>
+
+    tags:
+        - adminFilter
+    parameters:
+        - name: searchWord
+          in: query
+          description: phrase to search for
+          required: false
+        - $ref: "../../parameters/header/token.yaml"
+        - $ref: "../../parameters/query/firstName.yaml"
+        - $ref: "../../parameters/query/lastName.yaml"
+
+        - $ref: "../../parameters/query/nationalitiy.yaml"
+        - $ref: "../../parameters/query/qualification.yaml"
+        - $ref: "../../parameters/query/residentCountry.yaml"
+        - $ref: "../../parameters/query/residentCity.yaml"
+        - $ref: "../../parameters/query/experienceYears.yaml"
+        - $ref: "../../parameters/query/limit.yaml"
+        - $ref: "../../parameters/query/offset.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/search/SearchResult.yaml"
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

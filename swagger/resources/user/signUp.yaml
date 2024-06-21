@@ -1,0 +1,20 @@
+post:
+    summary: SignUp
+    operationId: SignUp
+    description: <p>Creates a new <b>User</b> in the system</p><p>Availablefor <b>guest</b></p><p>Signup endpoint also sends a <i>confirmation</i> email with <b>emailConfirmationCode</b></p><p><b>NOTE:</b> For now, emails are not beeing sent</p><p>Default role is <b>registred</b></p>
+
+    tags:
+        - users
+    parameters:
+        - $ref: "../../parameters/header/language.yaml"
+    requestBody:
+        $ref: "../../requests/user/SignUp.yaml"
+
+    responses:
+        "200":
+            $ref: "../../responses/user/UpdateUser.yaml"
+        "401":
+            $ref: "../../responses/user/UserExists.yaml"
+
+        default:
+            $ref: "../../responses/common/UnexpectedError.yaml"

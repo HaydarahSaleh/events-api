@@ -22,5 +22,6 @@
     "encyclopedia": "/encyclopedia/",
     "chapter": "/chapter/",
     "trustees": "/trustees",
-    "section": "/section/"
+    "section": "/section/",
+    "about": "/about/"
 }

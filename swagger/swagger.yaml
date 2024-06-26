@@ -552,7 +552,7 @@ paths:
     /survey/answer:
         $ref: "./resources/surveyAnswer/surveyAnswerCreate.yaml"
     /survey/answer/{id}:
-        $ref: "./resources/surveyAnswer/AnswerJsonById.yaml"
+        $ref: "./resources/surveyAnswer/answerJsonById.yaml"
     /survey/answer/{id}/delete:
         $ref: "./resources/surveyAnswer/surveyAnswerDelete.yaml"
     /survey/answer/{id}/update:

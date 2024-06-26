@@ -4,6 +4,7 @@ export enum PostType {
     MESSAGES = "messages",
     EVENTS = "events",
     NEWS = "news",
+    SPEECH = "speech",
     INITIATIVES = "initiatives",
     INV_OPPS = "investmentOpportunities",
     OPEN_DATAS = "openDatas",
@@ -28,7 +29,11 @@ export enum PostType {
     RESEARCHES = "researches",
     ENCYCLOPEDIA = "encyclopedia",
     CHAPTER = "chapter",
-    GOALS = "goals",
+    TAEAYSH = "taeaysh",
+    PEACE = "peace",
+    ANNUAL = "annual",
+    ABOUT = "about",
+
     //...
 }
 
@@ -85,6 +90,7 @@ export enum SubType {
     MESSAGES = "messages",
     EVENTS = "events",
     NEWS = "news",
+    SPEECH = "speech",
     INITIATIVES = "initiatives",
     INV_OPPS = "investmentOpportunities",
     OPEN_DATAS = "openDatas",
@@ -104,9 +110,12 @@ export enum SubType {
     BASIC_PAGE = "basicPage",
     WRITER = "writer",
     ENCYCLOPEDIA = "encyclopedia",
+    ANNUAL = "annual",
 }
 export enum TrusteeType {
     ALL = "all",
     OFFICES = "offices",
     MEMBERS = "members",
+    TAEAYSH = "taeaysh",
+    PEACE = "peace",
 }

@@ -40,6 +40,14 @@ const getUserAndToken = async (inputUser: User, language: Language) => {
 
     const jwtId = uuidv4();
     const token = generateToken(user, jwtId);
+    // const optCode = { otp: 100000 + Math.floor(Math.random() * 900000) };
+
+    const optCode = { otp: 123456 }; //static code for testing only
+    user.otp = jwt.sign(optCode, config.jwt.secret, {
+        expiresIn: config.jwt.otpCodeExpiresIn,
+        issuer: config.jwt.issuer,
+        audience: config.jwt.audience,
+    });
     user.jwtId = jwtId;
 
     await user.save();
@@ -125,17 +133,6 @@ export const verify = async (
             reason: user.enableOtp ? "IndividualOtp" : "GlobalOtp",
         };
     } else {
-        // const optCode = { otp: 100000 + Math.floor(Math.random() * 900000) };
-
-        const optCode = { otp: 123456 }; //static code for testing only
-        user.otp = jwt.sign(optCode, config.jwt.secret, {
-            expiresIn: config.jwt.otpCodeExpiresIn,
-            issuer: config.jwt.issuer,
-            audience: config.jwt.audience,
-        });
-        console.log({ otp: user.otp });
-
-        await user.save();
         const {
             token,
             user: userToReturn,

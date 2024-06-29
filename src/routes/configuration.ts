@@ -42,7 +42,68 @@ router.get(
         });
     })
 );
+router.get(
+    "/site",
 
+    asyncHandler(async (request: RequestWithUser, response: Response) => {
+        const {
+            headers: { language = Language.ALL },
+
+            user,
+        } = request;
+
+        const siteConfiguration =
+            await ConfigurationController.siteConfiguration();
+
+        response.send({ success: true, ...siteConfiguration });
+    })
+);
+router.post(
+    "/site",
+    getUserRoleMiddleware,
+    asyncHandler(async (request: Request, response: Response) => {
+        const {
+            params: { id },
+            headers: { language = Language.ALL },
+        } = request;
+
+        const {
+            body: {
+                dimension,
+                copyRights,
+                visitorsCount,
+                authority,
+                site1Link,
+                site1ImageId,
+                site1ArImageId,
+                site2Link,
+                site2ImageId,
+                site3Link,
+                site3imageId,
+                site3ImageId,
+            },
+        } = request;
+        const config = await ConfigurationController.setSiteConfiguration({
+            dimension,
+            visitorsCount,
+            site3ImageId,
+            copyRights,
+            authority,
+            site1Link,
+            site1ImageId,
+            site1ArImageId,
+            site2Link,
+            site2ImageId,
+            site3Link,
+            site3imageId,
+        });
+        response.send({
+            ...config,
+            success: true,
+            ...config,
+        });
+    })
+);
 router.get(
     "/map/config",
 

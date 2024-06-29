@@ -9,6 +9,7 @@ import ControllerException from "../exceptions/ControllerException";
 import { convertTextData } from "../helpers/textData";
 import { userActionLogger } from "../logger/userLogger";
 import { userLogger } from "../logger/winston";
+import { File } from "../entity/File";
 
 const convertToOutput = (config, language) => {
     const translatedProps = ["title", "description"];
@@ -149,7 +150,220 @@ export const getList = async (limit, offset, language) => {
         count,
     };
 };
+export const siteConfiguration = async () => {
+    const configsKeys = [
+        "DIMENSION", //0
+        "VISITORS_COUNT",
+        "LAST_UPDATE",
+        "COPY_RIGHTS",
+        "AUTHORITY", //4
+        "SITE_1_LINK",
+        "SITE_1_IMAGE_ID",
+        "SITE_2_LINK", //7
+        "SITE_2_IMAGE_ID",
+        "SITE_3_LINK",
+        "SITE_3_IMAGE_ID",
+        "HOME_PAGE_LAST_UPDATE",
+        "IOS_LINK",
+        "APP_STORE",
+    ];
 
+    const configs = await Promise.all(
+        configsKeys.map(async (key) => {
+            return await Configuration.findOne({
+                where: { key },
+            });
+        })
+    );
+
+    return {
+        dimension: configs[0].value ? JSON.parse(configs[0].value) : null,
+        visitorsCount: configs[1].value,
+        lastUpdate: configs[2].value,
+        copyRights: configs[3].value ? JSON.parse(configs[3].value) : null,
+        authority: configs[4].value ? JSON.parse(configs[4].value) : null,
+        siteLastUpdate: configs[11].value,
+        site1: {
+            link: configs[5].value,
+            image: parseInt(configs[6].value)
+                ? (await File.findOne({
+                      where: { id: parseInt(configs[6].value) },
+                  })) || null
+                : null,
+        },
+        site2: {
+            link: configs[7].value,
+            image: parseInt(configs[8].value)
+                ? (await File.findOne({
+                      where: { id: parseInt(configs[8].value) },
+                  })) || null
+                : null,
+        },
+        site3: {
+            link: configs[9].value,
+            image: parseInt(configs[10].value)
+                ? (await File.findOne({
+                      where: { id: parseInt(configs[10].value) },
+                  })) || null
+                : null,
+        },
+    };
+};
+
+export const setSiteConfiguration = async (patch) => {
+    const promises = [];
+
+    if ("dimension" in patch) {
+        let dimension = await Configuration.findOne({
+            where: { key: "DIMENSION" },
+        });
+
+        if (dimension) {
+            dimension.value = JSON.stringify(patch.dimension);
+            dimension.save();
+        }
+    }
+    if ("tollFree" in patch) {
+        let tollFree = await Configuration.findOne({
+            where: { key: "TOOL_FREE" },
+        });
+
+        if (tollFree) {
+            tollFree.value = patch.tollFree;
+            tollFree.save();
+        }
+    }
+    if ("isoLink" in patch) {
+        let isoLink = await Configuration.findOne({
+            where: { key: "ISO_LINK" },
+        });
+
+        if (isoLink) {
+            isoLink.value = JSON.stringify(patch.isoLink);
+            isoLink.save();
+        }
+    }
+    if ("appStore" in patch) {
+        let appStore = await Configuration.findOne({
+            where: { key: "APP_STORE" },
+        });
+
+        if (appStore) {
+            appStore.value = JSON.stringify(patch.appStore);
+            appStore.save();
+        }
+    }
+
+    if ("authority" in patch) {
+        let authority = await Configuration.findOne({
+            where: { key: "AUTHORITY" },
+        });
+        if (authority) {
+            authority.value = JSON.stringify(patch.authority);
+            authority.save();
+        }
+    }
+
+    if ("copyRights" in patch) {
+        let copyRights = await Configuration.findOne({
+            where: { key: "COPY_RIGHTS" },
+        });
+        if (copyRights) {
+            copyRights.value = JSON.stringify(patch.copyRights);
+            copyRights.save();
+        }
+    }
+    if ("iosLink" in patch) {
+        let iosLink = await Configuration.findOne({
+            where: { key: "IOS_LINK" },
+        });
+        if (iosLink) {
+            iosLink.value = JSON.stringify(patch.iosLink);
+            iosLink.save();
+        }
+    }
+    if ("APP_STORE" in patch) {
+        let appStore = await Configuration.findOne({
+            where: { key: "APP_STORE" },
+        });
+        if (appStore) {
+            appStore.value = JSON.stringify(patch.appStore);
+            appStore.save();
+        }
+    }
+
+    if ("site1Link" in patch) {
+        let site1Link = await Configuration.findOne({
+            where: { key: "SITE_1_LINK" },
+        });
+        if (site1Link) {
+            site1Link.value = patch.site1Link;
+            site1Link.save();
+        }
+    }
+
+    if ("site1ImageId" in patch) {
+        let site1ImageId = await Configuration.findOne({
+            where: { key: "SITE_1_IMAGE_ID" },
+        });
+        if (site1ImageId) {
+            site1ImageId.value = patch.site1ImageId;
+            site1ImageId.save();
+        }
+    }
+
+    if ("site2Link" in patch) {
+        let site2Link = await Configuration.findOne({
+            where: { key: "SITE_2_LINK" },
+        });
+        if (site2Link) {
+            site2Link.value = patch.site2Link;
+            site2Link.save();
+        }
+    }
+
+    if ("site2ImageId" in patch) {
+        let site2ImageId = await Configuration.findOne({
+            where: { key: "SITE_2_IMAGE_ID" },
+        });
+        if (site2ImageId) {
+            site2ImageId.value = patch.site2ImageId;
+            site2ImageId.save();
+        }
+    }
+
+    if ("site2ImageId" in patch) {
+        let site2ImageId = await Configuration.findOne({
+            where: { key: "SITE_2_IMAGE_ID" },
+        });
+        if (site2ImageId) {
+            site2ImageId.value = patch.site2ImageId;
+            site2ImageId.save();
+        }
+    }
+
+    if ("site3Link" in patch) {
+        let site3Link = await Configuration.findOne({
+            where: { key: "SITE_3_LINK" },
+        });
+        if (site3Link) {
+            site3Link.value = patch.site3Link;
+            site3Link.save();
+        }
+    }
+
+    if ("site3ImageId" in patch) {
+        let site3ImageId = await Configuration.findOne({
+            where: { key: "SITE_3_IMAGE_ID" },
+        });
+        if (site3ImageId) {
+            site3ImageId.value = patch.site3ImageId;
+            site3ImageId.save();
+        }
+    }
+
+    return { success: true };
+};
 export const getByKey = async (key, language = Language.ALL) => {
     const config = await Configuration.find({
         relations: ["title", "description", "createdBy", "updatedBy"],

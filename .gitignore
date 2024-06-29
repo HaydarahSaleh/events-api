@@ -17,3 +17,5 @@ logs/combined.log
 /errorWithStack.log
 configuration/*-staging.*
 configuration/*-production.*
+*.yaml
+

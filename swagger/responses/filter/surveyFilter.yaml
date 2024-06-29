@@ -1,5 +1,0 @@
-description: Surveies
-content:
-  application/json:
-    schema:
-      $ref : "../../schemas/filter/SurveyFilter.yaml"

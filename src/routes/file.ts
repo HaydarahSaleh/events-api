@@ -284,9 +284,7 @@ router.get(
         // await file.save();
         const isImage = file.mimetype.split("/")[0] == "image";
 
-        const uuidToReturn = isImage
-            ? await FileContoller.resize(file, size)
-            : uuid;
+        const uuidToReturn = uuid;
         const filePath = path.join(
             __dirname,
             `../../${config.files_upload}`,
